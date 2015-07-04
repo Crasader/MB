@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Skeleton.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0,0},{95,140}}</string>
+			<key>offset</key>
+			<string>{-3,-4}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceSize</key>
+			<string>{108,154}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>realTextureFileName</key>
+		<string>Skeleton.png</string>
+		<key>size</key>
+		<string>{95,140}</string>
+		<key>textureFileName</key>
+		<string>Skeleton.png</string>
+	</dict>
+	<key>texture</key>
+	<dict>
+		<key>height</key>
+		<integer>140</integer>
+		<key>width</key>
+		<integer>95</integer>
+	</dict>
+</dict>
+</plist>

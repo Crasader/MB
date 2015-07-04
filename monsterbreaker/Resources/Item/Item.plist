@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>HP UP, GET FAT</string>
+		<key>ItemName</key>
+		<string>FRESH MEAT</string>
+	</dict>
+	<key>10</key>
+	<dict>
+		<key>Cost</key>
+		<integer>100</integer>
+		<key>Desc</key>
+		<string>ALL STAT, KEY ITEM</string>
+		<key>ItemName</key>
+		<string>TRUTH</string>
+	</dict>
+	<key>11</key>
+	<dict>
+		<key>Cost</key>
+		<integer>100</integer>
+		<key>Desc</key>
+		<string>ALL STAT, KEY ITEM</string>
+		<key>ItemName</key>
+		<string>BLACK AND WHITE</string>
+	</dict>
+	<key>12</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>COIN + 10</string>
+		<key>ItemName</key>
+		<string>GOLD</string>
+	</dict>
+	<key>13</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>BOMB COUNT + 5</string>
+		<key>ItemName</key>
+		<string>BOMB PACKAGE</string>
+	</dict>
+	<key>14</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>CLICK THE BOMB! KABOOM!</string>
+		<key>ItemName</key>
+		<string>REMOTE BOMB</string>
+	</dict>
+	<key>15</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>I WILL DESTORY THAT ALL THINGS</string>
+		<key>ItemName</key>
+		<string>BOMBER</string>
+	</dict>
+	<key>16</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>I SEE SECRET DOOR</string>
+		<key>ItemName</key>
+		<string>SCAVENGER</string>
+	</dict>
+	<key>17</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>I KNOW EVERYTHING! ... about secret</string>
+		<key>ItemName</key>
+		<string>SECRET MASTER</string>
+	</dict>
+	<key>18</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>YES, IT'S THE MAP</string>
+		<key>ItemName</key>
+		<string>THE MAP</string>
+	</dict>
+	<key>19</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>I'M PIRATE! ARGH</string>
+		<key>ItemName</key>
+		<string>THE COMPASS</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>SP UP, RECOVER SP WHEN CLEAR ROOM</string>
+		<key>ItemName</key>
+		<string>SOUL EATER</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>Desc</key>
+		<string>BOMB DAMAGE UP</string>
+		<key>ItemName</key>
+		<string>DYNAMITE</string>
+	</dict>
+	<key>4</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>DAMAGE UP, BALL SPEED UP</string>
+		<key>ItemName</key>
+		<string>DANCING TOY</string>
+	</dict>
+	<key>5</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>HP UP, SP UP, DAMAGE UP</string>
+		<key>ItemName</key>
+		<string>LOL</string>
+	</dict>
+	<key>6</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>DAMAGE UP, BUT ...</string>
+		<key>ItemName</key>
+		<string>STONE OF DAVID</string>
+	</dict>
+	<key>7</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>DAMAGE UP</string>
+		<key>ItemName</key>
+		<string>CHAKRAM</string>
+	</dict>
+	<key>8</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>DAMAGE UP, BALL SIZE UP</string>
+		<key>ItemName</key>
+		<string>BEAUTY GLASS BEAD</string>
+	</dict>
+	<key>9</key>
+	<dict>
+		<key>Cost</key>
+		<integer>7</integer>
+		<key>Desc</key>
+		<string>BALL COUNT 3</string>
+		<key>ItemName</key>
+		<string>TRINITY</string>
+	</dict>
+</dict>
+</plist>

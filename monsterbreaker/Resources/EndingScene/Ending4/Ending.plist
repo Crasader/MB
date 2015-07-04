@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>EndingScene/Ending4/angel.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{917,3835},{247,273}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{247,273}</string>
+			</dict>
+			<key>EndingScene/Ending4/bg1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{1070,953}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1070,953}</string>
+			</dict>
+			<key>EndingScene/Ending4/crown.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1190,3683},{577,372}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{577,372}</string>
+			</dict>
+			<key>EndingScene/Ending4/crown2 back.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{953,2668},{368,118}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{368,118}</string>
+			</dict>
+			<key>EndingScene/Ending4/crown2 front.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{500,3835},{417,212}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{417,212}</string>
+			</dict>
+			<key>EndingScene/Ending4/face1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1569,3102},{179,190}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{179,190}</string>
+			</dict>
+			<key>EndingScene/Ending4/face2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1569,2902},{191,200}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{191,200}</string>
+			</dict>
+			<key>EndingScene/Ending4/frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>EndingScene/Ending4/hero1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1096,2902},{781,473}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{781,473}</string>
+			</dict>
+			<key>EndingScene/Ending4/hero2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{500,2990},{596,845}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{596,845}</string>
+			</dict>
+			<key>EndingScene/Ending4/hero3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{953,1920},{586,748}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{586,748}</string>
+			</dict>
+			<key>EndingScene/Ending4/wing.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2990},{1021,500}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1021,500}</string>
+			</dict>
+			<key>EndingScene/Ending1/SkipButton.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{953,2786},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+			<key>EndingScene/Ending1/SkipButtonClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1291,2786},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ending.png</string>
+			<key>realTextureFileName</key>
+			<string>Ending.png</string>
+			<key>size</key>
+			<string>{1767,4082}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1767</integer>
+			<key>height</key>
+			<integer>4082</integer>
+		</dict>
+	</dict>
+</plist>

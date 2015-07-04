@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AttackPoint</key>
+	<integer>4</integer>
+	<key>Name</key>
+	<string>RuneStaff</string>
+	<key>PaddleName</key>
+	<string>CloudPaddle</string>
+	<key>PaddleSize</key>
+	<real>0.69999999999999996</real>
+	<key>Type</key>
+	<string>Staff</string>
+</dict>
+</plist>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>MainMenuScene/Ending4/BG.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>MainMenuScene/Ending4/body.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3384},{388,282}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{388,282}</string>
+			</dict>
+			<key>MainMenuScene/Ending4/head.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3772},{303,322}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{303,322}</string>
+			</dict>
+			<key>MainMenuScene/Ending4/SubTitle.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{303,3999},{318,58}}</string>
+				<key>offset</key>
+				<string>{0,-7}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{327,73}</string>
+			</dict>
+			<key>MainMenuScene/Ending4/vassal body.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{282,3384},{239,294}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{239,294}</string>
+			</dict>
+			<key>MainMenuScene/Ending4/vassal leg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{404,3760},{80,93}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{80,93}</string>
+			</dict>
+			<key>MainMenuScene/Ending4/wing.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2854},{530,462}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{530,462}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/About.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{282,3678},{331,82}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{331,82}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/Play.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{303,3760},{239,101}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{239,101}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/Title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{934,382}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{934,382}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ending4.png</string>
+			<key>realTextureFileName</key>
+			<string>Ending4.png</string>
+			<key>size</key>
+			<string>{1080,4094}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1080</integer>
+			<key>height</key>
+			<integer>4094</integer>
+		</dict>
+	</dict>
+</plist>

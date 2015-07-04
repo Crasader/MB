@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>MainMenuScene/Ending0/About.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3612},{240,95}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{240,95}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/BlackWhite.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{95,3612},{320,53}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{320,53}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/breaker.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2847},{523,95}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{523,95}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/Hero.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{371,378}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{385,378}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/monster.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2298},{549,95}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{549,95}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/Play.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3370},{242,97}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{242,97}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/PlayClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3852},{238,91}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{238,91}</string>
+			</dict>
+			<key>MainMenuScene/Ending0/AboutClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{91,3852},{238,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{238,90}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ending0.png</string>
+			<key>realTextureFileName</key>
+			<string>Ending0.png</string>
+			<key>size</key>
+			<string>{1080,4090}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1080</integer>
+			<key>height</key>
+			<integer>4090</integer>
+		</dict>
+	</dict>
+</plist>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Door/btn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{582,0},{1,1}}</string>
+				<key>offset</key>
+				<string>{107,-114}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{216,230}</string>
+			</dict>
+			<key>Door/boss.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{534,0},{40,48}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{40,48}</string>
+			</dict>
+			<key>Door/coin.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{421,0},{46,57}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{46,57}</string>
+			</dict>
+			<key>Door/lock.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{478,0},{45,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{45,56}</string>
+			</dict>
+			<key>Door/DoorFrame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{216,154}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{216,154}</string>
+			</dict>
+			<key>Door/DoorLeft.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{319,0},{68,102}}</string>
+				<key>offset</key>
+				<string>{-30,-25}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{216,154}</string>
+			</dict>
+			<key>Door/DoorRight.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{216,0},{68,103}}</string>
+				<key>offset</key>
+				<string>{31,-24}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{216,154}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Door.png</string>
+			<key>realTextureFileName</key>
+			<string>Door.png</string>
+			<key>size</key>
+			<string>{583,154}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>583</integer>
+			<key>height</key>
+			<integer>154</integer>
+		</dict>
+	</dict>
+</plist>

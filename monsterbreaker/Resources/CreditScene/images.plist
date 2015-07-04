@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>CreditScene/bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>CreditScene/coding.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{491,193}}</string>
+				<key>offset</key>
+				<string>{-1,7}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{720,234}</string>
+			</dict>
+			<key>CreditScene/contact.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3614},{406,126}}</string>
+				<key>offset</key>
+				<string>{-1,9}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{651,165}</string>
+			</dict>
+			<key>CreditScene/isaac.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3384},{230,227}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{230,227}</string>
+			</dict>
+			<key>CreditScene/me.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{126,3614},{184,184}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{184,184}</string>
+			</dict>
+			<key>CreditScene/motivated.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2411},{973,83}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{973,83}</string>
+			</dict>
+			<key>CreditScene/title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,4020},{617,51}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{617,51}</string>
+			</dict>
+			<key>CreditScene/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,4071},{1,1}}</string>
+				<key>offset</key>
+				<string>{149,-149}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>CreditScene/BackBtn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{126,3898},{100,98}}</string>
+				<key>offset</key>
+				<string>{0,1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>CreditScene/BackBtnClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{126,3798},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>images.png</string>
+			<key>realTextureFileName</key>
+			<string>images.png</string>
+			<key>size</key>
+			<string>{1080,4072}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1080</integer>
+			<key>height</key>
+			<integer>4072</integer>
+		</dict>
+	</dict>
+</plist>

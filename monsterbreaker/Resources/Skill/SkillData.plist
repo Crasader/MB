@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>MaxPoint</key>
+		<integer>1</integer>
+		<key>SkillName</key>
+		<string>First Aid</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>MaxPoint</key>
+		<integer>3</integer>
+		<key>SkillName</key>
+		<string>Fire Ball</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>Cost</key>
+		<integer>5</integer>
+		<key>MaxPoint</key>
+		<integer>3</integer>
+		<key>SkillName</key>
+		<string>Lightning Bolt</string>
+	</dict>
+</dict>
+</plist>

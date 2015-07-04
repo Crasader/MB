@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Prolog/bg1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{537,2879},{534,953}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{534,953}</string>
+			</dict>
+			<key>Prolog/bg2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{537,959}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{537,959}</string>
+			</dict>
+			<key>Prolog/bg3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2879},{537,959}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{537,959}</string>
+			</dict>
+			<key>Prolog/bg4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{537,1920},{537,959}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{537,959}</string>
+			</dict>
+			<key>Prolog/Frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>Prolog/half.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1071,2879},{491,704}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{491,704}</string>
+			</dict>
+			<key>Prolog/hero.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3838},{216,603}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{216,603}</string>
+			</dict>
+			<key>Prolog/heroFace.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1071,3583},{71,45}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{71,45}</string>
+			</dict>
+			<key>Prolog/mark.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{603,3832},{231,265}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{231,265}</string>
+			</dict>
+			<key>Prolog/SkipButton.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{868,3832},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+			<key>Prolog/SkipButtonClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{868,3948},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Prolog.png</string>
+			<key>realTextureFileName</key>
+			<string>Prolog.png</string>
+			<key>size</key>
+			<string>{1562,4064}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1562</integer>
+			<key>height</key>
+			<integer>4064</integer>
+		</dict>
+	</dict>
+</plist>

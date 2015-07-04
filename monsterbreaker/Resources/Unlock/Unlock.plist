@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Unlock/bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1113}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1113}</string>
+			</dict>
+			<key>Unlock/frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1113},{708,549}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{708,549}</string>
+			</dict>
+			<key>Unlock/unlock.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2721},{694,120}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{694,120}</string>
+			</dict>
+			<key>Unlock/baw.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1821},{300,300}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>Unlock/ending.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{120,2721},{237,219}}</string>
+				<key>offset</key>
+				<string>{1,8}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>Unlock/hc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3715},{217,295}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>Unlock/hv.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3415},{269,300}}</string>
+				<key>offset</key>
+				<string>{5,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>Unlock/mc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2121},{300,300}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>Unlock/mm.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{217,3715},{195,300}}</string>
+				<key>offset</key>
+				<string>{-8,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+			<key>Unlock/truth.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2421},{300,300}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Unlock.png</string>
+			<key>realTextureFileName</key>
+			<string>Unlock.png</string>
+			<key>size</key>
+			<string>{1080,4015}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1080</integer>
+			<key>height</key>
+			<integer>4015</integer>
+		</dict>
+	</dict>
+</plist>

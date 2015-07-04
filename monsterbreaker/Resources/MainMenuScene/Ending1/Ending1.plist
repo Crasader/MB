@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>MainMenuScene/Ending1/BG.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1077,1916}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1077,1916}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/Corpse.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1916},{950,856}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{950,856}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/HalfDevil.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{382,2866},{323,556}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{323,556}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/SubTitle.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3983},{431,47}}</string>
+				<key>offset</key>
+				<string>{2,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{435,73}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/About.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3800},{331,82}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{331,82}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/Play.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3882},{239,101}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{239,101}</string>
+			</dict>
+			<key>MainMenuScene/Ending1/Title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2866},{934,382}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{934,382}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ending1.png</string>
+			<key>realTextureFileName</key>
+			<string>Ending1.png</string>
+			<key>size</key>
+			<string>{1077,4030}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1077</integer>
+			<key>height</key>
+			<integer>4030</integer>
+		</dict>
+	</dict>
+</plist>

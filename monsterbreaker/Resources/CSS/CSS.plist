@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>CSS/DescF.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1919},{820,608}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{820,608}</string>
+			</dict>
+			<key>CSS/Magician.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{608,2460},{276,522}}</string>
+				<key>offset</key>
+				<string>{-32,-6}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{340,560}</string>
+			</dict>
+			<key>CSS/MDT.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{700,3759},{282,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{282,66}</string>
+			</dict>
+			<key>Block/BlockC3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1007,2219},{104,75}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{108,77}</string>
+			</dict>
+			<key>CSS/SelectFrame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2739},{412,704}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{412,704}</string>
+			</dict>
+			<key>CSS/Warrior.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{608,1919},{322,541}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{322,542}</string>
+			</dict>
+			<key>CSS/WDesc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{700,3439},{731,320}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{731,320}</string>
+			</dict>
+			<key>CSS/WDT.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{930,2119},{238,77}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{238,77}</string>
+			</dict>
+			<key>CSS/WF.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3443},{400,700}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{400,700}</string>
+			</dict>
+			<key>CSS/MDesc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{821,3825},{732,267}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{732,267}</string>
+			</dict>
+			<key>CSS/BackBtn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1007,2119},{100,98}}</string>
+				<key>offset</key>
+				<string>{0,1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>CSS/BackBtnClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{930,2357},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>CSS/BG.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1919}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>CSS/LoadBtn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3843},{821,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{821,100}</string>
+			</dict>
+			<key>CSS/LoadBtnClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3943},{821,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{821,100}</string>
+			</dict>
+			<key>CSS/MF.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{412,2739},{400,700}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{400,700}</string>
+			</dict>
+			<key>CSS/StartBtn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{930,1919},{821,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{821,100}</string>
+			</dict>
+			<key>CSS/StartBtnClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{930,2019},{821,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{821,100}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>CSS.png</string>
+			<key>realTextureFileName</key>
+			<string>CSS.png</string>
+			<key>size</key>
+			<string>{1751,4092}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1751</integer>
+			<key>height</key>
+			<integer>4092</integer>
+		</dict>
+	</dict>
+</plist>

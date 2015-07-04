@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Ball/Blue.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,108},{23,23}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/Chakram.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{27,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/DancingToy.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,81},{20,27}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/GlassBead.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,28},{27,28}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/GreenBall.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{20,81},{23,23}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/NormalBall.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{25,56},{23,23}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/RedBall.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{27,0},{23,23}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/StoneOfDavid.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,56},{25,25}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/White.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{27,23},{23,23}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+			<key>Ball/Coin.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,131},{16,26}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{27,28}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ball.png</string>
+			<key>realTextureFileName</key>
+			<string>Ball.png</string>
+			<key>size</key>
+			<string>{50,157}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>50</integer>
+			<key>height</key>
+			<integer>157</integer>
+		</dict>
+	</dict>
+</plist>

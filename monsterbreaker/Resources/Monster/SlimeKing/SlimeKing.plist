@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AttackPoint</key>
+	<integer>1</integer>
+	<key>BallCount</key>
+	<integer>10</integer>
+	<key>BallCurrentCount</key>
+	<string>0</string>
+	<key>BallName</key>
+	<string>GreenBall</string>
+	<key>BallSize</key>
+	<real>1</real>
+	<key>BallVelocity</key>
+	<real>550</real>
+	<key>CurrentHp</key>
+	<integer>20</integer>
+	<key>MaxHp</key>
+	<integer>20</integer>
+	<key>Name</key>
+	<string>SlimeKing</string>
+	<key>Team</key>
+	<integer>2</integer>
+	<key>Type</key>
+	<string>Monster</string>
+</dict>
+</plist>

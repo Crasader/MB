@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Item/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1013,0},{1,1}}</string>
+				<key>offset</key>
+				<string>{74,-74}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/DANCING TOY.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{381,581},{101,125}}</string>
+				<key>offset</key>
+				<string>{3,2}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/Coin.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{955,571},{64,64}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/Key.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{981,0},{62,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/ItemLine.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,381}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1080,381}</string>
+			</dict>
+			<key>Item/BEAUTY GLASS BEAD.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{381,0},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/BLACK AND WHITE.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{531,0},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/BOMB PACKAGE.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{827,443},{150,128}}</string>
+				<key>offset</key>
+				<string>{0,-3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/CHAKRAM.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{681,0},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/DYNAMITE.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{381,682},{77,148}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/FRESH MEAT.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{381,300},{150,148}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/GOLD.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{831,0},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/LOL.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{381,150},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/STONE OF DAVID.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{517,576},{131,121}}</string>
+				<key>offset</key>
+				<string>{3,-7}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/Heart.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{955,635},{61,60}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/TRUTH.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{531,150},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/BOMBER.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{679,300},{145,148}}</string>
+				<key>offset</key>
+				<string>{-2,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/SOUL EATER.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{681,150},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/HalfHeart.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{981,62},{34,57}}</string>
+				<key>offset</key>
+				<string>{-12,1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/ItemFrame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{831,150},{150,150}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/Bomb.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{458,682},{56,62}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/TRINITY.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{819,571},{133,136}}</string>
+				<key>offset</key>
+				<string>{-3,1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/REMOTE BOMB.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{679,445},{140,135}}</string>
+				<key>offset</key>
+				<string>{-2,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/SCAVENGER.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{381,448},{136,133}}</string>
+				<key>offset</key>
+				<string>{-7,-7}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/SECRET MASTER.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{827,300},{148,143}}</string>
+				<key>offset</key>
+				<string>{0,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/THE MAP.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{517,448},{128,133}}</string>
+				<key>offset</key>
+				<string>{0,2}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Item/HaflSoulHeart.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{981,119},{34,57}}</string>
+				<key>offset</key>
+				<string>{-12,1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/SoulHeart.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{955,695},{61,60}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>Item/THE COMPASS.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{531,300},{148,148}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>ItemImage.png</string>
+			<key>realTextureFileName</key>
+			<string>ItemImage.png</string>
+			<key>size</key>
+			<string>{1019,1080}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1019</integer>
+			<key>height</key>
+			<integer>1080</integer>
+		</dict>
+	</dict>
+</plist>

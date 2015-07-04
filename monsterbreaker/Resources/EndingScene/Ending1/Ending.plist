@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>EndingScene/Ending1/bg1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{534,953}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{534,953}</string>
+			</dict>
+			<key>EndingScene/Ending1/bg2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{533,2873},{532,953}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{532,953}</string>
+			</dict>
+			<key>EndingScene/Ending1/bg3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2873},{533,952}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{533,952}</string>
+			</dict>
+			<key>EndingScene/Ending1/half.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1401,3405},{532,593}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{532,593}</string>
+			</dict>
+			<key>EndingScene/Ending1/half2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{534,1920},{493,525}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{493,525}</string>
+			</dict>
+			<key>EndingScene/Ending1/half4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{900,3758},{269,287}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{269,287}</string>
+			</dict>
+			<key>EndingScene/Ending1/hero1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3825},{216,603}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{216,603}</string>
+			</dict>
+			<key>EndingScene/Ending1/hero1Arms.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{603,3758},{324,297}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{324,297}</string>
+			</dict>
+			<key>EndingScene/Ending1/hero4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{533,3405},{353,603}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{353,603}</string>
+			</dict>
+			<key>EndingScene/Ending1/mark.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1136,3405},{231,265}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{231,265}</string>
+			</dict>
+			<key>EndingScene/Ending1/frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>EndingScene/Ending1/SkipButton.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1169,3670},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+			<key>EndingScene/Ending1/SkipButtonClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1285,3670},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ending.png</string>
+			<key>realTextureFileName</key>
+			<string>Ending.png</string>
+			<key>size</key>
+			<string>{1933,4082}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1933</integer>
+			<key>height</key>
+			<integer>4082</integer>
+		</dict>
+	</dict>
+</plist>

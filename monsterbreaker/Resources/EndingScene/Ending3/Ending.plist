@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>EndingScene/Ending3/bg1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2990},{1070,597}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1070,597}</string>
+			</dict>
+			<key>EndingScene/Ending3/bg2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{1070,671}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1070,671}</string>
+			</dict>
+			<key>EndingScene/Ending3/effect.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1273,3860},{509,201}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{509,201}</string>
+			</dict>
+			<key>EndingScene/Ending3/etc1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{671,1920},{1070,401}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1070,401}</string>
+			</dict>
+			<key>EndingScene/Ending3/frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>EndingScene/Ending3/half1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1043,2990},{419,601}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{419,601}</string>
+			</dict>
+			<key>EndingScene/Ending3/hero1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1072,2339},{283,510}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{283,510}</string>
+			</dict>
+			<key>EndingScene/Ending3/orc arm1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1355,2730},{161,212}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{161,212}</string>
+			</dict>
+			<key>EndingScene/Ending3/orc arm2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{597,2990},{446,985}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{446,985}</string>
+			</dict>
+			<key>EndingScene/Ending3/orc face.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1462,2942},{299,281}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{299,281}</string>
+			</dict>
+			<key>EndingScene/Ending3/orc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1072,1920},{419,400}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{419,400}</string>
+			</dict>
+			<key>EndingScene/Ending3/sword1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1355,2339},{283,391}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{283,391}</string>
+			</dict>
+			<key>EndingScene/Ending3/sword2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1043,3591},{269,612}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{269,612}</string>
+			</dict>
+			<key>EndingScene/Ending1/SkipButton.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{597,3975},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+			<key>EndingScene/Ending1/SkipButtonClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{935,3975},{338,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{338,116}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Ending.png</string>
+			<key>realTextureFileName</key>
+			<string>Ending.png</string>
+			<key>size</key>
+			<string>{1782,4091}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1782</integer>
+			<key>height</key>
+			<integer>4091</integer>
+		</dict>
+	</dict>
+</plist>

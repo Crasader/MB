@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Pause/ball.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3156},{284,378}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{284,378}</string>
+			</dict>
+			<key>Pause/bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>Pause/bomb.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3534},{279,378}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{279,378}</string>
+			</dict>
+			<key>Pause/buddy.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{279,3534},{225,268}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{225,268}</string>
+			</dict>
+			<key>Pause/dead.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3912},{862,83}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{862,83}</string>
+			</dict>
+			<key>Pause/home.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{504,3490},{266,81}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{266,81}</string>
+			</dict>
+			<key>Pause/homeClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{572,3756},{266,81}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{266,81}</string>
+			</dict>
+			<key>Pause/inven.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{858,486}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{858,486}</string>
+			</dict>
+			<key>Pause/pause.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3995},{380,83}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{380,83}</string>
+			</dict>
+			<key>Pause/resume.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{279,3802},{293,80}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{294,80}</string>
+			</dict>
+			<key>Pause/resumeClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{284,3410},{293,80}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{294,80}</string>
+			</dict>
+			<key>Pause/save.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{380,3995},{303,81}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{304,81}</string>
+			</dict>
+			<key>Pause/saveClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{683,3995},{303,81}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{304,81}</string>
+			</dict>
+			<key>Pause/weapon.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2778},{292,378}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{292,378}</string>
+			</dict>
+			<key>Pause/you.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{284,3156},{225,254}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{225,254}</string>
+			</dict>
+			<key>Pause/frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{292,2778},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Pause.png</string>
+			<key>realTextureFileName</key>
+			<string>Pause.png</string>
+			<key>size</key>
+			<string>{1080,4078}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1080</integer>
+			<key>height</key>
+			<integer>4078</integer>
+		</dict>
+	</dict>
+</plist>

@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Effect/Lightning/skill1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{779,253},{246,143}}</string>
+				<key>offset</key>
+				<string>{0,-29}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill10.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1011,0},{1,1}}</string>
+				<key>offset</key>
+				<string>{161,-115}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{286,219},{250,204}}</string>
+				<key>offset</key>
+				<string>{-2,1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{536,219},{243,194}}</string>
+				<key>offset</key>
+				<string>{-6,6}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{286,0},{253,219}}</string>
+				<key>offset</key>
+				<string>{-1,6}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{539,0},{253,219}}</string>
+				<key>offset</key>
+				<string>{-1,6}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,238},{151,211}}</string>
+				<key>offset</key>
+				<string>{-1,10}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{792,0},{253,219}}</string>
+				<key>offset</key>
+				<string>{-1,6}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,389},{151,211}}</string>
+				<key>offset</key>
+				<string>{-1,10}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/skill9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{922,253},{95,211}}</string>
+				<key>offset</key>
+				<string>{-2,10}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{324,231}</string>
+			</dict>
+			<key>Effect/Lightning/t1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1003,464},{19,21}}</string>
+				<key>offset</key>
+				<string>{-4,5}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+			<key>Effect/Lightning/t2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{922,464},{78,81}}</string>
+				<key>offset</key>
+				<string>{-1,7}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+			<key>Effect/Lightning/t3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{536,413},{196,163}}</string>
+				<key>offset</key>
+				<string>{5,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+			<key>Effect/Lightning/t4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{286,238}}</string>
+				<key>offset</key>
+				<string>{-2,5}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+			<key>Effect/Lightning/t5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{732,499},{196,163}}</string>
+				<key>offset</key>
+				<string>{5,3}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+			<key>Effect/Lightning/t6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{895,542},{78,81}}</string>
+				<key>offset</key>
+				<string>{-1,7}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+			<key>Effect/Lightning/t7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1003,483},{19,21}}</string>
+				<key>offset</key>
+				<string>{-4,5}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{300,250}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Lightning.png</string>
+			<key>realTextureFileName</key>
+			<string>Lightning.png</string>
+			<key>size</key>
+			<string>{1024,695}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>695</integer>
+		</dict>
+	</dict>
+</plist>

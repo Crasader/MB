@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Monster/Dragon/DragonBody.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1311,0},{619,671}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{619,671}</string>
+			</dict>
+			<key>Monster/Dragon/DragonClaw.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1720},{312,252}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{312,252}</string>
+			</dict>
+			<key>Monster/Dragon/DragonFace.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1311,1519},{366,335}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{366,335}</string>
+			</dict>
+			<key>Monster/Dragon/DragonMouse1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{252,1978},{187,67}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{187,67}</string>
+			</dict>
+			<key>Monster/Dragon/DragonMouse2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{252,1720},{258,161}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{258,161}</string>
+			</dict>
+			<key>Monster/Dragon/DragonWing1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1311,619},{684,503}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{684,503}</string>
+			</dict>
+			<key>Monster/Dragon/DragonWing2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1311,1122},{397,489}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{397,489}</string>
+			</dict>
+			<key>Monster/Dragon/DragonDeadHead.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1646,1519},{366,335}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{366,335}</string>
+			</dict>
+			<key>Monster/Dragon/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2032},{1,1}}</string>
+				<key>offset</key>
+				<string>{341,-366}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{684,734}</string>
+			</dict>
+			<key>Monster/Dragon/DragonBreath1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{403,1317}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{403,1317}</string>
+			</dict>
+			<key>Monster/Dragon/DragonBreath2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1317},{403,1311}}</string>
+				<key>offset</key>
+				<string>{0,-3}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{403,1317}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Dragon.png</string>
+			<key>realTextureFileName</key>
+			<string>Dragon.png</string>
+			<key>size</key>
+			<string>{2012,2045}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>2012</integer>
+			<key>height</key>
+			<integer>2045</integer>
+		</dict>
+	</dict>
+</plist>

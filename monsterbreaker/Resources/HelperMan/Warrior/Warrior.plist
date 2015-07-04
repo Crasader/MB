@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>HelperMan/Warrior/armor.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,330},{134,110}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{134,110}</string>
+			</dict>
+			<key>HelperMan/Warrior/body.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,185},{145,116}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{145,116}</string>
+			</dict>
+			<key>HelperMan/Warrior/cape.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,464},{134,103}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{134,103}</string>
+			</dict>
+			<key>HelperMan/Warrior/hat.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,598},{113,118}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{113,118}</string>
+			</dict>
+			<key>HelperMan/Warrior/head.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{110,330},{78,90}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{78,90}</string>
+			</dict>
+			<key>HelperMan/Warrior/sholder.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{103,464},{171,69}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{171,69}</string>
+			</dict>
+			<key>HelperMan/Warrior/Sword.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{135,185}}</string>
+				<key>offset</key>
+				<string>{0,1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{135,186}</string>
+			</dict>
+			<key>HelperMan/Warrior/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{103,533},{1,1}}</string>
+				<key>offset</key>
+				<string>{149,-149}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Warrior.png</string>
+			<key>realTextureFileName</key>
+			<string>Warrior.png</string>
+			<key>size</key>
+			<string>{274,716}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>274</integer>
+			<key>height</key>
+			<integer>716</integer>
+		</dict>
+	</dict>
+</plist>

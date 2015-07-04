@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>About/1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{992,1920},{484,387}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{484,387}</string>
+			</dict>
+			<key>About/2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{853,3420},{493,388}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{493,389}</string>
+			</dict>
+			<key>About/3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{428,3420},{484,425}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{488,431}</string>
+			</dict>
+			<key>About/4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3420},{495,428}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{495,428}</string>
+			</dict>
+			<key>About/5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{992,2897},{486,376}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{486,376}</string>
+			</dict>
+			<key>About/6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{992,2404},{493,378}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{493,378}</string>
+			</dict>
+			<key>About/About.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{980,3913},{361,89}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{361,89}</string>
+			</dict>
+			<key>About/bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{1080,1920}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{1080,1920}</string>
+			</dict>
+			<key>About/c1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3915},{980,95}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{980,95}</string>
+			</dict>
+			<key>About/credit.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{460,4010},{617,51}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{617,51}</string>
+			</dict>
+			<key>About/Ending.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,4010},{460,70}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{460,70}</string>
+			</dict>
+			<key>About/frame.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1920},{992,1500}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{992,1500}</string>
+			</dict>
+			<key>About/prolog.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1077,4002},{206,63}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{206,63}</string>
+			</dict>
+			<key>About/lock.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1241,3383},{330,279}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{330,279}</string>
+			</dict>
+			<key>About/BackBtn.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1241,3813},{100,98}}</string>
+				<key>offset</key>
+				<string>{0,1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>About/BackBtnClicked.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1241,3713},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>About/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,4080},{1,1}}</string>
+				<key>offset</key>
+				<string>{74,-74}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>About.png</string>
+			<key>realTextureFileName</key>
+			<string>About.png</string>
+			<key>size</key>
+			<string>{1520,4081}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1520</integer>
+			<key>height</key>
+			<integer>4081</integer>
+		</dict>
+	</dict>
+</plist>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>SecondBG/bgBomb.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1977},{800,1114}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{800,1116}</string>
+			</dict>
+			<key>SecondBG/bgCoin.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1010},{967,966}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{967,966}</string>
+			</dict>
+			<key>SecondBG/bgHeart.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{940,0},{965,947}}</string>
+				<key>offset</key>
+				<string>{-6,9}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{1000,984}</string>
+			</dict>
+			<key>SecondBG/bgKey.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{940,1010}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{940,1010}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>SecondBG.png</string>
+			<key>realTextureFileName</key>
+			<string>SecondBG.png</string>
+			<key>size</key>
+			<string>{1887,3091}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1887</integer>
+			<key>height</key>
+			<integer>3091</integer>
+		</dict>
+	</dict>
+</plist>

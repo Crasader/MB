@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Weapon/Staff/NormalStaff/NormalStaff.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{102,127}}</string>
+				<key>offset</key>
+				<string>{9,19}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{135,185}</string>
+			</dict>
+			<key>Weapon/Staff/NormalStaff/skill1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,127},{70,141}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{70,141}</string>
+			</dict>
+			<key>Weapon/Staff/NormalStaff/skill2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,268},{47,119}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{47,119}</string>
+			</dict>
+			<key>Weapon/Staff/NormalStaff/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,387},{1,1}}</string>
+				<key>offset</key>
+				<string>{74,-74}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>NormalStaff.png</string>
+			<key>realTextureFileName</key>
+			<string>NormalStaff.png</string>
+			<key>size</key>
+			<string>{102,388}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>102</integer>
+			<key>height</key>
+			<integer>388</integer>
+		</dict>
+	</dict>
+</plist>

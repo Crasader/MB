@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>HelperMan/Archer/body.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,106},{114,123}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{114,123}</string>
+			</dict>
+			<key>HelperMan/Archer/bow.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{291,0},{158,85}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{158,85}</string>
+			</dict>
+			<key>HelperMan/Archer/feather.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{382,85},{54,47}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{54,47}</string>
+			</dict>
+			<key>HelperMan/Archer/hat.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{156,106}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{156,106}</string>
+			</dict>
+			<key>HelperMan/Archer/head.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{291,85},{91,83}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{91,83}</string>
+			</dict>
+			<key>HelperMan/Archer/hood.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{449,0},{120,89}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{120,89}</string>
+			</dict>
+			<key>HelperMan/Archer/quivers.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{156,0},{118,135}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{118,135}</string>
+			</dict>
+			<key>HelperMan/Archer/alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{123,106},{1,1}}</string>
+				<key>offset</key>
+				<string>{149,-149}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{300,300}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Archer.png</string>
+			<key>realTextureFileName</key>
+			<string>Archer.png</string>
+			<key>size</key>
+			<string>{569,220}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>569</integer>
+			<key>height</key>
+			<integer>220</integer>
+		</dict>
+	</dict>
+</plist>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Archer.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0,0},{83,147}}</string>
+			<key>offset</key>
+			<string>{-4,-3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceSize</key>
+			<string>{108,154}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>realTextureFileName</key>
+		<string>Archer.png</string>
+		<key>size</key>
+		<string>{83,147}</string>
+		<key>textureFileName</key>
+		<string>Archer.png</string>
+	</dict>
+	<key>texture</key>
+	<dict>
+		<key>height</key>
+		<integer>147</integer>
+		<key>width</key>
+		<integer>83</integer>
+	</dict>
+</dict>
+</plist>

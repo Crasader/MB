@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AniName</key>
+	<string>Magician</string>
+	<key>AttackPoint</key>
+	<integer>2</integer>
+	<key>BallCount</key>
+	<integer>1</integer>
+	<key>BallCurrentCount</key>
+	<integer>0</integer>
+	<key>BallName</key>
+	<string>NormalBall</string>
+	<key>BallSize</key>
+	<real>1</real>
+	<key>BallVelocity</key>
+	<real>700</real>
+	<key>BombAttackPoint</key>
+	<integer>6</integer>
+	<key>BombCount</key>
+	<integer>1</integer>
+	<key>BombCountTime</key>
+	<real>3</real>
+	<key>BombName</key>
+	<string>NormalBomb</string>
+	<key>BombRange</key>
+	<real>2</real>
+	<key>BombSetCountTime</key>
+	<real>1</real>
+	<key>CurrentHp</key>
+	<integer>4</integer>
+	<key>CurrentSp</key>
+	<integer>4</integer>
+	<key>KeyCount</key>
+	<integer>0</integer>
+	<key>MaxHp</key>
+	<integer>4</integer>
+	<key>MaxSp</key>
+	<integer>4</integer>
+	<key>MoneyCount</key>
+	<integer>0</integer>
+	<key>PaddleSize</key>
+	<real>0.5</real>
+	<key>Skill</key>
+	<integer>2</integer>
+	<key>SkillCurrentPoint</key>
+	<integer>3</integer>
+	<key>SkillMaxPoint</key>
+	<integer>3</integer>
+	<key>Team</key>
+	<integer>1</integer>
+	<key>WeaponName</key>
+	<string>NormalStaff</string>
+</dict>
+</plist>

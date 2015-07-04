@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Torch/torch1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,313},{16,48}}</string>
+				<key>offset</key>
+				<string>{0,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,361},{16,48}}</string>
+				<key>offset</key>
+				<string>{0,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{16,54}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,108},{16,52}}</string>
+				<key>offset</key>
+				<string>{0,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,160},{16,52}}</string>
+				<key>offset</key>
+				<string>{0,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,409},{16,48}}</string>
+				<key>offset</key>
+				<string>{0,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,212},{16,52}}</string>
+				<key>offset</key>
+				<string>{0,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,54},{16,54}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+			<key>Torch/torch9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,264},{16,49}}</string>
+				<key>offset</key>
+				<string>{0,-3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{32,64}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Torch.png</string>
+			<key>realTextureFileName</key>
+			<string>Torch.png</string>
+			<key>size</key>
+			<string>{16,457}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>16</integer>
+			<key>height</key>
+			<integer>457</integer>
+		</dict>
+	</dict>
+</plist>

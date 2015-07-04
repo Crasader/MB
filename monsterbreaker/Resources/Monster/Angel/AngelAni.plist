@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Die</key>
+	<dict>
+		<key>AniDelay</key>
+		<real>0.25</real>
+		<key>AniFormat</key>
+		<string>%s%s%d.png</string>
+		<key>Frame</key>
+		<integer>4</integer>
+		<key>RepeatCount</key>
+		<integer>1</integer>
+		<key>RepeatForever</key>
+		<false/>
+		<key>Sound</key>
+		<string>Sounds/Bat/Die.mp3</string>
+	</dict>
+	<key>Stay</key>
+	<dict>
+		<key>AniDelay</key>
+		<real>0.14999999999999999</real>
+		<key>AniFormat</key>
+		<string>%s%s%d.png</string>
+		<key>Frame</key>
+		<integer>7</integer>
+		<key>RepeatCount</key>
+		<integer>30</integer>
+		<key>RepeatForever</key>
+		<true/>
+		<key>Sound</key>
+		<string>Sounds/Bat/Move.mp3</string>
+	</dict>
+</dict>
+</plist>
