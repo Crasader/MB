@@ -101,10 +101,6 @@ void DataManager::SaveData()
 
 void DataManager::LoadData()
 {
-	CCLOG("@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-	CCLOG("x:%d y:%d", x, y);
-	CCLOG("%s", mapManager->map[x][y].data2["itemCnt"]);
-	CCLOG("@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 	int itemSize = std::atoi(mapManager->map[x][y].data2["itemCnt"].c_str());
 	for (int i = 1; i <= itemSize; i++)
 	{

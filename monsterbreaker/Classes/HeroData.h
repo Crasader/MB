@@ -24,10 +24,6 @@ protected:
 	CC_SYNTHESIZE(std::string, _name, Name);
 	CC_SYNTHESIZE(std::string, _type, Type);
 
-	//std::vector<int> state;
-	//std::vector<int> strongState;
-	//std::vector<int> weakState;
-
 	// Character Data
 	CC_SYNTHESIZE(int, _ballCount, BallCount);
 	CC_SYNTHESIZE(int, _ballCurrentCount, BallCurrentCount);
@@ -70,10 +66,6 @@ public:
 	void freeInstance();
 	void Debug();
 	void InitWithFile(const char * type, const char * name);
-//	void InitHeroData(const Hero & hero);
-//	void CopyData(const char * type, const char * name);
-//	void SaveData() const;
-//	void LoadData();
 	void SaveData() const;
 	void LoadData();
 };

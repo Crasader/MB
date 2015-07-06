@@ -193,7 +193,6 @@ void AboutScene::MoveToScene(cocos2d::Ref * pSender, cocos2d::ui::Widget::TouchE
 			break;
 			case 8:
 			{
-				// credit scene
 				auto scene = CreditScene::createScene();
 				Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene));
 			}

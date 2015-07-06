@@ -87,7 +87,6 @@ void EffectManager::FireBallEffect(cocos2d::Vec2 startPosition, cocos2d::Vec2 ta
 	body->setContactTestBitmask(true);
 	spr->setPhysicsBody(body);
 
-	//spr->runAction(RotateBy::create(0.2f, 90));
 	spr->runAction(
 		Sequence::create(
 		MoveBy::create(0.3f, Vec2(0, spr->getContentSize().height)),
@@ -106,7 +105,6 @@ void EffectManager::ShiningEffect(cocos2d::Vec2 target)
 	auto spr = Sprite::create("Effect/Shining/Shining.png");
 	spr->setPosition(target);
 	layer->addChild(spr, ZINDEX_EFFECT_FRONT);
-//	spr->setScale(2);
 	spr->setOpacity(0);
 	spr->runAction(
 		Sequence::create(
@@ -124,7 +122,6 @@ void EffectManager::ThankyouEffect(cocos2d::Vec2 target)
 	auto spr = Sprite::create("Effect/Thankyou/Thankyou.png");
 	spr->setPosition(target);
 	layer->addChild(spr, ZINDEX_EFFECT_FRONT);
-	//	spr->setScale(2);
 	spr->setOpacity(0);
 	spr->runAction(
 		Sequence::create(
@@ -138,8 +135,6 @@ void EffectManager::ThankyouEffect(cocos2d::Vec2 target)
 	effects.pushBack(spr);
 }
 
-
-// TODO
 void EffectManager::ShowItemDes(int itemNumber)
 {
 	auto node = Node::create();
@@ -155,8 +150,6 @@ void EffectManager::ShowItemDes(int itemNumber)
 	// Item Animation 
 	auto frame = CSLoader::createNode("Item/ItemFrame.csb");
 	frame->setPosition(origin.x, origin.y);
-//	frame->setOpacity(0);	// invisible
-//	frame->setScale(0);
 	node->addChild(frame,0);
 
 	auto nameLabel = dynamic_cast<Text*>(frame->getChildByName("NameLabel"));
@@ -171,7 +164,6 @@ void EffectManager::ShowItemDes(int itemNumber)
 		DelayTime::create(3.0f),
 		MoveTo::create(0.5f, Vec2(visibleSize.width*1.5f, visibleSize.height*0.7f)),
 		DelayTime::create(0.5f),
-//		CallFunc::create(std::bind(&EffectManager::DestroyNode, this, node)),
 		NULL
 		));
 
@@ -199,18 +191,11 @@ void EffectManager::HitEffect(cocos2d::Vec2 target)
 		CallFunc::create(std::bind(&EffectManager::DestroyNode, this, node)),
 		NULL));
 }
-//void EffectManager::HpEffect(Monster * monster)
-//{
-//
-//}
-
 
 void EffectManager::DestroyNode(cocos2d::Node* node)
 {
 	node->stopAllActions();
-	//node->removeAllChildrenWithCleanup(true);
 	node->removeFromParentAndCleanup(true);
-//	layer->removeChild(node);
 }
 
 void EffectManager::LightningEffect(cocos2d::Vec2 target, int damage)

@@ -8,13 +8,6 @@ ArmorItem::ArmorItem(cocos2d::Layer * layer, Hero * hero, int armorID, bool isSh
 }
 void ArmorItem::InitArmorItemData()
 {
-	//auto dic = __Dictionary::createWithContentsOfFile("Skill/SkillData.plist");
-	//auto item = (cocos2d::__Dictionary *)dic->objectForKey(String::createWithFormat("%d", _skillID)->getCString());
-
-	//_cost = item->valueForKey("Cost")->intValue();
-	//maxPoint = item->valueForKey("MaxPoint")->intValue();
-	//if (_isShop) currentPoint = maxPoint;
-
 	node = CSLoader::createNode("Armor/Armor.csb");
 	this->addChild(node);
 	
@@ -34,7 +27,6 @@ void ArmorItem::InitArmorItemData()
 	};
 	Widget::ccWidgetClickCallback callBackArmorItem= callBackFunctorArmorItem();
 	btn->addClickEventListener(callBackArmorItem);
-	//btn->setEnabled(_isShop);
 
 	// armor data
 	auto cache = SpriteFrameCache::getInstance();
@@ -83,6 +75,7 @@ void ArmorItem::ClickArmorItem()
 		else
 		{
 			// beep sound
+			SoundManager::getInstance()->playMySoundLogic("X");
 		}
 	}
 	else

@@ -7,7 +7,6 @@
 #include "ui\CocosGUI.h"
 #include "Hero.h"
 #include "MonsterManager.h"
-//#include "EffectManager.h"
 
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
@@ -21,7 +20,6 @@ public:
 	const float kTimeUp = -9999.0f;
 	float kTimer;
 	float setTime;
-	//int _attackPoint;
 	HMRifleMan(cocos2d::Layer * layer, Hero * hero, bool cageIn);
 	~HMRifleMan();
 

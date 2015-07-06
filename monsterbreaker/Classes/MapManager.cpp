@@ -93,7 +93,6 @@ void MapManager::createBranch(bool first)
 			}			
 		}
 		map[_heroX][_heroY].cnt_sideroom = 2;
-//		_cntRoom = 3;
 	}
 	else
 	{
@@ -170,7 +169,6 @@ void MapManager::createBranch(bool first)
 					break;
 				}
 				map[x][y].type = myEnum::kRoomType::kRTStem;
-//				_cntRoom++;
 			}
 
 			branchRooms.pop_back();
@@ -242,34 +240,11 @@ void MapManager::init(const char * levelName)
 	_heroX = sp_x;
 	_heroY = sp_y;
 	initAllRoomdata();
-	//for (int i = 0; i < SIZE_X; i++)
-	//{
-	//	for (int j = 0; j < SIZE_Y; j++)
-	//	{
-	//		map[i][j].x = i;
-	//		map[i][j].y = j;
-	//		map[i][j].lock = false;
-	//		map[i][j].visible = false;
-	//		map[i][j].exp = false;
-	//		map[i][j].type = myEnum::kRoomType::kRTNone;
-	//		map[i][j].data.clear();
-	//		for (int k = 0; k < 4; k++)
-	//			map[i][j].dir[k] = false;
-	//		map[i][j].data.clear();
-	//		map[i][j].data2.clear();
-	//		
-	//	}
-	//}
 	// init start room data
 	map[_heroX][_heroY].exp = true;
 	map[_heroX][_heroY].visible = true;
 	map[_heroX][_heroY].type = myEnum::kRoomType::kRTStart;
 	branchRooms.clear();
-
-//	_cntRoom = 0;
-//	_clearCntRoom = 1;
-
-	//create();
 }
 
 void MapManager::readLevelData()
@@ -345,7 +320,7 @@ void MapManager::setRoomType()
 		index++;
 	}
 
-	debug("before init");
+	//debug("before init");
 	// secret
 	for (int i = 0; i < SIZE_X; i++)
 	{
@@ -359,7 +334,7 @@ void MapManager::setRoomType()
 		}
 	}
 
-	debug("after init");
+	//debug("after init");
 
 	Heap<Room> heap;
 	heap.setState(Heap<Room>::bigHeap);
@@ -381,7 +356,6 @@ void MapManager::setRoomType()
 		int y = rd.y;
 		map[x][y].type = myEnum::kRoomType::kRTSecret;
 		map[x][y].lock = true;
-//		_cntRoom++;
 	}
 
 	heap.clear();
@@ -463,7 +437,6 @@ void MapManager::DrawMap(cocos2d::Layer *layer)
 							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
 						else
 							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-						//tempType = Sprite::createWithSpriteFrameName("Map/Shop.png");
 					}
 					if (_allViewType || map[i][j].visible)
 					{
@@ -477,7 +450,6 @@ void MapManager::DrawMap(cocos2d::Layer *layer)
 							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
 						else
 							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-						//tempType = Sprite::createWithSpriteFrameName("Map/Help.png");
 					}
 					if (_allViewType || map[i][j].visible)
 					{
@@ -491,7 +463,6 @@ void MapManager::DrawMap(cocos2d::Layer *layer)
 							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
 						else
 							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-						//tempType = Sprite::createWithSpriteFrameName("Map/Boss.png");
 					}
 					if (_allViewType || map[i][j].visible)
 					{
@@ -505,7 +476,6 @@ void MapManager::DrawMap(cocos2d::Layer *layer)
 							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
 						else
 							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-						//tempType = Sprite::createWithSpriteFrameName("Map/Treasure.png");
 					}
 					if (_allViewType || map[i][j].visible)
 					{
@@ -552,26 +522,7 @@ void MapManager::ReDrawMap()
 	layer->removeChild(spriteBatch);
 	DrawMap(layer);
 }
-//
-//void MapManager::Save()
-//{
-//	auto def = UserDefault::sharedUserDefault();
-//	def->setIntegerForKey("m_heroX", _heroX);
-//	def->setIntegerForKey("m_heroY", _heroY);
-//
-//	// current room data save
-//	SaveRoomData(_heroX, _heroY);
-//	if (IsE())
-//		SaveRoomData(_heroX, _heroY + 1);
-//	if (IsW())
-//		SaveRoomData(_heroX, _heroY - 1);
-//	if (IsS())
-//		SaveRoomData(_heroX + 1, _heroY);
-//	if (IsN())
-//		SaveRoomData(_heroX - 1, _heroY);
-//
-//	def->flush();
-//}
+
 void MapManager::SaveRoomData(int x, int y)
 {
 	GetRoomData(x, y).SaveRoomData();
@@ -619,10 +570,7 @@ void MapManager::LoadAll()
 void MapManager::LoadRoomData(int x, int y)
 {
 	map[x][y].LoadRoomData();
-	//GetRoomData(x, y).LoadRoomData();
 }
-
-
 
 void MapManager::CheckSideRoom(bool secretVisible, bool secretLockOpen)
 {

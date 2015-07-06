@@ -38,7 +38,6 @@ void ShooterSlime::MoodAttack(float dt)
 	if (timer == kTimerUp)
 	{
 		timer = AttackTime() + AttackTime() * CCRANDOM_0_1();
-		//		sprite->stopAllActions();
 		Animate("Attack", myEnum::kAction::kActionAttack);
 		// fire a ball
 		auto sp = this->getPosition();

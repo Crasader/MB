@@ -1,5 +1,4 @@
 #include"Character.h"
-//#include "Ball.h"
 #include "BallSprite.h"
 
 #include "Definitions.h"
@@ -32,7 +31,7 @@ void Character::Fire(cocos2d::Layer * layer, cocos2d::Vec2 startPoint, cocos2d::
 		{
 			_ballCurrentCount++;
 			auto ball = BallSprite::create(*this);
-			//ball->setPosition(visibleSize.width / 3, visibleSize.height / 3);
+
 			ball->getPhysicsBody()->setVelocity(Vec2(200, 200));
 			ball->setUserData(this);
 

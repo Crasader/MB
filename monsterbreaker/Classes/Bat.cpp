@@ -37,20 +37,14 @@ Bat* Bat::create()
 
 void Bat::InitSprite()
 {
-	//	MyBodyParser::getInstance()->parseJsonFile(String::createWithFormat("%s/%s/%s.json", _type.c_str(), _name.c_str(), _name.c_str())->getCString());
-	//	auto body = MyBodyParser::getInstance()->bodyFormJson(this, String::createWithFormat("%s.png", _name.c_str())->getCString(), PhysicsMaterial(100, 1, 1));
-	//	if (body != nullptr)
-	//	{
 	auto body = PhysicsBody::createCircle(this->getContentSize().width / 2, PhysicsMaterial(100, 1, 1));
 	body->setDynamic(true);
 	body->setRotationEnable(false);
 	body->setCollisionBitmask(MONSTER_BODY_COLLISION_BITMASK);
 	body->setContactTestBitmask(true);
 	this->setPhysicsBody(body);
-	//	}
+
 	this->setUserData(this);
-	//	this->Animate("Stay", myEnum::kAction::kActionStay);
-	//	MyBodyParser::getInstance()->freeInstance();
 
 	hpBgSpr = Sprite::create("Monster/hpBg.png");
 	this->addChild(hpBgSpr, ZINDEX_MONSTER_HP);
@@ -89,8 +83,6 @@ void Bat::ChooseMood()
 		}
 		else
 		{
-			//SetMood(myEnum::kMoods::kMoodAttack);
-
 			float r = CCRANDOM_0_1();
 			if (r < 0.3f)
 			{
@@ -122,7 +114,6 @@ void Bat::update(float dt)
 		case myEnum::kMoods::kMoodMove: MoodMove(dt); break;
 		case myEnum::kMoods::kMoodAttack: MoodAttack(dt); break;
 		case myEnum::kMoods::kMoodSleep: MoodSleep(dt); break;
-			//		case myEnum::kMoods::kMoodDamaged: MoodDamaged(dt); break;
 		}
 	}
 }
@@ -186,7 +177,6 @@ void Bat::MoodAttack(float dt)
 		// fire a ball
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
-		//auto destPoint = Vec2(0, Director::getInstance()->getVisibleSize().width * CCRANDOM_0_1());
 		auto dp1 = Vec2(sp.x - 1, sp.y - 1);
 		auto dp2 = Vec2(sp.x, sp.y - 1);
 		auto dp3 = Vec2(sp.x + 1, sp.y - 1);
@@ -203,7 +193,6 @@ void Bat::MoodAttack(float dt)
 
 void Bat::StartAnimation()
 {
-	//this->setColor(cocos2d::Color3B(255, 0, 0));
 	this->Animate("Sleep", myEnum::kAction::kActionSleep);
 }
 

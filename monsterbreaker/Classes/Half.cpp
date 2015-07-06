@@ -42,7 +42,7 @@ void Half::InitSprite()
 	body->setCollisionBitmask(MONSTER_BODY_COLLISION_BITMASK);
 	body->setContactTestBitmask(true);
 	this->setPhysicsBody(body);
-	//	}
+
 	this->setUserData(this);
 
 	hpBgSpr = Sprite::create("Monster/hpBg.png");
@@ -57,7 +57,6 @@ void Half::InitSprite()
 
 	sword = Sword::create(layer);
 	sword->setPosition(this->getContentSize().width * 0.33f, this->getContentSize().height * 0.33f);
-//	sword->setPosition(this->getContentSize().width * 0.5f, 0);
 	this->addChild(sword);
 
 	fury = CSLoader::createNode("Effect/Rage/Rage.csb");
@@ -67,9 +66,6 @@ void Half::InitSprite()
 
 	auto hero = (Hero*)layer->getChildByName("Hero");
 	_ballName = hero->getBallName();
-//	_ballSize = hero->getBallSize();
-//	_ballVelocity = hero->getBallVelocity();
-
 }
 
 
@@ -77,12 +73,6 @@ void Half::Damaged(int i)
 {
 	this->setOpacity(255);
 	Monster::Damaged(i);
-//	if (IsAlive())
-//	{
-//		//if (!usingSkill)
-//			//SetMood(myEnum::kMoods::kMoodHide);
-//	}
-
 }
 
 void Half::ChooseMood()
@@ -112,8 +102,6 @@ void Half::ChooseMood()
 				SetMood(myEnum::kMoods::kMoodAttack2);
 			else 
 				SetMood(myEnum::kMoods::kMoodHide);
-//			else
-//				SetMood(myEnum::kMoods::kMoodSkill);
 		}
 	}
 
@@ -152,7 +140,6 @@ void Half::update(float dt)
 void Half::Die()
 {
 	GameObject::Die();
-//	this->runAction(FadeOut::create(1.0f));
 	sword->FadeOut(1.0f);
 	fury->runAction(FadeOut::create(1.0f));
 
@@ -183,12 +170,6 @@ void Half::MoodHide(float dt)
 		int x = rand() % 6 + 2; // 2 to 7
 		int y = rand() % 6 + 2; // 2 to 7
 		auto dp = Vec2(sp.x + gapX * x, sp.y - gapY * y);
-
-		//auto visibleSize = Director::getInstance()->getVisibleSize();
-		//auto sp = Vec2(visibleSize.width / 10, visibleSize.height / 25 * 10);
-		//auto x = visibleSize.width / 10 * 8;
-		//auto y = visibleSize.height / 25 * 9;
-		//auto dp = Vec2(sp.x + x*CCRANDOM_0_1(), sp.y + y*CCRANDOM_0_1());
 
 		auto seq = Sequence::create(CallFunc::create(std::bind(&Half::fadeOut, this))
 			, DelayTime::create(1.0f)
@@ -259,7 +240,6 @@ void Half::MoodAttack(float dt)
 		{
 			// swing
 			sword->Swing();
-//			SoundManager::getInstance()->playMySoundLogic("Swing");
 
 			// fire a ball
 			auto sp = this->getPosition();
@@ -300,14 +280,9 @@ void Half::MoodAttack2(float dt)
 				, CallFunc::create(std::bind(&Half::SeqFire, this, sp, dp2))
 				, DelayTime::create(1.0f)
 				, CallFunc::create(std::bind(&Half::SeqFire, this, sp, dp4))
-//				, DelayTime::create(1.0f)
-//				, CallFunc::create(std::bind(&Half::SeqFire, this, sp, dp1))
-//				, CallFunc::create(std::bind(&Half::SeqFire, this, sp, dp5))
 				, NULL);
 			this->runAction(seq);
 		}
-
-		//		Fire(layer, sp, dp1);
 	}
 	else if (timer <= 0.0f)
 	{
@@ -323,9 +298,7 @@ void Half::MoodSkill(float dt)
 		usingSkill = true;
 		// swing
 		sword->UseSkill();
-//		SoundManager::getInstance()->playMySoundLogic("Skill");
 
-		// Todo
 		auto seq = Sequence::create(
 			DelayTime::create(1.0f),
 			CallFunc::create(std::bind(&Half::MakeShadow, this)),
@@ -353,10 +326,6 @@ void Half::MakeShadow()
 	this->shadows.pushBack(h1);
 	h1->Draw(layer);
 
-	//h1->setOpacity(0);
-	
-	//h1->fadeIn();
-	//h1->runAction(FadeIn::create(0.5f));
 	h1->StartAnimation();
 	h1->scheduleUpdate();
 }

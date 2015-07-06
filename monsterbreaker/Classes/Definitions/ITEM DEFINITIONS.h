@@ -100,11 +100,5 @@
 #define UNLOCK_HV 1009
 #define UNLOCK_HC 1010
 #define UNLOCK_MM 1011
-//#define UNLOCK_CREDIT 1012
-
-
-// merchant item :: Magician Skill
-//#define ITEM_MERCHANT_
-
 
 #endif // __ITEM_DEFINITIONS_H__

@@ -9,7 +9,6 @@
 class Warrior : public Hero
 {
 private:
-	//void Init();
 public:
 
 	Warrior();

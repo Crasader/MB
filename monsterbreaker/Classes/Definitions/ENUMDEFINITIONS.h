@@ -20,13 +20,11 @@ namespace myEnum
 
 	enum kAction
 	{
-//		kActionMove, kActionStay, kActionAttack, kActionDie, kActionDamage, kActionSkill
 		kActionMove, kActionStay, kActionAttack, kActionDie, kActionSkill, kActionSleep, kActionAwake
 	};
 
 	enum kMoods
 	{
-//		kMoodStay, kMoodMove, kMoodAttack, kMoodDie, kMoodSkill, kMoodDamaged
 		kMoodStay, kMoodMove, kMoodAttack, kMoodAttack2, kMoodDie, kMoodSkill, kMoodSleep, kMoodHide, kMoodCharge1, kMoodCharge2
 	};
 
@@ -38,11 +36,6 @@ namespace myEnum
 	{
 		kRTNone, kRTStart, kRTMonster, kRTShop, kRTHelp, kRTBoss, kRTTreasure, kRTSecret, kRTBranch, kRTStem
 	};
-	//enum kMenu
-	//{
-	//	kMenuPlay, kMenuAbout, kMenuEnding, kMenuSetting, kMenuBack, kMenuStart, kMenuWarrior, kMenuMagician
-	//};
-
 	enum kEnding
 	{
 		kEndingNone = 0, kEndingMurderer, kEndingDevil, kEndingSavior, kEndingAngel, kEndingInfinity, kEndingForgiver

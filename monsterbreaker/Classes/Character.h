@@ -4,8 +4,6 @@
 
 #include "cocos2d.h"
 #include "GameObject.h"
-//#include "Ball.h"
-
 class Character : public GameObject
 {
 private:

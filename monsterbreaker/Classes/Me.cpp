@@ -107,7 +107,6 @@ void Me::update(float dt)
 void Me::Die()
 {
 	GameObject::Die();
-//	fury->runAction(FadeOut::create(1.0f));
 
 }
 
@@ -133,21 +132,6 @@ void Me::MoodMove(float dt)
 	{
 		timer = MoveTime();
 		BaseMoveMent2(dt);
-//		dir = rand() % 2;
-//		cocos2d::MoveBy * move;
-//		switch (dir)
-//		{
-//		case myEnum::kDir::kDirEast:
-//			move = MoveBy::create(1.05f, Vec2(this->getContentSize().width, 0));
-////			setFlippedX(true);
-//			break;
-//		case myEnum::kDir::kDirWest:
-//			move = MoveBy::create(1.05f, Vec2(-this->getContentSize().width, 0));
-////			setFlippedX(false);
-//			break;
-//		}
-////		auto seq = Sequence::create(move,  NULL);
-//		this->runAction(move);
 	}
 	else if (timer <= 0.0f)
 	{
@@ -167,27 +151,11 @@ void Me::MoodAttack2(float dt)
 		ChooseMood();
 	}
 }
-//void Me::MoodStay(float dt)
-//{
-//	if (timer == kTimerUp)
-//	{
-//		timer = StayTime();
-//		//		sprite->stopAllActions();
-//		Animate("Stay", myEnum::kAction::kActionStay);
-//	}
-//
-//	else if (timer <= 0.0f)
-//	{
-//		ChooseMood();
-//	}
-//}
 void Me::MoodSkill(float dt)
 {
 	if (timer == kTimerUp)
 	{
 		timer = skillTime;
-		// Todo
-		//lightning->setVisible(true);
 
 		weapon->Skill();
 
@@ -204,9 +172,6 @@ void Me::MoodSkill(float dt)
 }
 void Me::SkillUse()
 {
-//	auto visibleSize = Director::getInstance()->getVisibleSize();
-//	auto hero = layer->getChildByName("Hero");
-
 	auto spX = visibleSize.width * 0.1f;
 	auto gapX = visibleSize.width * 0.8f / 3;
 
@@ -221,16 +186,8 @@ void Me::SkillUse()
 	auto sp1 = Vec2(spX + r1 * gapX + gapX * 0.5f, hero->getPositionY());
 	auto sp2 = Vec2(spX + r2 * gapX + gapX * 0.5f, hero->getPositionY());
 
-//	if (isWarrior)
-//	{
-//		// bomb 
-//	}
-//	else
-//	{
-		// lightning
-		createLightning(sp1);
-		createLightning(sp2);
-//	}
+	createLightning(sp1);
+	createLightning(sp2);
 
 }
 
@@ -296,6 +253,4 @@ void Me::Draw(cocos2d::Layer * layer)
 {
 	this->layer = layer;
 	layer->addChild(this, ZINDEX_MONSTER_SPRITE, "Montser");
-	//layer->addChild(weapon, ZINDEX_HERO_WEAPON);
-	//layer->addChild(paddle, ZINDEX_HERO_PADDLE);
 }

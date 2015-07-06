@@ -1,7 +1,6 @@
 #include"Bomb.h"
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
-//#include "MyBodyParser.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -24,7 +23,6 @@ Bomb* Bomb::create(cocos2d::Layer * layer, Hero * hero)
 {
 	auto pNode = new Bomb(layer, hero);
 	pNode->autorelease();
-	//pNode->SetBombData(hero);
 	pNode->InitSprite();
 	return pNode;
 }
@@ -49,8 +47,6 @@ void Bomb::InitSprite()
 	{
 		btn = dynamic_cast<Button*>(bombNode->getChildByName("btn"));
 		btn->setUserData(this);
-		//btn->addTouchEventListener(CC_CALLBACK_2(Bomb::BombBomb, this));
-		//btn->addClickEventListener
 		struct callBackFunctorBomb
 		{
 			void operator() (Ref* sender) const

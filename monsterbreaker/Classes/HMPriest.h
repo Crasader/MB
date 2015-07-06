@@ -6,7 +6,6 @@
 #include "cocostudio\CocoStudio.h"
 #include "ui\CocosGUI.h"
 #include "Hero.h"
-//#include "EffectManager.h"
 
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
@@ -23,7 +22,6 @@ public:
 
 	static HMPriest* create(cocos2d::Layer * layer, Hero * hero, bool cageIn);
 
-//	virtual void update(float dt);
 	virtual void AIAfterBattle();
 
 };

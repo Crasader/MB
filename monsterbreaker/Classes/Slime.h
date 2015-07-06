@@ -14,9 +14,6 @@ public :
 	void Init();
 	static Slime* create();
 
-//	virtual void MoodStay(float dt);
-//	virtual void MoodMove(float dt, char * dir, int kAction);
-//	virtual void MoodAttack(float dt);
 };
 
 #endif // __SLIME_H__

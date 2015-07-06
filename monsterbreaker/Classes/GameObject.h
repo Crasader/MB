@@ -21,13 +21,9 @@ protected:
 	CC_SYNTHESIZE(std::string, _name, Name);
 	CC_SYNTHESIZE(std::string, _type, Type);
 
-	//std::vector<int> state;
-	//std::vector<int> strongState;
-	//std::vector<int> weakState;
 public:
 	GameObject();
 	~GameObject();
-//	static GameObject* create();
 
 	virtual void IncreaseMaxHp(int i);
 	virtual void DecreaseMaxHp(int i);

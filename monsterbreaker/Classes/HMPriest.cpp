@@ -22,10 +22,6 @@ HMPriest* HMPriest::create(cocos2d::Layer * layer, Hero * hero, bool cageIn)
 	return pNode;
 }
 
-//void HMPriest::update(float dt)
-//{
-//
-//}
 void HMPriest::AIAfterBattle()
 {
 	if (!hero->IsFullHp())
@@ -38,9 +34,5 @@ void HMPriest::AIAfterBattle()
 		SoundManager::getInstance()->playMySoundLogic("Skill");
 
 	}
-	//else
-	//{
-	//	// fail sound
-	//}
 }
 

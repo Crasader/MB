@@ -27,7 +27,6 @@ Warrior* Warrior::create()
 	if (pSprite->initWithSpriteFrameName(String::createWithFormat("%s.png", pSprite->getName().c_str())->getCString()))
 	{
 		pSprite->autorelease();
-//		pSprite->setWeaponName("DragonSlayer");
 		pSprite->InitSprite();
 		pSprite->SetWeapon(pSprite->getWeaponType().c_str(), pSprite->getWeaponName().c_str());
 
@@ -64,7 +63,6 @@ void Warrior::Damaged(int i)
 			//Animate
 			auto color = this->getColor();
 			auto sprite = Sprite::create();
-			////auto spawn = Spawn::create(TintTo::create(0.1, 255, 0, 0), Blink::create(0.1, 2));
 			this->runAction(
 				Sequence::create(
 				TintTo::create(0.1, 255, 0, 0), 
@@ -75,7 +73,6 @@ void Warrior::Damaged(int i)
 				NULL));
 
 			DecreaseCurrentSp(i);
-//			SoundManager::getInstance()->playMySoundLogic("HeroDamaged");
 		}
 	}
 }
@@ -96,6 +93,7 @@ void Warrior::SkillUse()
 		else
 		{
 			// fail sound
+			SoundManager::getInstance()->playMySoundLogic("X");
 		}
 	}
 }

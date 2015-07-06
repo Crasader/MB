@@ -168,14 +168,6 @@ bool EndingScene::init()
 	{
 		void operator() (Ref* sender) const
 		{
-			//auto def = UserDefault::sharedUserDefault();
-			//int temp = def->getIntegerForKey("u_ending");
-			//if (temp < ESendingNum)
-			//{
-			//	def->setIntegerForKey("u_ending", ESendingNum);
-			//	def->flush();
-			//}
-
 			auto obj = (EndingScene*)((Button*)(sender))->getUserData();
 			obj->saveDataLogic();
 
@@ -275,14 +267,12 @@ void EndingScene::animate1()
 			FadeIn::create(0.5f),
 			NULL
 			));
-//		CCLOG("%f", obj1->getContentSize().width);
 		obj1->setPosition(Vec2(visibleSize.width + obj1->getContentSize().width, obj1->getPositionY()));
 		obj1->setOpacity(255);
 		obj1->runAction(
 			Sequence::create(
 			DelayTime::create(1.0f),
 			MoveBy::create(0.5f, Vec2(-obj1->getContentSize().width, 0)),
-//			MoveTo::create(0.5f,Vec2(visibleSize.width * 0.95f, obj1->getPositionY())),
 			FadeIn::create(0.5f),
 			NULL
 			));
@@ -517,9 +507,7 @@ void EndingScene::animate2()
 		obj3->runAction(
 			Sequence::create(
 			DelayTime::create(0.5f),
-//			FadeIn::create(0.5f),
 			MoveBy::create(0.5f, Vec2(-obj3->getContentSize().width, 0)),
-//			MoveTo::create(0.5f, Vec2(visibleSize.width * 0.95f, obj3->getPositionY())),
 			NULL
 			));
 		// hero
@@ -779,7 +767,6 @@ void EndingScene::animate3()
 			NULL
 			));
 
-//		auto b = obj5->getChildByName("orc_body");
 		auto a1 = obj5->getChildByName("orc_arm1");
 		auto a2 = obj5->getChildByName("orc_arm2");
 		auto f = obj5->getChildByName("orc_face");
@@ -997,14 +984,6 @@ void EndingScene::animate4()
 }
 void EndingScene::moveMainMenu()
 {
-	//auto def = UserDefault::sharedUserDefault();
-	//int temp = def->getIntegerForKey("u_ending");
-	//if (temp < ESendingNum)
-	//{
-	//	def->setIntegerForKey("u_ending", ESendingNum);
-	//	def->flush();
-	//}
-
 	saveDataLogic();
 
 	auto scene = MainMenuScene::createScene();
@@ -1121,7 +1100,6 @@ void EndingScene::clickAnimate2()
 		obj4->setOpacity(255);
 		obj5->setOpacity(255);
 		obj6->setOpacity(255);
-//		obj3->runAction(MoveTo::create(0.01f, Vec2(visibleSize.width * 0.9f, obj3->getPositionY())));
 		obj3->setPosition(Vec2(visibleSize.width, obj3->getPositionY()));
 
 		state = 4;
@@ -1277,8 +1255,6 @@ void EndingScene::clickAnimate4()
 		obj5->setOpacity(255);
 		obj6->setOpacity(255);
 		obj7->setOpacity(255);
-//		obj5->runAction(RepeatForever::create(Sequence::create(RotateBy::create(1.5f, -15.0f), RotateBy::create(1.5f, 15.0f), NULL)));
-//		obj6->runAction(RepeatForever::create(Sequence::create(RotateBy::create(1.5f, -15.0f), RotateBy::create(1.5f, 15.0f), NULL)));
 		state = 4;
 		break;
 	case 2:
@@ -1327,19 +1303,15 @@ void EndingScene::saveDataLogic()
 			um->addUnlockData(UNLOCK_MC);
 		}else if (ESendingNum == 2)
 		{
-//			um->addUnlockData(UNLOCK);
 			um->addUnlockData(UNLOCK_ENDING_2);
 			um->addUnlockData(UNLOCK_HV);
 		}else if (ESendingNum == 3)
 		{
-//			um->addUnlockData(UNLOCK_BLACK_AND_WHITE);
 			um->addUnlockData(UNLOCK_ENDING_3);
 			um->addUnlockData(UNLOCK_HC);
 		}else if (ESendingNum == 4)
 		{
-//			um->addUnlockData(UNLOCK_TRUTH);
 			um->addUnlockData(UNLOCK_ENDING_4);
-//			um->addUnlockData(UNLOCK_MM);
 		}
 		else if (ESendingNum == 5)
 		{
@@ -1349,9 +1321,7 @@ void EndingScene::saveDataLogic()
 		}
 		else if (ESendingNum == 6)
 		{
-//			um->addUnlockData(UNLOCK_TRUTH);
 			um->addUnlockData(UNLOCK_ENDING_6);
-//			um->addUnlockData(UNLOCK_MM);
 		}
 
 		def->flush();

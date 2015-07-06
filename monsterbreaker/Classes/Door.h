@@ -23,10 +23,7 @@ private :
 
 	bool _isSecret;
 	bool _isOpen;
-
-//	Hero * hero;
-//	MapManager * mapManager;
-
+	
 public :
 	Door(const Room & rd, int kDir, const char * mapType);
 	static Door* create(const Room & rd, int kDir, const char * mapType);
@@ -40,11 +37,6 @@ public :
 
 	virtual void bombCrush();
 
-	//virtual void move(int x, int y, int roomType, int dir);
-	//virtual void setNextHeroLocationAndSave(int x, int y);
-	//virtual void moveScene(int roomType, int dir);
-
-//	virtual void onTouchDoor(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 };
 
 #endif // __SLIME_H__

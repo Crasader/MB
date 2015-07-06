@@ -36,7 +36,6 @@ bool SplashScene::init()
 	backgroundSprite->setPosition( Vec2( visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y  ) );
 	this->addChild( backgroundSprite );
 
-//	this->scheduleOnce( schedule_selector( SplashScene::GotoMainMenuScene ), 0 );
 	LoadData();
 	SoundManager::getInstance()->playMySoundLogic("Solid");
 	return true;

@@ -14,8 +14,6 @@ public :
 	void Init();
 	static TankerSlime * create();
 
-	//virtual void MoodAttack(float dt);
-
 };
 
 #endif // __TANKER_SLIME_H__

@@ -1,6 +1,7 @@
 ===================================================
 Update Log
 ===================================================
+06.July.2015	:: Clear unuseful documentation in my c++ files
 04.July.2015	:: BackUp MB(0.9.0)
 		:: Readme.txt Update
 03.July 2015	:: Test github.

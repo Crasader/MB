@@ -4,7 +4,6 @@ StatusManager::StatusManager()
 {
 	auto cache = SpriteFrameCache::sharedSpriteFrameCache();
 	cache->addSpriteFramesWithFile("Heart/Heart.plist", "Heart/Heart.png");
-	// load the status images
 }
 StatusManager::~StatusManager()
 {
@@ -228,14 +227,10 @@ void StatusManager::SetMaxSp(int maxSp)
 
 void StatusManager::update(float dt)
 {
-//	if (hero->IsDamaged())
-//	{
-		SetCurrentHp(hero->getCurrentHp());
-		SetMaxHp(hero->getMaxHp());
-		SetCurrentSp(hero->getCurrentSp());
-		SetMaxSp(hero->getMaxSp());
-//	}
-
+	SetCurrentHp(hero->getCurrentHp());
+	SetMaxHp(hero->getMaxHp());
+	SetCurrentSp(hero->getCurrentSp());
+	SetMaxSp(hero->getMaxSp());
 	SetKeyCount(hero->getKeyCount());
 	SetBombCount(hero->getBombCount());
 	SetMoneyCount(hero->getMoneyCount());

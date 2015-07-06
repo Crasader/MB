@@ -29,7 +29,6 @@ private:
 	cocos2d::Sprite* moneySprite;
 	cocos2d::LabelAtlas* moneyCountLabel;
 
-//	cocos2d::Sprite * skill;
 	void InitHp();
 	void InitSp(const char * hName);
 public:

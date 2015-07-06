@@ -151,7 +151,6 @@ bool CharacterSelectScene::init()
 				heroData->InitWithFile("Hero", "Warrior");
 			else
 				heroData->InitWithFile("Hero", "Magician");
-			//			hero->SaveData();
 
 			SoundManager::getInstance()->playMySoundLogic("Select");
 			auto scene = LoadingScene::createScene("Load");

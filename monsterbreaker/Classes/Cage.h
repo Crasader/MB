@@ -33,7 +33,6 @@ public:
 	void InitSprite();
 	void ClickCage();
 	void RemoveAll();
-
 	
 };
 

@@ -52,8 +52,6 @@ void BossHp::update(float dt)
 	else
 	{
 		f->setVisible(false);
-		//SoundManager::getInstance()->changeBG("MainBG");
-
 	}
 }
 

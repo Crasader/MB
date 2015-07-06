@@ -157,12 +157,4 @@ void SecretManager::createSecretItem()
 
 	}
 
-	//auto chest = Chest::create(hero);
-	//chest->setPosition(Vec2(visibleSize.width * 0.5f + origin.x, visibleSize.height* 0.5f + origin.y));
-	//layer->addChild(chest, ZINDEX_CHEST_SPRITE);
-
-	//	auto mapManager = MapManager::getInstance();
-	//	if (mapManager->GetCurrentRoomData().itemOpened)
-	//		chest->Opened();
-
 }

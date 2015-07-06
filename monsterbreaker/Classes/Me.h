@@ -5,10 +5,6 @@
 #include "cocos2d.h"
 #include "Monster.h"
 
-//#include "MonsterManager.h"
-//class MonsterManager;
-//class SlimeKingMiddle;
-
 class Me: public Monster
 {
 private :
@@ -34,7 +30,6 @@ public :
 	virtual void MoodMove(float dt);
 	virtual void MoodAttack(float dt);
 	virtual void MoodAttack2(float dt);
-//	virtual void MoodStay(float dt);
 	virtual void MoodSkill(float dt);
 	virtual void InitSprite();
 	

@@ -32,27 +32,3 @@ TankerSlime* TankerSlime::create()
 	return NULL;
 	
 }
-
-//void ShooterSlime::MoodAttack(float dt)
-//{
-//	if (timer == kTimerUp)
-//	{
-//		timer = AttackTime() + AttackTime() * CCRANDOM_0_1();
-//		//		sprite->stopAllActions();
-//		Animate("Attack", myEnum::kAction::kActionAttack);
-//		// fire a ball
-//		auto sp = this->getPosition();
-//		sp.y -= this->getContentSize().height;
-//		auto dp= Vec2(0, Director::getInstance()->getVisibleSize().width * CCRANDOM_0_1());
-//
-//		Fire(layer, sp, dp);
-//		Fire(layer, sp, dp);
-//		Fire(layer, sp, dp);
-//	}
-//	else if (timer <= 0.0f)
-//	{
-//		ChooseMood();
-//	}
-//}
-//
-

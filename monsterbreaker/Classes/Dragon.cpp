@@ -35,10 +35,8 @@ void Dragon::InitSprite()
 
 	// flame & flame body
 	flame= (Sprite *)(mNode->getChildByName("dbNode")->getChildByName("f"));
-//	flame->setPosition(-flame->getContentSize().width * 0.5f, -flame->getContentSize().height * 0.5f);
 	auto flameBody = PhysicsBody::createBox(flame->getContentSize());
 	flameBody->setDynamic(false);
-//	flameBody->setGravityEnable(false);
 	flameBody->setCollisionBitmask(DRAGON_BREATH_COLLISION_BITMASK);
 	flameBody->setContactTestBitmask(true);
 	flame->setPhysicsBody(flameBody);
@@ -48,9 +46,7 @@ void Dragon::InitSprite()
 	// dragon body
 	size = node->getChildByName("size");
 	
-	//auto body = PhysicsBody::createBox(size->getContentSize(), PhysicsMaterial(100, 1, 1), Vec2(-50, 0));
 	auto body = PhysicsBody::createBox(size->getContentSize());
-	//auto body = PhysicsBody::createCircle(this->getContentSize().width / 3, PhysicsMaterial(100, 1, 1));
 	body->setDynamic(false);
 	body->setRotationEnable(false);
 	body->setCollisionBitmask(SOLID_BRICK_COLLISION_BITMASK);
@@ -58,11 +54,6 @@ void Dragon::InitSprite()
 	this->setPhysicsBody(body);
 	this->setUserData(this);
 	
-
-	//db = DragonBreath::create(layer);
-	//db->setPosition(-size->getContentSize().width*0.5f, -size->getContentSize().height*0.5f);
-	//this->addChild(db);
-
 }
 
 cocos2d::Size Dragon::getContentSize()
@@ -128,7 +119,6 @@ void Dragon::Fire()
 
 void Dragon::FireLeft()
 {
-	CCLOG("left");
 	auto act = CSLoader::createTimeline("Monster/Dragon/Dragon.csb");
 	act->gotoFrameAndPlay(60, 360, false);
 	node->runAction(act);
@@ -152,7 +142,6 @@ void Dragon::FireLeft()
 
 void Dragon::FireRight()
 {
-	CCLOG("right");
 	auto act = CSLoader::createTimeline("Monster/Dragon/Dragon.csb");
 	act->gotoFrameAndPlay(360, 660, false);
 	node->runAction(act);

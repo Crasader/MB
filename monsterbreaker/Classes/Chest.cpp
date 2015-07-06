@@ -19,7 +19,7 @@ void Chest::InitSprite()
 	auto origin = Director::getInstance()->getVisibleOrigin();
 	auto node = (CSLoader::createNode("Chest/Chest.csb"));
 	node->setPosition(origin.x, origin.y);
-	//	node->setPosition(this->getContentSize().width / 2, this->getContentSize().height / 2);
+
 	this->addChild(node);
 
 	auto act = CSLoader::createTimeline("Chest/Chest.csb");

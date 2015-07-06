@@ -1,7 +1,6 @@
 #include"TutorialBtn.h"
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
-//#include "MyBodyParser.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -51,7 +50,6 @@ void TutorialBtn::InitSprite()
 	img->setDisplayFrame(cache->getSpriteFrameByName(String::createWithFormat("Tutorial/%s.png", btnTypeStr.c_str())->getCString()));
 
 	addChild(node);
-//	c->setVisible(false);
 	
 }
 void TutorialBtn::RemoveAll()
@@ -61,7 +59,6 @@ void TutorialBtn::RemoveAll()
 
 cocos2d::Size TutorialBtn::getContentSize()
 {
-//	auto spr = l->getChildByName("skill10_1");
 	return btn->getContentSize();
 }
 
@@ -69,13 +66,11 @@ void TutorialBtn::pause()
 {
 	Node::pause();
 	node->pause();
-	//c->pause();
 }
 
 void TutorialBtn::resume()
 {
 	Node::resume();
 	node->resume();
-	//c->resume();
 }
 

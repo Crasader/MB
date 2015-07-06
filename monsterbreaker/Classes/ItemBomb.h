@@ -17,7 +17,6 @@ public :
 	
 	static ItemBomb* create(cocos2d::Layer * layer, Hero * hero, bool isShop);
 	
-//	virtual void SetTextLabel();
 	virtual void ClickEvent();
 
 

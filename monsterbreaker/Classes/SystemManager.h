@@ -21,7 +21,6 @@ class SystemManager : public cocos2d::Node
 {
 public:
 	SystemManager(cocos2d::Layer * layer, Hero * hero);
-//	SystemManager(cocos2d::Layer *layer, cocos2d::PhysicsWorld **physicsWorld);
 	~SystemManager();
 
 	// local pointer of the physics world
@@ -45,8 +44,6 @@ public:
 	cocos2d::Node * pause;
 
 	cocos2d::Node * you;
-	//cocos2d::Node * buddy1;
-	//cocos2d::Node * buddy2;
 	
 	cocos2d::Node * ball1;
 	cocos2d::Node * ball2;

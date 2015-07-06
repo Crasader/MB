@@ -71,23 +71,6 @@ void Vampire::MoodStay(float dt)
 	}
 }
 
-
-//void Vampire::MoodStay(float dt)
-//{
-//	if (timer == kTimerUp)
-//	{
-//		timer = StayTime();
-//		Animate("Stay", myEnum::kAction::kActionStay);
-////		this->runAction(JumpBy::create(1.0f, Vec2::ZERO, this->getContentSize().height*0.5f, 1));
-//	}
-//
-//	else if (timer <= 0.0f)
-//	{
-//		ChooseMood();
-//	}
-//
-//}
-
 void Vampire::MoodMove(float dt)
 {
 	if (timer == kTimerUp)
@@ -143,5 +126,4 @@ void Vampire::InitSprite()
 	hpBgSpr->setOpacity(0);
 	hpCurrentSpr->setOpacity(0);
 
-//	this->setScale(2);
 }

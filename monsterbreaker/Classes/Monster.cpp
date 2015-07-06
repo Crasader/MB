@@ -91,7 +91,7 @@ void Monster::Die()
 
 void Monster::DropItem(int itemID)
 {
-	auto hero = static_cast<Hero*>(layer->getChildByName("Hero"));	// EUREKA!!
+	auto hero = static_cast<Hero*>(layer->getChildByName("Hero"));
 	int dir = ((int)(CCRANDOM_0_1() * 2) == 0) ? -1 : 1;
 	auto act = JumpBy::create(0.5f, Vec2(getContentSize().width * dir, 0), getContentSize().height*0.5f, 1);
 
@@ -166,7 +166,6 @@ void Monster::MoodStay(float dt)
 	if (timer == kTimerUp)
 	{
 		timer = StayTime();
-//		sprite->stopAllActions();
 		Animate("Stay", myEnum::kAction::kActionStay);
 	}
 
@@ -182,7 +181,6 @@ void Monster::MoodMove(float dt)
 	if (timer == kTimerUp)
 	{
 		timer = MoveTime();
-//		sprite->stopAllActions();
 		dir = CCRANDOM_0_1() * 4;
 
 		switch (dir)
@@ -234,28 +232,23 @@ void Monster::BaseMoveMent(float dt)
 		desVec += Vec2(this->getContentSize().width * 0.5f, 0);
 		if (desVec.x >= max.x) desVec.x = max.x;
 		move = MoveTo::create(0.5f, desVec);
-		//			move = MoveTo::create(0.5f, Vec2(this->getContentSize().width * 0.5f, 0));
 		break;
 	case myEnum::kDir::kDirWest:
 		desVec -= Vec2(this->getContentSize().width*0.5f, 0);
 		if (desVec.x <= min.x) desVec.x = min.x;
 		move = MoveTo::create(0.5f, desVec);
-		//			move = MoveTo::create(0.5f, Vec2(-this->getContentSize().width * 0.5f, 0));
 		break;
 	case myEnum::kDir::kDirSouth:
 		desVec -= Vec2(0, this->getContentSize().height*0.5f);
 		if (desVec.y <= max.y) desVec.y = max.y;
 		move = MoveTo::create(0.5f, desVec);
-		//			move = MoveTo::create(0.5f, Vec2(0, -this->getContentSize().height * 0.5f));
 		break;
 	case myEnum::kDir::kDirNorth:
 		desVec += Vec2(0, this->getContentSize().height*0.5f);
 		if (desVec.y >= min.y) desVec.y = min.y;
 		move = MoveTo::create(0.5f, desVec);
-		//			move = MoveTo::create(0.5f, Vec2(0, this->getContentSize().height * 0.5f));
 		break;
 	}
-	//		auto seq = Sequence::create(move, NULL);
 	this->runAction(move);
 }
 
@@ -283,36 +276,15 @@ void Monster::BaseMoveMent2(float dt)
 		desVec += Vec2(this->getContentSize().width * 0.5f, 0);
 		if (desVec.x >= max.x) desVec.x = max.x;
 		move = MoveTo::create(0.5f, desVec);
-		//			move = MoveTo::create(0.5f, Vec2(this->getContentSize().width * 0.5f, 0));
 		break;
 	case myEnum::kDir::kDirWest:
 		desVec -= Vec2(this->getContentSize().width*0.5f, 0);
 		if (desVec.x <= min.x) desVec.x = min.x;
 		move = MoveTo::create(0.5f, desVec);
-		//			move = MoveTo::create(0.5f, Vec2(-this->getContentSize().width * 0.5f, 0));
 		break;
-	//case myEnum::kDir::kDirSouth:
-	//	desVec -= Vec2(0, this->getContentSize().height*0.5f);
-	//	if (desVec.y <= max.y) desVec.y = max.y;
-	//	move = MoveTo::create(0.5f, desVec);
-	//	//			move = MoveTo::create(0.5f, Vec2(0, -this->getContentSize().height * 0.5f));
-	//	break;
-	//case myEnum::kDir::kDirNorth:
-	//	desVec += Vec2(0, this->getContentSize().height*0.5f);
-	//	if (desVec.y >= min.y) desVec.y = min.y;
-	//	move = MoveTo::create(0.5f, desVec);
-	//	//			move = MoveTo::create(0.5f, Vec2(0, this->getContentSize().height * 0.5f));
-	//	break;
 	}
-	//		auto seq = Sequence::create(move, NULL);
 	this->runAction(move);
 }
-
-//Vec2 Monster::GetTP()
-//{
-//	
-//}
-
 
 void Monster::MoodAttack(float dt)
 {
@@ -382,11 +354,5 @@ void Monster::StartAnimation()
 {
 	this->Animate("Stay", myEnum::kAction::kActionStay);
 }
-//
-//void Monster::RemoveThisClearly()
-//{
-//	this->removeFromParentAndCleanup(true);
-//}
-
 
 

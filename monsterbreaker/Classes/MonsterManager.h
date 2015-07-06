@@ -16,7 +16,6 @@
 class MonsterManager : public cocos2d::Node
 {
 public:
-//	MonsterManager();
 	MonsterManager(cocos2d::Layer * layer, const char * mapType);
 	~MonsterManager();
 
@@ -28,17 +27,14 @@ public:
 	cocos2d::Size contentSize;
 	cocos2d::Vec2 startPoint;
 
-	//std::vector<Monster*> monsters;
 	cocos2d::Vector<Monster*> monsters;
 
 	CC_SYNTHESIZE(bool, _monsterClear, MonsterClear);
 	CC_SYNTHESIZE(std::string, _mapType, MapType);
 
-	//void SetLayer(cocos2d::Layer * layer);
 	void DrawMonsters();
 	void Debug2();
 	void CreateBossMonster();
-	void Debug4();
 	void update(float dt);
 	void PauseMonsters();
 	void ResumeMonsters();

@@ -19,33 +19,12 @@ HelperMan::~HelperMan()
 
 }
 
-//HelperMan* HelperMan::create(cocos2d::Layer * layer, Hero * hero, bool cageIn)
-//{
-//	auto pNode = new HelperMan(layer, hero, cageIn);
-//	pNode->autorelease();
-//	pNode->InitSprite();
-//	return pNode;
-//}
-
 void HelperMan::InitSprite()
 {
 
 	node = CSLoader::createNode(String::createWithFormat("HelperMan/%s/%s.csb", _name.c_str(), _name.c_str())->getCString());
 	this->addChild(node);
 	Stay();
-	//auto act = CSLoader::createTimeline(String::createWithFormat("HelperMan/%s/%s.csb", _name.c_str(), _name.c_str())->getCString());
-	//act->gotoFrameAndPlay(0, 60, true);
-	//node->runAction(act);
-
-	//l1 = node->getChildByName("l1");
-	//l2 = node->getChildByName("l2");
-	//l3 = node->getChildByName("l3");
-
-	//for (int i = 3; i > 0 + lockCnt; i--)
-	//{
-	//	auto obj = node->getChildByName(String::createWithFormat("l%d", i)->getCString());
-	//	obj->setVisible(false);
-	//}
 
 	btn = dynamic_cast<Button*>(node->getChildByName("btn"));
 	btn->setUserData(this);
@@ -74,7 +53,6 @@ void HelperMan::ClickHelperMan()
 	int size = hero->helperList.size();
 	if (clickOk && size < 2)
 	{
-//		CCLOG("Clicked");
 		ThankYou();
 		clickOk = false;
 
@@ -131,9 +109,7 @@ void HelperMan::update(float dt)
 
 void HelperMan::RemoveAll()
 {
-	//this->removeAllChildrenWithCleanup(true);
 	this->removeFromParentAndCleanup(true);
-//	layer->removeChild(this);
 }
 
 void HelperMan::AIBeforeBattle()

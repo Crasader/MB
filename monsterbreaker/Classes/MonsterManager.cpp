@@ -2,10 +2,6 @@
 
 USING_NS_CC;
 
-//MonsterManager::MonsterManager(cocos2d::Layer * layer) : layer(layer)
-//{
-//	_monsterClear = false;
-//}
 MonsterManager::~MonsterManager()
 {
 
@@ -91,7 +87,6 @@ void MonsterManager::DrawMonsters()
 				r = rand() % MONSTER_MM_SIZE_NUMBER + MONSTER_MM_START_NUMBER;
 			}
 
-			//			int r = rand() % 22 + 1;
 			Monster * m = nullptr;
 			
 			m = CreateMonster(r);
@@ -99,7 +94,6 @@ void MonsterManager::DrawMonsters()
 			// only for debug 
 			//m = Skeleton::create();
 
-			//		Monster * s1 = Ghost::create();
 			m->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
 			m->Draw(layer);
 			m->StartAnimation();
@@ -197,8 +191,6 @@ void MonsterManager::update(float dt)
 		}
 	}
 	_monsterClear = true;
-	//auto hero = (Hero *)layer->getChildByName("Hero");
-	//hero->IncreaseSkillPoint(1);
 }
 
 void MonsterManager::PauseMonsters()
@@ -249,14 +241,11 @@ void MonsterManager::CreateBossMonster()
 
 			if (m != nullptr)
 			{
-				//m->setPosition(visibleSize.width*0.5f, visibleSize.height*0.7f);
 				m->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
 				m->Draw(layer);
 				m->StartAnimation();
 				m->scheduleUpdate();
 				monsters.pushBack(m);
-				//sk->scheduleUpdate();
-				//layer->addChild(sk, ZINDEX_MONSTER_SPRITE);
 
 				auto bossHp = BossHp::create(layer);
 				bossHp->setPosition(visibleSize.width * 0.5f, visibleSize.height - 300);
@@ -287,13 +276,5 @@ void MonsterManager::CreateBossMonster()
 	}
 	
 }
-
-void MonsterManager::Debug4()
-{
-	//auto brick = SolidBrick::create(getMapType().c_str());
-	//brick->setPosition(Vec2(visibleSize.width* 0.5f, visibleSize.height*0.5f));
-	//layer->addChild(brick, ZINDEX_BRICK_SPRITE);
-}
-
 
 

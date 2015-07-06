@@ -84,7 +84,6 @@ void GameObject::Animate(const char * str, int kAction)
 		switch (kAction)
 		{
 		case myEnum::kAction::kActionAttack: Ani(str, (__Dictionary *)aniData->objectForKey("Attack")); break;
-//		case myEnum::kAction::kActionDamage: Ani(str, (__Dictionary *)aniData->objectForKey("Damage")); break;
 		case myEnum::kAction::kActionDie: DieAni(str, (__Dictionary *)aniData->objectForKey("Die")); break;
 		case myEnum::kAction::kActionMove: Ani(str, (__Dictionary *)aniData->objectForKey("Move")); break;
 		case myEnum::kAction::kActionSkill: Ani(str, (__Dictionary *)aniData->objectForKey("Skill")); break;
@@ -138,7 +137,6 @@ bool GameObject::IsAlive() const
 }
 void GameObject::update(float dt)
 {
-//	CCLOG("GameObject update(float dt)");
 }
 
 void GameObject::Damaged(int i)
@@ -163,23 +161,8 @@ void GameObject::Damaged(int i)
 	}
 }
 
-
-//cocos2d::__Dictionary* GameObject::GetObjectInfo()
-//{
-//	auto dic = __Dictionary::createWithContentsOfFile("Info/Info.plist");
-//	dic = (cocos2d::__Dictionary *)dic->objectForKey(getName().c_str());
-//	dic = __Dictionary::createWithContentsOfFile(dic->valueForKey("InfoPath")->getCString());
-//	auto data = (cocos2d::__Dictionary *)dic->objectForKey(getName().c_str());
-//	return data;
-//}
-
 cocos2d::__Dictionary* GameObject::GetAniInfo()
 {
 	auto data = __Dictionary::createWithContentsOfFile(String::createWithFormat("%s/%s/%sAni.plist", _type.c_str(), _name.c_str(), _name.c_str())->getCString());
 	return data;
 }
-
-//void GameObject::SetObjectData()
-//{
-//
-//}

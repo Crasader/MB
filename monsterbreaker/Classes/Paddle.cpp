@@ -37,11 +37,8 @@ void Paddle::SetPaddle(float paddleSize, const char * paddleName)
 		body->setDynamic(false);
 		body->setCollisionBitmask(PADDLE_COLLISION_BITMASK);
 		body->setContactTestBitmask(true);
-//		body->setCategoryBitmask(1);
 		this->setPhysicsBody(body);
 	}
-	//this->setTag(ZINDEX_HERO_PADDLE);
-	//this->setOpacity(200);
 	MyBodyParser::getInstance()->freeInstance();
 
 	float scale = this->getScaleX();

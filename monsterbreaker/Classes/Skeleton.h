@@ -12,9 +12,7 @@ private :
 public :
 	Skeleton();
 	static Skeleton* create();
-
-//	virtual void MoodStay(float dt);
-
+	
 	cocos2d::Node * charge;
 
 	virtual void Die();

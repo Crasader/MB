@@ -44,7 +44,6 @@ void Sword::UseSkill()
 	act->gotoFrameAndPlay(30, 90, false);
 	node->runAction(act);
 
-//	skill->stopAllActions();
 	skill->setOpacity(0);
 
 	skill->runAction(Sequence::create(

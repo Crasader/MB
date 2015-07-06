@@ -4,7 +4,6 @@ USING_NS_CC;
 DoubleBrick::DoubleBrick(const char * mapType, cocos2d::Layer * layer, int brickTypeID) : Brick(mapType, brickTypeID)
 {
 	this->layer = layer;
-//	setType(type);
 	b = false;
 }
 
@@ -24,17 +23,6 @@ DoubleBrick* DoubleBrick::create(const char * mapType, cocos2d::Layer * layer, i
 	CC_SAFE_DELETE(pSprite);
 	return NULL;
 }
-
-//void DoubleBrick::InitSprite()
-//{
-//	auto body = PhysicsBody::createBox(this->getContentSize(), PhysicsMaterial(100, 1, 1));
-//	body->setDynamic(false);
-//	body->setRotationEnable(false);
-//	body->setCollisionBitmask(DOUBLE_BRICK_COLLISION_BITMASK);
-//	body->setContactTestBitmask(true);
-////	body->setCategoryBitmask(2);
-//	this->setPhysicsBody(body);
-//}
 
 void DoubleBrick::DestroyBlock()
 {

@@ -43,7 +43,6 @@ void Angel::InitSprite()
 	body->setCollisionBitmask(MONSTER_BODY_COLLISION_BITMASK);
 	body->setContactTestBitmask(true);
 	this->setPhysicsBody(body);
-	//	}
 	this->setUserData(this);
 
 	hpBgSpr = Sprite::create("Monster/hpBg.png");
@@ -269,11 +268,6 @@ void Angel::Lightning()
 	}
 	else
 	{
-		//auto seq = Sequence::create(CallFunc::create(std::bind(&Angel::createLightning, this, sp1))
-		//	, DelayTime::create(1.5f)
-		//	, CallFunc::create(std::bind(&Angel::createLightning, this, sp2))
-		//	, NULL);
-		//this->runAction(seq);
 		createLightning(sp1);
 		createLightning(sp2);
 	}
@@ -282,11 +276,6 @@ void Angel::Lightning()
 
 void Angel::createLightning(cocos2d::Vec2 p)
 {	
-	//auto l = Lightning::create(layer, 1);
-	//p.x += l->getContentSize().width * 0.5f;
-	//l->setPosition(p);
-	//layer->addChild(l, ZINDEX_EFFECT_FRONT);
-
 	auto effectManager = (EffectManager *)layer->getChildByName("EffectManager");
 	effectManager->LightningEffect(p, 1);
 }
@@ -299,7 +288,6 @@ void Angel::setVisibleLightning(bool b)
 void Angel::StartAnimation()
 {
 	this->Animate("Stay", myEnum::kAction::kActionStay);
-
 }
 
 void Angel::SeqFire(cocos2d::Vec2 sp, cocos2d::Vec2 dp)

@@ -25,10 +25,6 @@ DoorManager::~DoorManager()
 {
 }
 
-//cocos2d::Vec2 DoorManager::getMyGridPosition(int x, int y)
-//{
-//	return Vec2(startPoint.x + contentSize.width * y + contentSize.width + origin.x, startPoint.y - contentSize.height * x + contentSize.height / 2 + origin.y);
-//}
 DoorManager* DoorManager::create(Hero * hero)
 {
 	auto pNode = new DoorManager(hero);
@@ -36,10 +32,6 @@ DoorManager* DoorManager::create(Hero * hero)
 	return pNode;
 }
 
-//void DoorManager::InitMapTypeData(MapManager * mapManager, Hero * hero, MonsterManager * monsterManager)
-//{
-//	//setClick(false);
-//}
 void DoorManager::Draw(cocos2d::Layer * layer)
 {
 	this->layer = layer;
@@ -51,13 +43,10 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	int heroX = mapManager->getHeroX();
 	int heroY = mapManager->getHeroY();
 	
-	//bool temp = (mapManager->GetCurrentRoomData().data == myEnum::kRoomType::kRTSecret);
-
 	// top ( x = 0 )
 	if (mapManager->IsN())
 	{
 		Room rd = mapManager->GetRoomData(heroX - 1, heroY);
-		//SetTileFenceLine(myEnum::kDir::kDirNorth, (rd.data != myEnum::kRoomType::kRTNone && rd.data != myEnum::kRoomType::kRTSecret));
 		if( !_currentSecretRoom ) SetTileFenceLine(myEnum::kDir::kDirNorth, rd.visible);
 		else SetTileFenceLine(myEnum::kDir::kDirNorth, rd.exp);
 
@@ -66,10 +55,8 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 			int x = 0;
 			int y = 4;
 			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width + origin.x, startPoint.y - contentSize.height * x + contentSize.height / 2 + origin.y);
-//			auto vec = Vec2(getMyGridPosition(x, y));
 			SetTileDoor(vec, 1, 0, rd, myEnum::kDir::kDirNorth);
 		}
-			//SetTileDoor(0, 4, myEnum::kDir::kDirNorth, 0, rd.data);
 	}
 	else
 		SetTileFenceLine(myEnum::kDir::kDirNorth, false);
@@ -78,19 +65,15 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	if (mapManager->IsS())
 	{
 		Room rd = mapManager->GetRoomData(heroX + 1, heroY);
-		//SetTileFenceLine(myEnum::kDir::kDirSouth, (rd.data != myEnum::kRoomType::kRTNone && rd.data != myEnum::kRoomType::kRTSecret));
 		if (!_currentSecretRoom) SetTileFenceLine(myEnum::kDir::kDirSouth, rd.visible);
 		else SetTileFenceLine(myEnum::kDir::kDirSouth, rd.exp);
-		//SetTileFenceLine(myEnum::kDir::kDirSouth, rd.visible);
 		if (rd.type != myEnum::kRoomType::kRTNone)
 		{
 			int x = 19;
 			int y = 4;
 			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width + origin.x, startPoint.y - contentSize.height * x + origin.y);
-//			auto vec = Vec2(getMyGridPosition(x, y));
 			SetTileDoor(vec, 1, 180, rd, myEnum::kDir::kDirSouth);
 		}
-//			SetTileDoor(19, 4, myEnum::kDir::kDirSouth, 180, rd.data);
 	}
 	else
 		SetTileFenceLine(myEnum::kDir::kDirSouth, false);
@@ -99,19 +82,15 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	if (mapManager->IsW())
 	{
 		Room rd = mapManager->GetRoomData(heroX, heroY - 1);
-		//SetTileFenceLine(myEnum::kDir::kDirWest, (rd.data != myEnum::kRoomType::kRTNone && rd.data != myEnum::kRoomType::kRTSecret));
 		if (!_currentSecretRoom) SetTileFenceLine(myEnum::kDir::kDirWest, rd.visible);
 		else SetTileFenceLine(myEnum::kDir::kDirWest, rd.exp);
-//		SetTileFenceLine(myEnum::kDir::kDirWest, rd.visible);
 		if (rd.type != myEnum::kRoomType::kRTNone)
 		{
 			int x = 9;
 			int y = 0;
 			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width / 2 + origin.x, startPoint.y - contentSize.height * x + origin.y);
-//			auto vec = Vec2(getMyGridPosition(x, y));
 			SetTileDoor(vec, 0.7129, -90, rd, myEnum::kDir::kDirWest);
 		}
-//			SetTileDoor(9, 0, myEnum::kDir::kDirWest, -90, rd.data);
 	}
 	else
 		SetTileFenceLine(myEnum::kDir::kDirWest, false);
@@ -120,27 +99,20 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	if (mapManager->IsE())
 	{
 		Room rd = mapManager->GetRoomData(heroX, heroY + 1);
-		//SetTileFenceLine(myEnum::kDir::kDirEast, (rd.data != myEnum::kRoomType::kRTNone && rd.data != myEnum::kRoomType::kRTSecret));
 		if (!_currentSecretRoom) SetTileFenceLine(myEnum::kDir::kDirEast, rd.visible);
 		else SetTileFenceLine(myEnum::kDir::kDirEast, rd.exp);
-		//SetTileFenceLine(myEnum::kDir::kDirEast, rd.visible);
 		if (rd.type != myEnum::kRoomType::kRTNone)
 		{
 			int x = 9;
 			int y = 9;
 			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width / 2 + origin.x, startPoint.y - contentSize.height * x + origin.y);
-//			auto vec = Vec2(getMyGridPosition(x, y));
 			SetTileDoor(vec, 0.7129, 90, rd, myEnum::kDir::kDirEast);
 		}
-//			SetTileDoor(9, 9, myEnum::kDir::kDirEast, 90, rd.data);
 	}
 	else
 		SetTileFenceLine(myEnum::kDir::kDirEast, false);
 
-	//mapData.DebugDrawMap(layer);
-
 	float tempY = visibleSize.height / 10 * 8;
-	//cocos2d::Size tempSize = Sprite::create("Tile/G/Fence.png")->getContentSize();
 
 	auto edgeBody = PhysicsBody::createEdgeBox(Size(visibleSize.width - contentSize.width * 2 + contentSize.height / 2, tempY - contentSize.height * 2 + contentSize.height / 2), PhysicsMaterial(1, 1, 0), contentSize.height / 2);
 	edgeBody->setCollisionBitmask(WALL_COLLISION_BITMASK); 
@@ -152,15 +124,12 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	layer->addChild(edgeNode);
 
 	// create a death zone
-	//	auto deathBody = PhysicsBody::createBox(Size(visibleSize.width, 10));
-	//	auto deathBody = PhysicsBody::createEdgeBox(Size(visibleSize.width + visibleSize.width / 300, visibleSize.height / 10 * 8 + visibleSize.height / 300));
 	auto deathBody = PhysicsBody::createEdgeBox(Size(visibleSize.width - contentSize.width * 1, tempY - contentSize.height * 2));
 	deathBody->setCollisionBitmask(DEATH_COLLISION_BITMASK);
 	deathBody->setContactTestBitmask(true);
 	deathBody->setDynamic(false);
 
 	auto deathNode = Node::create();
-	//	deathNode->setPosition(Vec2(visibleSize.width / 2 + origin.x, 1));
 	deathNode->setPosition(Vec2(visibleSize.width / 2 + origin.x, tempY / 2 + contentSize.height + origin.y));
 	deathNode->setPhysicsBody(deathBody);
 	layer->addChild(deathNode);
@@ -241,7 +210,6 @@ void DoorManager::SetTileFence(int x, int y)
 {
 	auto spr = Sprite::create(cocos2d::String::createWithFormat("Tile/%s/Fence.png", getMapType().c_str())->getCString());
 	spr->setPosition(startPoint.x + contentSize.width * y + contentSize.width / 2 + origin.x, startPoint.y - contentSize.height * x + contentSize.height / 2 + origin.y);
-//	spr->setPosition(getMyGridPosition(x, y));
 	layer->addChild(spr, ZINDEX_BRICK_SPRITE);
 }
 
@@ -252,7 +220,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 	{
 	case myEnum::kRoomType::kRTBoss:
 		if (!_currentSecretRoom) door = BossDoor::create(rd, kDir, getMapType().c_str());
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -272,7 +239,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 		break;
 	case myEnum::kRoomType::kRTHelp:
 		if (!_currentSecretRoom) door = CoinDoor::create(rd, kDir, hero, getMapType().c_str());
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -292,7 +258,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 		break;
 	case myEnum::kRoomType::kRTMonster:
 		if (!_currentSecretRoom) door = Door::create(rd, kDir, getMapType().c_str());
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -317,7 +282,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 			if (_secretView) door->setVisible(true);
 			if (_secretViewLockOpen) door->setLock(false);
 		}
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -337,7 +301,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 		break;
 	case myEnum::kRoomType::kRTShop:
 		if (!_currentSecretRoom) door = KeyDoor::create(rd, kDir, hero, getMapType().c_str());
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -357,7 +320,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 		break;
 	case myEnum::kRoomType::kRTStart:
 		if (!_currentSecretRoom) door = Door::create(rd, kDir, getMapType().c_str());
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -377,7 +339,6 @@ void DoorManager::SetTileDoor(cocos2d::Vec2 vec, float scale, float rotate, cons
 		break;
 	case myEnum::kRoomType::kRTTreasure:
 		if (!_currentSecretRoom) door = KeyDoor::create(rd, kDir, hero, getMapType().c_str());
-//		else SetSecretDoor(door, rd, kDir);
 		else
 		{
 			door = SecretDoor::create(rd, kDir, getMapType().c_str());
@@ -447,13 +408,12 @@ void DoorManager::onTouchDoor(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEv
 				{
 					door->Open();
 					mapManager->map[door->getGoToX()][door->getGoToY()].lock = false;
-//					mapManager->Save();
 					hero->Save();
 				}
 				else
 				{
 					// X
-					// door sound
+					SoundManager::getInstance()->playMySoundLogic("X");
 				}
 			}
 		}
@@ -471,36 +431,12 @@ void DoorManager::setNextHeroLocationAndSave(int x, int y)
 {
 	mapManager->setHeroX(x);
 	mapManager->setHeroY(y);
-//	mapManager->Save();
 	hero->Save();
 }
 void DoorManager::moveScene(int dir)
 {
 	cocos2d::Scene * scene = GameScene::createScene();
-	//switch (roomType)
-	//{
-	//case myEnum::kRoomType::kRTBoss:
-	//	scene = BossScene::createScene();
-	//	break;
-	//case myEnum::kRoomType::kRTHelp:
-	//	scene = HelpScene::createScene();
-	//	break;
-	//case myEnum::kRoomType::kRTMonster:
-	//	scene = MonsterScene::createScene();
-	//	break;
-	//case myEnum::kRoomType::kRTSecret:
-	//	scene = SecretScene::createScene();
-	//	break;
-	//case myEnum::kRoomType::kRTStart:
-	//	scene = StartScene::createScene();
-	//	break;
-	//case myEnum::kRoomType::kRTShop:
-	//	scene = ShopScene::createScene();
-	//	break;
-	//case myEnum::kRoomType::kRTTreasure:
-	//	scene = TreasureScene::createScene();
-	//	break;
-	//}
+
 	if (scene != nullptr)
 	{
 		switch (dir)
@@ -535,7 +471,6 @@ void DoorManager::ShowEndingDoor()
 		if (_un == 0 || _un == 1)
 		{
 			auto spr = EndingDoor::create("MV");
-			//auto spr = Sprite::create("Tile/MV/Fence.png");
 			spr->setPosition(visibleSize.width*0.5f, visibleSize.height * 0.7f);
 			layer->addChild(spr, ZINDEX_ENDING_DOOR);
 			
@@ -545,14 +480,12 @@ void DoorManager::ShowEndingDoor()
 		else
 		{
 			auto spr = EndingDoor::create("MV");
-			//auto spr = Sprite::create("Tile/MV/Fence.png");
 			spr->setPosition(visibleSize.width / 3 * 1, visibleSize.height * 0.7f);
 			layer->addChild(spr, ZINDEX_ENDING_DOOR);
 			auto btn = spr->btn;
 			if (btn != nullptr) 	btn->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveLoadingScene, this));
 
 			auto spr2 = EndingDoor::create("HV");
-			//auto spr2 = Sprite::create("Tile/HV/Fence.png");
 			spr2->setPosition(visibleSize.width / 3 * 2, visibleSize.height * 0.7f);
 			layer->addChild(spr2, ZINDEX_ENDING_DOOR);
 			auto btn2 = spr2->btn;
@@ -600,7 +533,7 @@ void DoorManager::ShowEndingDoor()
 			auto btn = spr->btn;
 			if (btn != nullptr) 	btn->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveEndingScene, this));
 		}
-		else if(_un == 4) // TODO
+		else if(_un == 4)
 		{
 			auto spr = EndingDoor::create("Ending", 2);
 			spr->setPosition(visibleSize.width / 3 * 1, visibleSize.height * 0.7f);
@@ -611,7 +544,6 @@ void DoorManager::ShowEndingDoor()
 			auto spr2 = EndingDoor::create("Ending", 5);
 			spr2->setPosition(visibleSize.width / 3 * 2, visibleSize.height * 0.7f);
 			spr2->setScale(2);
-//			spr2->setColor(Color3B::RED);
 			layer->addChild(spr2, ZINDEX_ENDING_DOOR);
 			auto btn2 = spr2->btn;
 			if (btn2 != nullptr) 	btn2->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveEndingScene, this));
@@ -627,7 +559,6 @@ void DoorManager::ShowEndingDoor()
 			auto spr2 = EndingDoor::create("Ending", 5);
 			spr2->setPosition(visibleSize.width / 4 * 2, visibleSize.height * 0.7f);
 			spr2->setScale(2);
-//			spr2->setColor(Color3B::RED);
 			layer->addChild(spr2, ZINDEX_ENDING_DOOR);
 			auto btn2 = spr2->btn;
 			if (btn2 != nullptr) 	btn2->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveEndingScene, this));
@@ -693,7 +624,6 @@ void DoorManager::ShowEndingDoor()
 			auto spr2 = EndingDoor::create("Ending", 5);
 			spr2->setPosition(visibleSize.width / 4 * 2, visibleSize.height * 0.7f);
 			spr2->setScale(2);
-//			spr2->setColor(Color3B::RED);
 			layer->addChild(spr2, ZINDEX_ENDING_DOOR);
 			auto btn2 = spr2->btn;
 			if (btn2 != nullptr) 	btn2->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveEndingScene, this));

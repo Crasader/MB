@@ -39,7 +39,6 @@ public :
 	virtual void fadeIn();
 	virtual void moveTo(cocos2d::Vec2 vec);
 	virtual void StartAnimation();
-//	virtual void Ani(const char * str, cocos2d::__Dictionary* dic);
 
 	virtual void InitSprite();
 	virtual void SeqFire(cocos2d::Vec2 sp, cocos2d::Vec2 dp);

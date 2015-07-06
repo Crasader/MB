@@ -23,9 +23,7 @@ void ItemCoin::ClickEvent()
 	if (hero->getMoneyCount() < ITEM_MAX_COUNT)
 	{
 		hero->IncreaseMoneyCount(1);
-//		SoundManager::getInstance()->playMySoundLogic("PickUpCoin");
 		RemoveThis();
-		// sound
 	}
 	else
 	{

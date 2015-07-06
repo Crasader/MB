@@ -6,7 +6,6 @@
 #include "GameObject.h"
 #include "cocostudio\CocoStudio.h"
 #include "ui\CocosGUI.h"
-//#include "Hero.h"
 
 class TutorialBtn : public cocos2d::Node
 {
@@ -32,7 +31,6 @@ public:
 	virtual cocos2d::Size getContentSize();
 	virtual void pause();
 	virtual void resume();
-//	virtual void setClickVisible(bool b);
 
 };
 

@@ -17,8 +17,6 @@ public:
 	bool IsMultiplesOfTwo(int num);
 	int GetWeaponID(const char * weaponName);
 	std::string GetWeaponName(int id);
-//	bool Compare(const char * str1, char * str2) const ;
-//	const char * GetStringRoomType(int roomType);
 };
 
 #endif // __UTILS_H__

@@ -31,7 +31,6 @@ public :
 
 	virtual void SetTextLabel();
 	virtual void ClickEvent();
-//	virtual void SaveShopItem1ClickedData();
 
 };
 

@@ -36,6 +36,5 @@ void EndingDoor::InitSprite()
 
 	btn = dynamic_cast<Button*>(node->getChildByName("btn"));
 	btn->setUserData(this);
-	//btn->addTouchEventListener(CC_CALLBACK_2(Door::onTouchDoor, this));
 
 }

@@ -132,7 +132,6 @@ void HelpManager::createCageAndData()
 			int wID = Utils::GetInstance()->GetWeaponID(weaponName.getCString());
 			while (true)
 			{
-				//int r = rand() % (ITEM_WEAPON_STAFF_SIZE - 1) + 1 + ITEM_WEAPON_STAFF_START_NUM;
 				int r = rand() % ITEM_WEAPON_STAFF_SIZE + ITEM_WEAPON_STAFF_START_NUM;
 				if (wID != r)
 				{
@@ -153,7 +152,6 @@ void HelpManager::createCageAndData()
 			int wID = Utils::GetInstance()->GetWeaponID(weaponName.getCString());
 			while (true)
 			{
-				//int r = rand() % (ITEM_WEAPON_STAFF_SIZE - 1) + 1 + ITEM_WEAPON_STAFF_START_NUM;
 				int r = rand() % ITEM_WEAPON_SWORD_SIZE + ITEM_WEAPON_SWORD_START_NUM;
 				if (wID != r)
 				{
@@ -163,8 +161,6 @@ void HelpManager::createCageAndData()
 			}
 			if (wID != 0)
 			{
-				//std::string temp = Utils::GetInstance()->GetWeaponName(wID);
-
 				auto weapon = Weapon::create(layer, hero, "Sword", Utils::GetInstance()->GetWeaponName(wID).c_str(), true);
 				weapon->setPosition(c2->getPosition());
 				layer->addChild(weapon, ZINDEX_HERO_WEAPON);
@@ -265,28 +261,11 @@ void HelpManager::createHeroHelperMan()
 		auto hmID = hero->helperList.at(i);
 		hm = createHelperMan(hmID);
 
-		//switch (obj)
-		//{
-		//case myEnum::kHelperMan::kHMWarrior:
-		//	hm = HMWarrior::create(layer, hero, false);
-		//	break;
-		//case myEnum::kHelperMan::kHMArcher:
-		//	hm = HMArcher::create(layer, hero, false);
-		//	break;
-		//case myEnum::kHelperMan::kHMPriest:
-		//	hm = HMPriest::create(layer, hero, false);
-		//	break;
-		//case myEnum::kHelperMan::kHMRifleMan:
-		//	hm = HMRifleMan::create(layer, hero, false);
-		//	break;
-		//}
-
 		if (hm != nullptr)
 		{
 			if (i == 0) hm->setPosition(visibleSize.width * 0.7f, hero->getPositionY());
 			else hm->setPosition(visibleSize.width*0.3f, hero->getPositionY());
 			layer->addChild(hm, ZINDEX_HELPERMAN_SPRITE);
-			//hm->scheduleUpdate();
 			helpermans.push_back(hm);
 		}
 		else

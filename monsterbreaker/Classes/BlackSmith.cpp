@@ -5,7 +5,6 @@ BlackSmith::BlackSmith()
 {
 	_name = "BlackSmith";
 	_type = "Monster";
-//	stayTime = 1.25f;
 	attackTime = 3.00f;
 	moveTime = 1.05f;
 }
@@ -34,14 +33,11 @@ void BlackSmith::MoodAttack(float dt)
 	if (timer == kTimerUp)
 	{
 		timer = AttackTime();
-		//Animate("Attack", myEnum::kAction::kActionAttack);
 		// fire a ball
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
 		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-//		auto target = layer->getChildByName("Hero");
-//		auto dp1 = target->getPosition();
 
 		Fire(layer, sp, dp1);
 		Fire(layer, sp, dp2);
@@ -71,23 +67,6 @@ void BlackSmith::MoodMove(float dt)
 		ChooseMood();
 	}
 }
-
-
-//void BlackSmith::MoodStay(float dt)
-//{
-//	if (timer == kTimerUp)
-//	{
-//		timer = StayTime();
-//		Animate("Stay", myEnum::kAction::kActionStay);
-////		this->runAction(JumpBy::create(1.0f, Vec2::ZERO, this->getContentSize().height*0.5f, 1));
-//	}
-//
-//	else if (timer <= 0.0f)
-//	{
-//		ChooseMood();
-//	}
-//
-//}
 
 void BlackSmith::ChooseMood()
 {
@@ -126,5 +105,4 @@ void BlackSmith::InitSprite()
 	hpBgSpr->setOpacity(0);
 	hpCurrentSpr->setOpacity(0);
 
-//	this->setScale(2);
 }

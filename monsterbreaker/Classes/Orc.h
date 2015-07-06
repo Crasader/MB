@@ -4,9 +4,6 @@
 
 #include "cocos2d.h"
 #include "Monster.h"
-//#include "MonsterManager.h"
-//class MonsterManager;
-//class SlimeKingMiddle;
 
 class Orc: public Monster
 {

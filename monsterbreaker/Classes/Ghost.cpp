@@ -10,7 +10,6 @@ void Ghost::Init()
 {
 	_name = "Ghost";
 	_type = "Monster";
-//	sleepState = true;
 }
 Ghost* Ghost::create()
 {
@@ -36,20 +35,13 @@ Ghost* Ghost::create()
 
 void Ghost::InitSprite()
 {
-	//	MyBodyParser::getInstance()->parseJsonFile(String::createWithFormat("%s/%s/%s.json", _type.c_str(), _name.c_str(), _name.c_str())->getCString());
-	//	auto body = MyBodyParser::getInstance()->bodyFormJson(this, String::createWithFormat("%s.png", _name.c_str())->getCString(), PhysicsMaterial(100, 1, 1));
-	//	if (body != nullptr)
-	//	{
 	auto body = PhysicsBody::createCircle(this->getContentSize().width / 2, PhysicsMaterial(100, 1, 1));
 	body->setDynamic(true);
 	body->setRotationEnable(false);
 	body->setCollisionBitmask(MONSTER_BODY_COLLISION_BITMASK);
 	body->setContactTestBitmask(true);
 	this->setPhysicsBody(body);
-	//	}
 	this->setUserData(this);
-	//	this->Animate("Stay", myEnum::kAction::kActionStay);
-	//	MyBodyParser::getInstance()->freeInstance();
 
 	hpBgSpr = Sprite::create("Monster/hpBg.png");
 	this->addChild(hpBgSpr, ZINDEX_MONSTER_HP);
@@ -66,7 +58,6 @@ void Ghost::InitSprite()
 
 void Ghost::Damaged(int i)
 {
-//	stopAllActions();
 	this->setOpacity(255);
 	Monster::Damaged(i);
 	if (IsAlive())
@@ -120,15 +111,6 @@ void Ghost::MoodHide(float dt)
 		timer = 2.0f;
 		Animate("Attack", myEnum::kAction::kActionAttack);
 
-		// TODO
-		//		timer = MoveTime() + MoveTime() * CCRANDOM_0_1();
-		//		Animate("Fly", myEnum::kAction::kActionMove);
-		//auto visibleSize = Director::getInstance()->getVisibleSize();
-		//auto sp = Vec2(visibleSize.width / 10, visibleSize.height / 25 * 10);
-		//auto x = visibleSize.width / 10 * 8;
-		//auto y = visibleSize.height / 25 * 9;
-		//auto dp = Vec2(sp.x + x*CCRANDOM_0_1(), sp.y + y*CCRANDOM_0_1());
-
 		auto gapX = visibleSize.width * 0.1f;
 		auto gapY = visibleSize.width * 0.04f;
 
@@ -149,8 +131,6 @@ void Ghost::MoodHide(float dt)
 			dp = Vec2(sp.x + gapX * x, sp.y - gapY * y);
 		}
 
-
-
 		auto seq = Sequence::create(CallFunc::create(std::bind(&Ghost::fadeOut, this))
 			, DelayTime::create(1.0f)
 			, CallFunc::create(std::bind(&Ghost::moveTo, this, dp))
@@ -158,7 +138,6 @@ void Ghost::MoodHide(float dt)
 			, NULL);
 		
 		this->runAction(seq);
-
 
 	}
 
@@ -201,25 +180,6 @@ void Ghost::MoodStay(float dt)
 	}
 
 }
-//
-//void Ghost::MoodMove(float dt)
-//{
-//	if (timer == kTimerUp)
-//	{
-//		timer = MoveTime() + MoveTime() * CCRANDOM_0_1();
-//		Animate("Fly", myEnum::kAction::kActionMove);
-//		auto visibleSize = Director::getInstance()->getVisibleSize();
-//		auto sp = Vec2(visibleSize.width / 10, visibleSize.height / 25 * 10);
-//		auto x = visibleSize.width / 10 * 8;
-//		auto y = visibleSize.height / 25 * 9;
-//		auto dp = Vec2(sp.x + x*CCRANDOM_0_1(), sp.y + y*CCRANDOM_0_1());
-//		this->runAction(MoveTo::create(timer, dp));
-//	}
-//	else if (timer <= 0.0f)
-//	{
-//		ChooseMood();
-//	}
-//}
 
 void Ghost::MoodAttack(float dt)
 {
@@ -230,7 +190,6 @@ void Ghost::MoodAttack(float dt)
 		// fire a ball
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
-		//auto destPoint = Vec2(0, Director::getInstance()->getVisibleSize().width * CCRANDOM_0_1());
 		auto dp1 = Vec2(sp.x - 1 * CCRANDOM_MINUS1_1(), sp.y - 1);
 
 		Fire(layer, sp, dp1);
@@ -243,7 +202,6 @@ void Ghost::MoodAttack(float dt)
 
 void Ghost::StartAnimation()
 {
-	//this->setColor(cocos2d::Color3B(255, 0, 0));
 	this->Animate("Stay", myEnum::kAction::kActionStay);
 }
 

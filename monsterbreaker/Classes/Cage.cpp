@@ -1,7 +1,6 @@
 #include"Cage.h"
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
-//#include "MyBodyParser.h"
 USING_NS_CC;
 using namespace ui;
 
@@ -65,7 +64,7 @@ void Cage::ClickCage()
 
 			clickOk = false;
 			hero->DecreaseKeyCount(lockCnt);
-			// TODO :: item logic
+
 			auto effectManager = (EffectManager*) layer->getChildByName("EffectManager");
 			effectManager->ShiningEffect(l1->getPosition() + this->getPosition());
 
@@ -91,7 +90,5 @@ void Cage::ClickCage()
 
 void Cage::RemoveAll()
 {
-//	this->removeAllChildrenWithCleanup(true);
 	this->removeFromParentAndCleanup(true);
-//	layer->removeChild(this);
 }

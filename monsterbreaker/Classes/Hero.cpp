@@ -2,7 +2,6 @@
 
 USING_NS_CC;
 
-//Hero* Hero::instance = nullptr;
 Hero::Hero()
 {
 	_type = "Hero";
@@ -181,9 +180,7 @@ Hero* Hero::create(Hero * hero)
 	if (pSprite->initWithSpriteFrameName(String::createWithFormat("%s.png", pSprite->getName().c_str())->getCString()))
 	{
 		pSprite->autorelease();
-		//pSprite->InitSprite();
 		pSprite->Animate("Stay", myEnum::kAction::kActionStay);
-		//pSprite->SetWeapon(pSprite->getWeaponType().c_str(), pSprite->getWeaponName().c_str());
 		return pSprite;
 	}
 	CC_SAFE_DELETE(pSprite);
@@ -191,7 +188,6 @@ Hero* Hero::create(Hero * hero)
 }
 void Hero::SetHeroData(Hero * hero)
 {
-	//auto heroData = HeroData::getInstance();
 	_type = hero->getType();
 	_name = hero->getName();
 	_team = hero->getTeam();
@@ -278,8 +274,6 @@ void Hero::SetHeroData()
 
 void Hero::InitSprite()
 {
-//	this->initWithSpriteFrameName(String::createWithFormat("%s.png", _name.c_str())->getCString());
-
 	MyBodyParser::getInstance()->parseJsonFile(String::createWithFormat("%s/%s/%s.json", _type.c_str(), _name.c_str(), _name.c_str())->getCString());
 	auto body = MyBodyParser::getInstance()->bodyFormJson(this, String::createWithFormat("%s.png", _name.c_str())->getCString(), PhysicsMaterial(100, 1, 0));
 	if (body != nullptr)
@@ -295,10 +289,6 @@ void Hero::InitSprite()
 	this->Animate("Stay", myEnum::kAction::kActionStay);
 	MyBodyParser::getInstance()->freeInstance();
 
-	//trajectoryBall = BallSprite::create(*this);
-	//trajectoryBall->setOpacity(100);
-	//trajectoryBall->removeFromPhysicsWorld();
-
 }
 
 void Hero::SetWeapon(const char * weaponType, const char * weaponName)
@@ -311,12 +301,10 @@ void Hero::SetWeapon(const char * weaponType, const char * weaponName)
 	// weapon setposition
 	weapon->setPosition(this->getPosition());
 	weapon->Stay();
-	//weapon->Animate("Stay", myEnum::kAction::kActionStay);
 	// paddle set
 	paddle = Paddle::create(_paddleSize, weapon->getPaddleName().c_str());
 	paddle->setPosition(this->getPosition().x, this->getPosition().y + paddle->getContentSize().height *1.5);
 
-//	CCLOG("SetWeapon !!   ap:%d  || ps:%f", _attackPoint, _paddleSize);
 }
 
 void Hero::ChangeWeapon(const char * weaponType, const char * weaponName)
@@ -334,8 +322,6 @@ void Hero::RemoveWeapon()
 	layer->removeChild(weapon);
 	layer->removeChild(paddle);
 
-//	CCLOG("Remove !!   ap:%d  || ps:%f", _attackPoint, _paddleSize);
-
 }
 
 void Hero::Move(cocos2d::Vec2 vec)
@@ -343,17 +329,13 @@ void Hero::Move(cocos2d::Vec2 vec)
 	this->setPosition(vec);
 	weapon->setPosition(vec);
 	paddle->setPosition(vec.x, vec.y + paddle->getContentSize().height*2);
-	// paddle
 }
 void Hero::Draw(cocos2d::Layer* layer)
 {
 	layer->addChild(this, ZINDEX_HERO_SPRITE, "Hero");
 	layer->addChild(weapon, ZINDEX_HERO_WEAPON);
 	layer->addChild(paddle, ZINDEX_HERO_PADDLE);
-	//layer->addChild(trajectoryBall, ZINDEX_HERO_BALL, "TrajectoryBall");
-	//trajectoryBall->setVisible(false);
 	this->layer = layer;
-	// paddle
 }
 
 void Hero::Swing()
@@ -362,8 +344,6 @@ void Hero::Swing()
 	{
 		Animate("Attack", myEnum::kAction::kActionAttack);
 		weapon->Swing();
-//		SoundManager::getInstance()->playMySoundLogic("Swing", "mp3");
-		//weapon->Animate("Attack", myEnum::kAction::kActionAttack);
 	}
 }
 void Hero::Die()
@@ -371,8 +351,6 @@ void Hero::Die()
 	Animate("Die", myEnum::kAction::kActionDie);
 	weapon->Die();
 	SoundManager::getInstance()->playMySoundLogic("Die");
-
-	//weapon->Animate("Die", myEnum::kAction::kActionDie);
 }
 
 void Hero::Debug()
@@ -388,10 +366,6 @@ void Hero::Debug()
 
 	CCLOG("name : %s", _name.c_str());
 	CCLOG("type : %s", _type.c_str());
-
-	//std::vector<int> state;
-	//std::vector<int> strongState;
-	//std::vector<int> weakState;
 
 	// Character Data
 	CCLOG("ballCount : %d", _ballCount);
@@ -492,15 +466,14 @@ void Hero::SetItem(int itemID)
 		_attackPoint += 1;
 		IncreaseMaxHp(2);
 		IncreaseMaxSp(2);
-		// change hero image
 
+		// change hero image
 		auto cache = SpriteFrameCache::sharedSpriteFrameCache();
 		cache->addSpriteFramesWithFile("Hero/HalfHero/HalfHeroImage.plist", "Hero/HalfHero/HalfHero.png");
 		this->setTexture(cache->getSpriteFrameByName("HalfHero.png")->getTexture());
 		_aniName = "HalfHero";
 		this->Animate("Stay", myEnum::kAction::kActionStay);
 		weapon->Stay();
-		//weapon->Animate("Stay", myEnum::kAction::kActionStay);
 	}
 		break;
 	case ITEM_BOMBER:
@@ -554,11 +527,10 @@ void Hero::SetItem(int itemID)
 		break;
 	case ITEM_REMOTE_BOMB:
 		_bombSetCountTime += 0.5f;
-		// touch event set
+		// change bomb image
 		_bombName = "RemoteBomb";
 		break;
 	case ITEM_TRINITY:
-//		_attackPoint += 1;
 		_ballCount = 3;
 		break;
 	case ITEM_TRUTH:
@@ -593,23 +565,6 @@ void Hero::SetSkill(int skill)
 
 	_skillMaxPoint = item->valueForKey("MaxPoint")->intValue();
 	_skillCurrentPoint = _skillMaxPoint;
-
-
-	//switch (skill)
-	//{
-	//case SKILL_FIRST_AID:
-	//	_skillMaxPoint = 1;
-	//	_skillCurrentPoint = 1;
-	//	break;
-	//case SKILL_FIRE_BALL:
-	//	_skillMaxPoint = 3;
-	//	_skillCurrentPoint = 3;
-	//	break;
-	//case SKILL_LIGHTNING:
-	//	_skillMaxPoint = 3;
-	//	_skillCurrentPoint = 3;
-	//	break;
-	//}
 }
 
 void Hero::IncreaseSkillPoint(int num)
@@ -617,7 +572,6 @@ void Hero::IncreaseSkillPoint(int num)
 	_skillCurrentPoint += num;
 	if (_skillCurrentPoint > _skillMaxPoint)
 		_skillCurrentPoint = _skillMaxPoint;
-	//SoundManager::getInstance()->playMySoundLogic("HpUp");
 }
 
 void Hero::DecreaseSkillPoint(int num)

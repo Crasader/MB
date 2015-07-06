@@ -6,7 +6,6 @@
 #include "cocostudio\CocoStudio.h"
 #include "ui\CocosGUI.h"
 #include "Hero.h"
-//#include "EffectManager.h"
 #include "MonsterManager.h"
 
 #include "Definitions.h"

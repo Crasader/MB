@@ -145,12 +145,9 @@ void PrologScene::animate1()
 		NULL
 		));
 
-//	hero1->setPosition(-hero1->getContentSize().width, hero1->getPositionY());
-//	hero1->setOpacity(255);
 	hero1->runAction(
 		Sequence::create(
 		DelayTime::create(1.5f),
-		//		MoveBy::create(1.0, Vec2(hero1->getContentSize().width, hero1->getPositionY())),
 		FadeIn::create(0.5f),
 		DelayTime::create(1.0f),
 		CallFunc::create(std::bind(&PrologScene::setState, this, 1)),
@@ -187,17 +184,12 @@ void PrologScene::animate3()
 		FadeIn::create(0.5f),
 		NULL
 		));
-	//visibleSize.width * 0.5f, visibleSize.height*0.5f
 	auto spawn = Spawn::create(MoveTo::create(2.0f, Vec2(visibleSize.width*0.3f, visibleSize.height*0.25f)), ScaleTo::create(2.0f, 0.5f), NULL);
 	half2->runAction(
 		Sequence::create(
 		DelayTime::create(1.0f),
 		FadeIn::create(1.0f),
 		spawn,
-		//MoveBy::create(1.0f, Vec2(half2->getPositionX(), half2->getPositionY() + half2->getContentSize().height * 0.5f)),
-		//MoveBy::create(1.0f, Vec2(half2->getPositionX(), half2->getPositionY() - half2->getContentSize().height * 0.5f)),
-		//MoveBy::create(1.0f, Vec2(half2->getPositionX(), half2->getPositionY() + half2->getContentSize().height * 0.5f)),
-		//MoveBy::create(1.0f, Vec2(half2->getPositionX(), half2->getPositionY() - half2->getContentSize().height * 0.5f)),
 		DelayTime::create(1.0f),
 		CallFunc::create(std::bind(&PrologScene::setState, this, 3)),
 		CallFunc::create(std::bind(&PrologScene::animate4, this)),
@@ -225,9 +217,7 @@ void PrologScene::animate4()
 		Sequence::create(
 		DelayTime::create(2.0f),
 		FadeIn::create(0.5f),
-//		DelayTime::create(2.0f),
 		CallFunc::create(std::bind(&PrologScene::setState, this, 4)),
-//		CallFunc::create(std::bind(&PrologScene::animate3, this)),
 		NULL
 		));
 }

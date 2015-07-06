@@ -19,8 +19,6 @@ public :
 	cocos2d::Node * node;
 	cocos2d::Sprite * skill;
 
-
-
 	Sword(cocos2d::Layer * layer);
 
 	static Sword* create(cocos2d::Layer * layer);

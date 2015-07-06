@@ -7,7 +7,6 @@ Guard::Guard()
 	_type = "Monster";
 	stayTime = 3.00f;
 	attackTime = 2.00f;
-//	moveTime = 1.05f;
 }
 Guard* Guard::create()
 {
@@ -34,14 +33,10 @@ void Guard::MoodAttack(float dt)
 	if (timer == kTimerUp)
 	{
 		timer = AttackTime();
-		//Animate("Attack", myEnum::kAction::kActionAttack);
 		// fire a ball
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
 		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-//		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-//		auto target = layer->getChildByName("Hero");
-//		auto dp1 = target->getPosition();
 
 		Fire(layer, sp, dp1);
 	}
@@ -69,23 +64,6 @@ void Guard::MoodStay(float dt)
 	}
 }
 
-
-//void Guard::MoodStay(float dt)
-//{
-//	if (timer == kTimerUp)
-//	{
-//		timer = StayTime();
-//		Animate("Stay", myEnum::kAction::kActionStay);
-////		this->runAction(JumpBy::create(1.0f, Vec2::ZERO, this->getContentSize().height*0.5f, 1));
-//	}
-//
-//	else if (timer <= 0.0f)
-//	{
-//		ChooseMood();
-//	}
-//
-//}
-
 void Guard::ChooseMood()
 {
 	if (IsAlive())
@@ -101,7 +79,6 @@ void Guard::ChooseMood()
 		}
 	}
 }
-
 
 void Guard::InitSprite()
 {
@@ -123,5 +100,4 @@ void Guard::InitSprite()
 	hpBgSpr->setOpacity(0);
 	hpCurrentSpr->setOpacity(0);
 
-//	this->setScale(2);
 }

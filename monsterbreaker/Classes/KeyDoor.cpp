@@ -35,8 +35,6 @@ void KeyDoor::InitSprite()
 
 	btn = dynamic_cast<Button*>(node->getChildByName("btn"));
 	btn->setUserData(this);
-	//btn->setEnabled(false);
-	//btn->addTouchEventListener(CC_CALLBACK_2(Door::onTouchDoor, this));
 
 	auto body = PhysicsBody::createBox(btn->getContentSize());
 	body->setCollisionBitmask(DOOR_COLLISION_BITMASK);
@@ -57,8 +55,6 @@ void KeyDoor::Open()
 		auto act = CSLoader::createTimeline("Door/Lock.csb");
 		act->gotoFrameAndPlay(0, 60, false);
 		this->runAction(act);
-		// glow effect
-		// open sound
 	}
 }
 bool KeyDoor::ClickOpen()

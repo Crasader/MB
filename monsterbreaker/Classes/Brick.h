@@ -16,7 +16,6 @@ protected:
 public:
 	Brick(const char * mapType, int brickTypeID);
 	~Brick();
-	//static Brick* create(const char * mapType, int brickTypeID);
 
 	virtual void DestroyBlock();
 	virtual void DestroyBody();

@@ -26,14 +26,11 @@ void Merchant::Die()
 	vec.y -= size.height;
 	for (int i = 0; i < r; i++)
 	{
-		//int dir = ((int)(rand() % 2) == 0) ? -1 : 1;
-		//auto act = JumpBy::create(0.5f, Vec2(getContentSize().width , 0), getContentSize().height*0.5f, 1);
 		auto item = ItemCoin::create(layer, hero);
 		item->setPosition(this->getPosition());
 		layer->addChild(item, ZINDEX_ITEM_SPRITE);
 
 		auto act = MoveTo::create(0.5f, Vec2(vec.x + size.width * 0.5f * i, vec.y));
-		//auto act = MoveTo::create(0.5f, Vec2(300, 500));
 		item->runAction(act);
 	}	
 }

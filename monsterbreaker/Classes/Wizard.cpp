@@ -49,7 +49,6 @@ void Wizard::MoodAttack(float dt)
 
 		auto visibleSize = Director::getInstance()->getVisibleSize();
 		auto seq = Sequence::create(
-//			MoveTo::create(0.5f, Vec2(visibleSize.width*0.5f, this->getPositionY()))
 			CallFunc::create(std::bind(&Wizard::SeqFire, this, sp, dp3))
 			, DelayTime::create(1.0f)
 			, CallFunc::create(std::bind(&Wizard::SeqFire, this, sp, dp2))
@@ -136,12 +135,6 @@ void Wizard::MoodMove(float dt)
 	if (timer == kTimerUp)
 	{
 		timer = MoveTime();
-
-		//auto visibleSize = Director::getInstance()->getVisibleSize();
-		//auto sp = Vec2(visibleSize.width / 10, visibleSize.height / 25 * 10);
-		//auto x = visibleSize.width / 10 * 8;
-		//auto y = visibleSize.height / 25 * 9;
-		//auto dp = Vec2(sp.x + x*CCRANDOM_0_1(), sp.y + y*CCRANDOM_0_1());
 
 		auto gapX = visibleSize.width * 0.1f;
 		auto gapY = visibleSize.width * 0.04f;

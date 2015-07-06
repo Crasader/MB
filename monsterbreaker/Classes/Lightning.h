@@ -13,7 +13,6 @@ private:
 public:
 	float kTimer;
 	CC_SYNTHESIZE(int, _attackPoint, AttackPoint);
-//	int attackPoint = 2;
 
 	const float kTimerUp= -9999.0f;
 

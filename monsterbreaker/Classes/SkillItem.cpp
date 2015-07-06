@@ -38,7 +38,6 @@ void SkillItem::InitSkillItemData()
 	};
 	Widget::ccWidgetClickCallback callBackSkillItem= callBackFunctorSkillItem();
 	btn->addClickEventListener(callBackSkillItem);
-	//btn->setEnabled(_isShop);
 }
 SkillItem* SkillItem::create(cocos2d::Layer * layer, Hero * hero, int itemID, bool isShop, int currentPoint)
 {
@@ -95,12 +94,10 @@ void SkillItem::ClickSkillItem()
 		newSkillItem->setPosition(this->getPosition());
 		layer->addChild(newSkillItem, ZINDEX_ITEM_SPRITE, myEnum::kMyTag::kSkillItemTag);
 
-
 		// change hero skill
 		hero->SetSkill(this);
 		auto sm = (SkillManager *)layer->getChildByName("SkillManager");
 		sm->SetSkillImage();
-
 
 		RemoveThis();
 	}

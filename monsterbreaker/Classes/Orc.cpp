@@ -23,10 +23,6 @@ Orc* Orc::create()
 	{
 		pSprite->autorelease();
 		pSprite->InitSprite();
-		//pSprite->scheduleUpdate();
-
-//		pSprite->SetWeapon(pSprite->getWeaponName().c_str());
-
 		return pSprite;
 	}
 	CC_SAFE_DELETE(pSprite);
@@ -45,17 +41,8 @@ void Orc::MoodAttack(float dt)
 		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 
-		//auto dp1 = Vec2(sp.x - 2, sp.y - 1);
-		//auto dp2 = Vec2(sp.x - 1, sp.y - 1);
-		//auto dp3 = Vec2(sp.x, sp.y - 1);
-		//auto dp4 = Vec2(sp.x + 1, sp.y - 1);
-		//auto dp5 = Vec2(sp.x + 2, sp.y - 1);
-
 		Fire(layer, sp, dp1);
 		Fire(layer, sp, dp2);
-		//Fire(layer, sp, dp3);
-		//Fire(layer, sp, dp4);
-		//Fire(layer, sp, dp5);
 	}
 	else if (timer <= 0.0f)
 	{
@@ -84,7 +71,6 @@ void Orc::MoodStay(float dt)
 	{
 		timer = StayTime();
 		Animate("Stay", myEnum::kAction::kActionStay);
-//		this->runAction(JumpBy::create(1.0f, Vec2::ZERO, this->getContentSize().height*0.5f, 1));
 	}
 
 	else if (timer <= 0.0f)
@@ -114,5 +100,4 @@ void Orc::InitSprite()
 	hpBgSpr->setOpacity(0);
 	hpCurrentSpr->setOpacity(0);
 
-//	this->setScale(2);
 }

@@ -25,8 +25,6 @@ void ItemKey::ClickEvent()
 			{
 				hero->DecreaseMoneyCount(_cost);
 				hero->IncreaseKeyCount(1);
-//				SaveShopItem1ClickedData();
-//				SoundManager::getInstance()->playMySoundLogic("PickUpCoin");
 				RemoveThis();
 			}
 			else
@@ -38,13 +36,12 @@ void ItemKey::ClickEvent()
 		else
 		{
 			hero->IncreaseKeyCount(1);
-//			SoundManager::getInstance()->playMySoundLogic("PickUpCoin");
 			RemoveThis();
 		}
 	}
 	else
 	{
-		SoundManager::getInstance()->playMySoundLogic("X");
 		// beep sound
+		SoundManager::getInstance()->playMySoundLogic("X");
 	}
 }

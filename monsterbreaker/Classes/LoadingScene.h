@@ -6,7 +6,6 @@
 #include "MapManager.h"
 #include "HeroData.h"
 #include "Definitions.h"
-//#include "StartScene.h"
 #include "GameScene.h"
 
 class LoadingScene : public cocos2d::Layer
@@ -23,17 +22,11 @@ public:
 	
 private:
 
-//	CC_SYNTHESIZE(bool, _loadingFinished, LoadingFinished);
-//	MapManager map;
-
 	cocos2d::Size visibleSize;
 	cocos2d::Vec2 origin;
 
 	void onEnter();
-//	int onEnter();
 	void GoToGameScene();
-//	virtual void update(float dt);
-	void InitData();
 
 };
 

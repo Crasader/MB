@@ -5,13 +5,11 @@
 #include "cocos2d.h"
 #include "GameObject.h"
 #include "Brick.h"
-//#include "SingleBrick.h"
 class CollisionManager
 {
 public:
 	// default constructor
 	CollisionManager();
-	//~CollisionManager();
 
 	cocos2d::Layer *layer;
 	void SetLayer(cocos2d::Layer * layer);
@@ -23,7 +21,6 @@ public:
 	void DestroyNode(cocos2d::Node * node);
 
 	void DestroyBrick(cocos2d::PhysicsBody * target);
-	//void DestroyDoubleBrick(cocos2d::PhysicsBody * target);
 };
 
 #endif // __COLLISION_MANAGER_H__

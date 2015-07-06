@@ -73,9 +73,3 @@ std::string Utils::GetWeaponName(int id)
 	return result;
 }
 
-
-//bool Utils::Compare(const char * str1, char * str2) const 
-//{
-//	return (strcmp(str1, str2) == 0) ? true : false;
-//}
-

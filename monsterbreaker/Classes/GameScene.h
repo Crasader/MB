@@ -24,8 +24,6 @@
 
 #include "Definitions.h"
 #include "Utils.h"
-//#include "Chest.h"
-//#include "Merchant.h"
 
 class DoorManager;
 class MonsterManager;
@@ -37,11 +35,6 @@ class HelpManager;
 class DataManager;
 class SystemManager;
 class TutorialManager;
-
-
-//#include "Definitions\SCENE DEFINITIONS.h"
-//#include "Cage.h"
-//#include "HMWarrior.h"
 
 class GameScene : public cocos2d::Layer
 {
@@ -68,7 +61,6 @@ private:
 	virtual void onEnter();
 
 	Hero * hero = nullptr;
-	//bool touchDoor;
 
 	// Managers
 	StatusManager * statusManager;
@@ -93,10 +85,11 @@ private:
 	cocos2d::ui::Button * pauseBtn;
 	void pauseLogic();
 
-	// test menu0
+	// test menu
 	void test(cocos2d::Ref *pSender);
 	void test2(cocos2d::Ref *pSender);
 	void test3(cocos2d::Ref *pSender);
+
 	// event
 	bool onContactBegin(cocos2d::PhysicsContact &contact);
 	void onContactSeperate(cocos2d::PhysicsContact &contact);
@@ -119,7 +112,6 @@ public:
 	void SetDie();
 	void Move(cocos2d::Touch * touch);
 
-	//void onTouchDoor(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 };
 
 #endif // __BOSS_SCENE_H__

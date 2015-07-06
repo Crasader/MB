@@ -41,8 +41,6 @@ public:
 	CC_SYNTHESIZE(bool, _allViewType, AllViewType);
 	CC_SYNTHESIZE(int, _heroX, HeroX);
 	CC_SYNTHESIZE(int, _heroY, HeroY);
-//	CC_SYNTHESIZE(int, _cntRoom, CountRoom);
-//	CC_SYNTHESIZE(int, _clearCntRoom, ClearCountRoom);
 
 	Room map[SIZE_X][SIZE_Y];
 	static MapManager* getInstance();
@@ -59,11 +57,9 @@ public:
 	void initAllRoomdata();
 	void create();
 	void debug(const char * temp);
-//	void debugMap(cocos2d::Layer * layer);
 	void DrawMap(cocos2d::Layer *layer);
 	void ReDrawMap();
 
-//	void Save();
 	void SaveAll();
 	void SaveRoomData(int x, int y);
 	void LoadAll();

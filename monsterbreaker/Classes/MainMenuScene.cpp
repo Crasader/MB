@@ -7,13 +7,9 @@ Scene* MainMenuScene::createScene()
 {
     // 'scene' is an autorelease object
 	auto scene = Scene::create();
- //   auto scene = Scene::createWithPhysics();
-	//scene->getPhysicsWorld()->setGravity(Vec2(0, 0));
-	//scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
 
     // 'layer' is an autorelease object
 	auto layer = MainMenuScene::create();
-	//layer->SetPhysicsWorld(scene->getPhysicsWorld());
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -37,7 +33,6 @@ bool MainMenuScene::init()
 
 	this->setKeypadEnabled(true);
 
-	//unlockManager = UnlockManager::create(this);
 	unlockManager = UnlockManager::getInstace();
 
 	LoadData();
@@ -98,8 +93,6 @@ bool MainMenuScene::init()
 	SoundManager::getInstance()->playMyBGLogic("MainBG");
 	
 	unlockManager->ShowUnlockData(this);
-
-	//CCLOG("%s", (sp) ? "true" : "false");
 	return true;
 }
 
@@ -180,7 +173,6 @@ void MainMenuScene::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event)
 	{
 		if (_currentEndingNumber > 0)
 		{
-			// todo
 			dotMenu[_currentEndingNumber]->setDisplayFrame(cache->spriteFrameByName(String::createWithFormat("Icon/%d.png", _currentEndingNumber)->getCString()));
 			_currentEndingNumber--;
 			dotMenu[_currentEndingNumber]->setDisplayFrame(cache->spriteFrameByName(String::createWithFormat("Icon/%dc.png", _currentEndingNumber)->getCString()));
@@ -238,13 +230,9 @@ void MainMenuScene::DrawNode()
 
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
-		//b_play->setTag(myEnum::kMenu::kMenuPlay);
-		//b_play->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		auto b_about = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonAbout"));
 		b_about->addClickEventListener(callBackAbout);
-		//b_about->setTag(myEnum::kMenu::kMenuAbout);
-		//b_about->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		auto treeNode = node->getChildByName("TreeTop_2");
 		auto spawn = Spawn::create(RotateBy::create(0.45f, -3), SkewBy::create(0.45f, -3, 3), NULL);
@@ -252,7 +240,6 @@ void MainMenuScene::DrawNode()
 			RepeatForever::create(Sequence::create(spawn, spawn->reverse(), NULL))
 			);
 
-		// sound
 	}
 	break;
 	case myEnum::kEnding::kEndingMurderer:
@@ -267,22 +254,15 @@ void MainMenuScene::DrawNode()
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
 
-		//b_play->setTag(myEnum::kMenu::kMenuPlay);
-		//b_play->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
-
 		auto b_about = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonAbout"));
 		b_about->addClickEventListener(callBackAbout);
-//		b_about->setTag(myEnum::kMenu::kMenuAbout);
-//		b_about->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		// half Devil
 		auto halfDevil = CSLoader::createNode("MainMenuScene/Ending1/HalfDevil.csb");
 		node->addChild(halfDevil);
 		auto ani_hd = CSLoader::createTimeline("MainMenuScene/Ending1/HalfDevil.csb");
 		halfDevil->runAction(ani_hd);
-		//ani_hd->pause();
 		ani_hd->gotoFrameAndPlay(0, 120, false);
-		//halfDevil->runAction(ani_hd);
 		
 		auto seq = Sequence::create(
 			CallFunc::create(std::bind(&MainMenuScene::PlayAnimation, this,ani_hd,0,120,false)),
@@ -291,9 +271,6 @@ void MainMenuScene::DrawNode()
 			NULL);
 
 		halfDevil->runAction(seq);
-
-		// sound
-
 	}
 	break;
 	case myEnum::kEnding::kEndingDevil:
@@ -304,25 +281,18 @@ void MainMenuScene::DrawNode()
 		auto ani = CSLoader::createTimeline("MainMenuScene/Ending2/Ending2.csb");
 		ani->gotoFrameAndPlay(0, 120, false);
 		node->runAction(ani);
-		//node->setCameraMask(2);
 
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
-//		b_play->setTag(myEnum::kMenu::kMenuPlay);
-//		b_play->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		auto b_about = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonAbout"));
 		b_about->addClickEventListener(callBackAbout);
-//		b_about->setTag(myEnum::kMenu::kMenuAbout);
-//		b_about->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		// torch
 		auto torch = CSLoader::createNode("Torch/Torch.csb");
 		torch->setScale(3);
 		torch->setPosition(visibleSize.width * 0.4f + origin.x, visibleSize.height * 0.6f + origin.y);
-//		torch->setPosition(visibleSize.width / 2, visibleSize.height / 10);
-//		torch->setRotation(75);
-		//torch->setPosition(0, 180);
+
 		node->addChild(torch, 1000);
 		auto ani_torch = CSLoader::createTimeline("Torch/Torch.csb");
 		torch->runAction(ani_torch);
@@ -336,7 +306,6 @@ void MainMenuScene::DrawNode()
 		mask->setBlendFunc(f1);
 		mask->setPosition(visibleSize.width / 2, visibleSize.height / 2);
 		mask->setScale(1.5);
-//		mask->setPosition(torch->getPosition());
 		node->addChild(mask, 1);
 
 		auto sh = Sprite::create("Shadow.png");
@@ -352,9 +321,6 @@ void MainMenuScene::DrawNode()
 		auto seq = Sequence::create(ft1, ft2, sc1, sc2, NULL);
 		auto r = RepeatForever::create(seq);
 		sh->runAction(r);
-		//sh->runAction(RepeatForever::create(Sequence::createWithTwoActions(FadeOut::create(0.5f), FadeIn::create(0.5f))));
-
-		// setOpacity(0)Àº Åõ¸í
 	}
 	break;
 	case myEnum::kEnding::kEndingSavior:
@@ -365,17 +331,12 @@ void MainMenuScene::DrawNode()
 		auto ani = CSLoader::createTimeline("MainMenuScene/Ending3/Ending3.csb");
 		ani->gotoFrameAndPlay(0, 90, false);
 		node->runAction(ani);
-		//node->setCameraMask(2);
 
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
-//		b_play->setTag(myEnum::kMenu::kMenuPlay);
-//		b_play->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		auto b_about = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonAbout"));
 		b_about->addClickEventListener(callBackAbout);
-//		b_about->setTag(myEnum::kMenu::kMenuAbout);
-//		b_about->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		// half angel
 		auto halfAngel = CSLoader::createNode("MainMenuScene/Ending3/HalfAngel.csb");
@@ -427,42 +388,23 @@ void MainMenuScene::DrawNode()
 		auto ani = CSLoader::createTimeline("MainMenuScene/Ending4/Ending4.csb");
 		ani->gotoFrameAndPlay(0, 60, false);
 		node->runAction(ani);
-		//node->setCameraMask(2);
 
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
-//		b_play->setTag(myEnum::kMenu::kMenuPlay);
-//		b_play->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		auto b_about = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonAbout"));
 		b_about->addClickEventListener(callBackAbout);
-//		b_about->setTag(myEnum::kMenu::kMenuAbout);
-//		b_about->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
-
-		// angel
-		//auto angel = CSLoader::createNode("MainMenuScene/Ending4/Angel.csb");
-		//angel->setPosition(visibleSize.width / 2 + origin.x, visibleSize.height + visibleSize.height / 2);
-		//node->addChild(angel);
-//		auto ani_a = CSLoader::createTimeline("MainMenuScene/Ending4/Angel.csb");
-//		angel->runAction(ani_a);
-//		ani_a->gotoFrameAndPlay(0, 120, true);
 
 		auto angel = node->getChildByName("Angel");
 		auto wing1 = node->getChildByName("Angel")->getChildByName("wing_4");
 		auto wing2 = node->getChildByName("Angel")->getChildByName("wing_3");
 		auto body = node->getChildByName("Angel")->getChildByName("body_1");
 
-		
-
 		auto act_wing1 = RepeatForever::create(Sequence::create(
-			//			Spawn::create(RotateBy::create(1.0f, 20), SkewBy::create(1.0f, 20, 20), NULL),
-			//			Spawn::create(RotateBy::create(1.0f, -20), SkewBy::create(1.0f, -20, -20), NULL),
 			RotateBy::create(1.0f, -20),
 			RotateBy::create(1.0f, 20),
 			NULL));
 		auto act_wing2 = RepeatForever::create(Sequence::create(
-			//			Spawn::create(RotateBy::create(1.0f, -20), SkewBy::create(1.0f, -20, -20), NULL),
-			//			Spawn::create(RotateBy::create(1.0f, 20), SkewBy::create(1.0f, 20, 20), NULL),
 			RotateBy::create(1.0f, 20),
 			RotateBy::create(1.0f, -20),
 			NULL));
@@ -492,9 +434,7 @@ void MainMenuScene::DrawNode()
 
 		auto ani_v1 = CSLoader::createTimeline("MainMenuScene/Ending4/Vassal.csb");
 		vassal1->runAction(ani_v1);
-		//ani_a->gotoFrameAndPlay(0, 120, true);
 		auto act_vassal1_moveTo = MoveTo::create(2.0f, Vec2(vassal1->getPositionX(), visibleSize.height / 15));
-		//vassal1->runAction(act_vassal1_moveTo);
 
 		auto seq_vassal1 = Sequence::create(
 			DelayTime::create(1.5f),
@@ -511,9 +451,7 @@ void MainMenuScene::DrawNode()
 
 		auto ani_v2 = CSLoader::createTimeline("MainMenuScene/Ending4/Vassal.csb");
 		vassal2->runAction(ani_v2);
-		//ani_a->gotoFrameAndPlay(0, 120, true);
 		auto act_vassal2_moveTo = MoveTo::create(2.0f, Vec2(vassal2->getPositionX(), visibleSize.height / 20));
-		//vassal1->runAction(act_vassal1_moveTo);
 
 		auto seq_vassal2 = Sequence::create(
 			DelayTime::create(0.7f),
@@ -531,9 +469,7 @@ void MainMenuScene::DrawNode()
 
 		auto ani_v3 = CSLoader::createTimeline("MainMenuScene/Ending4/Vassal.csb");
 		vassal3->runAction(ani_v3);
-		//ani_a->gotoFrameAndPlay(0, 120, true);
 		auto act_vassal3_moveTo = MoveTo::create(2.0f, Vec2(vassal3->getPositionX(), visibleSize.height / 15));
-		//vassal1->runAction(act_vassal1_moveTo);
 
 		auto seq_vassal3 = Sequence::create(
 			DelayTime::create(1.0f),
@@ -553,7 +489,6 @@ void MainMenuScene::DrawNode()
 		auto ani = CSLoader::createTimeline("MainMenuScene/Ending5/Ending5.csb");
 		ani->gotoFrameAndPlay(0, 60, false);
 		node->runAction(ani);
-		//node->setCameraMask(2);
 
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
@@ -616,13 +551,9 @@ void MainMenuScene::DrawNode()
 
 		auto b_play = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonPlay"));
 		b_play->addClickEventListener(callBackCSS);
-//		b_play->setTag(myEnum::kMenu::kMenuPlay);
-//		b_play->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		auto b_about = static_cast<cocos2d::ui::Button *>(node->getChildByName("ButtonAbout"));
 		b_about->addClickEventListener(callBackAbout);
-//		b_about->setTag(myEnum::kMenu::kMenuAbout);
-//		b_about->addTouchEventListener(CC_CALLBACK_2(MainMenuScene::MenuClick, this));
 
 		// tree
 		auto treeNode = static_cast<cocos2d::Sprite*>(node->getChildByName("TreeTop"));
@@ -633,8 +564,6 @@ void MainMenuScene::DrawNode()
 		// secret road
 		auto roadNode = static_cast<cocos2d::Sprite*>(node->getChildByName("SecretRoad"));
 		roadNode->setOpacity(0);
-		//auto seq_Road = Sequence::create(FadeIn::create(1.5f), FadeOut::create(1.5f), NULL);
-		//auto repeat_road = RepeatForever::create(seq_Road);
 		roadNode->runAction(FadeIn::create(1.5f));
 
 		// flower
@@ -656,8 +585,6 @@ void MainMenuScene::DrawNode()
 void MainMenuScene::PlayAnimation(cocostudio::timeline::ActionTimeline * ani, int s, int e, bool r)
 {
 	ani->gotoFrameAndPlay(s, e, r);
-	//target->stopAllActions();
-	//target->runAction(ani);
 }
 
 void MainMenuScene::onKeyReleased(cocos2d::EventKeyboard::KeyCode keycode, cocos2d::Event *event)

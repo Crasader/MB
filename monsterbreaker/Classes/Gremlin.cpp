@@ -23,10 +23,6 @@ Gremlin* Gremlin::create()
 	{
 		pSprite->autorelease();
 		pSprite->InitSprite();
-		//pSprite->scheduleUpdate();
-
-//		pSprite->SetWeapon(pSprite->getWeaponName().c_str());
-
 		return pSprite;
 	}
 	CC_SAFE_DELETE(pSprite);
@@ -42,8 +38,6 @@ void Gremlin::MoodAttack(float dt)
 		// fire a ball
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
-//		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-//		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 
 		auto dp1 = Vec2(sp.x - 2, sp.y - 1);
 		auto dp2 = Vec2(sp.x - 1, sp.y - 1);

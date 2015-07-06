@@ -20,7 +20,6 @@ private :
 	CC_SYNTHESIZE(int, _cost, Cost);
 	Hero * hero;
 	cocos2d::Layer * layer;
-//	int itemID;
 
 	cocos2d::Node * node;
 	cocos2d::Sprite * image;
@@ -29,7 +28,6 @@ private :
 public :
 	SkillItem(cocos2d::Layer * layer, Hero * hero, int skillID, bool isShop, int currentPoint);
 	
-	//void Init();
 	static SkillItem* create(cocos2d::Layer * layer, Hero * hero, int skillID, bool isShop, int currentPoint = 0);
 	void InitSkillItemData();
 

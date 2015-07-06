@@ -92,7 +92,6 @@ void TutorialManager::onTutorialBtnTouch(cocos2d::Ref* sender, cocos2d::ui::Widg
 			break;
 		case Widget::TouchEventType::ENDED:
 		{
-			//Open();
 			isClicked = true;
 			auto target = (TutorialBtn*)((Node*)sender)->getUserData();
 			doWork(target->btnType);
@@ -119,7 +118,6 @@ void TutorialManager::doWork(int btnType)
 
 		f->setClickVisible(false);
 		f->setRotation(-45);
-		//		f->setOpacity(128);
 
 		f->runAction(Sequence::create(
 			DelayTime::create(1.0f),
@@ -133,10 +131,7 @@ void TutorialManager::doWork(int btnType)
 		auto cache = SpriteFrameCache::sharedSpriteFrameCache();
 		cache->addSpriteFramesWithFile("Ball/Ball.plist", "Ball/Ball.png");
 
-//		ball = Node::create();
-
 		auto ball = Sprite::createWithSpriteFrameName(String::createWithFormat("Ball/%s.png", hero->getBallName().c_str())->getCString());
-		//ball->addChild(b1);
 
 		auto dp = Vec2(f->getPosition() + Vec2(-ball->getContentSize().width *0.5f, ball->getContentSize().height*0.5f));
 		auto startPoint = hero->paddle->getPosition();
@@ -150,7 +145,6 @@ void TutorialManager::doWork(int btnType)
 			DelayTime::create(1.5f),
 			CallFunc::create(std::bind(&Node::setVisible, ball, true)),
 			CallFunc::create(std::bind(&TutorialManager::playAttackSound, this, "FireBall", "wav")),
-			//			CallFunc::create(std::bind(&SoundManager::playMySoundLogic, SoundManager::getInstance(), "FireBall")),
 			MoveTo::create(1.0f, dp),
 			CallFunc::create(std::bind(&Node::setVisible, ball, false)),
 			DelayTime::create(1.0f),
@@ -192,7 +186,6 @@ void TutorialManager::doWork(int btnType)
 		layer->addChild(f, ZINDEX_TUTORIAL_SPRITE);
 
 		f->setClickVisible(true);
-//		f->setOpacity(128);
 
 		f->runAction(Sequence::create(
 			MoveTo::create(1.0f, Vec2(visibleSize.width*0.8f, f->getPositionY())),
@@ -211,7 +204,6 @@ void TutorialManager::doWork(int btnType)
 
 		f->setClickVisible(true);
 		f->setRotation(-45);
-		//		f->setOpacity(128);
 
 		auto txt = Sprite::createWithSpriteFrameName("Tutorial/ClickAndHold.png");
 		txt->setPosition(f->getPosition());
@@ -278,8 +270,6 @@ void TutorialManager::doWork(int btnType)
 			CallFunc::create(std::bind(&Node::setVisible, ball, true)),
 			MoveTo::create(0.5f, dp2),
 			MoveTo::create(0.5f, hero->getPosition()),
-			//CallFunc::create(std::bind(&TutorialManager::playAttackSound, this, "Solid", "wav")),
-			//MoveTo::create(1.0f, dp),
 			CallFunc::create(std::bind(&TutorialManager::removeNode, this, ball)),
 			NULL));
 
@@ -329,7 +319,6 @@ void TutorialManager::doWork(int btnType)
 
 		f->setClickVisible(true);
 		f->setRotation(45);
-//		f->setOpacity(128);
 
 		f->runAction(Sequence::create(
 			DelayTime::create(1.0f),
@@ -344,14 +333,10 @@ void TutorialManager::doWork(int btnType)
 		f2->setClickVisible(true);
 		f2->setVisible(false);
 		f2->setRotation(45);
-		//		f2->setOpacity(128);
 
 		f2->runAction(Sequence::create(
 			DelayTime::create(1.0f),
 			CallFunc::create(std::bind(&FingerPointer::setVisible, f2, true)),
-			//FadeIn::create(0.5f),
-//			DelayTime::create(0.5f),
-//			CallFunc::create(std::bind(&FingerPointer::fadeOut, f2, 0.5f)),
 			DelayTime::create(1.0f),
 			CallFunc::create(std::bind(&TutorialManager::removeNode, this, f2)),
 			CallFunc::create(std::bind(&TutorialManager::setIsClicked, this, false)),

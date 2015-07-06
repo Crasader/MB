@@ -5,7 +5,6 @@
 #include "cocos2d.h"
 #include "GameObject.h"
 #include "cocostudio\CocoStudio.h"
-//#include "Hero.h"
 
 class FingerPointer : public cocos2d::Node
 {

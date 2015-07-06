@@ -38,10 +38,6 @@ void HeroData::Debug()
 	CCLOG("name : %s", _name.c_str());
 	CCLOG("type : %s", _type.c_str());
 
-	//std::vector<int> state;
-	//std::vector<int> strongState;
-	//std::vector<int> weakState;
-
 	// Character Data
 	CCLOG("ballCount : %d", _ballCount);
 	CCLOG("ballCurrentCount : %d", _ballCurrentCount);
@@ -89,7 +85,6 @@ void HeroData::InitWithFile(const char * type, const char * name)
 	_damagedState = false;
 	_actionState = myEnum::kAction::kActionStay;
 
-
 	// character data
 	_ballCount = dic->valueForKey("BallCount")->intValue();
 	_ballCurrentCount = dic->valueForKey("BallCurrentCount")->intValue();
@@ -125,16 +120,6 @@ void HeroData::InitWithFile(const char * type, const char * name)
 	itemList.clear();
 	helperList.clear();
 }
-
-//void HeroData::SaveData()
-//{
-//	
-//}
-//void HeroData::LoadData()
-//{
-//
-//}
-
 
 void HeroData::SaveData() const
 {
@@ -262,42 +247,4 @@ void HeroData::LoadData()
 	_aniName = def->getStringForKey("p_aniName", "Warrior");
 
 }
-
-//void HeroData::InitHeroData(const Hero & hero)
-//{
-//	_name = hero.getName();
-//	_type = hero.getType();
-//	_team = hero.getTeam();
-//	_maxHp = hero.getMaxHp();
-//	_currentHp = hero.getCurrentHp();
-//	_attackPoint = hero.getAttackPoint();
-//	_alive = true;
-//	_damagedState = false;
-//	_actionState = myEnum::kAction::kActionStay;
-//
-//	_ballCount = hero.getBallCount();
-//	_ballCurrentCount = 0;
-//	_ballName = hero.getBallName();
-//	_ballVelocity = hero.getBallVelocity();
-//	_ballAccel = hero.getBallAccel();
-//
-//	_maxSp = hero.getMaxSp();
-//	_currentSp = hero.getCurrentSp();
-//	_keyCount = hero.getKeyCount();
-//	_bombCount = hero.getBombCount();
-//	_moneyCount = hero.getMoneyCount();
-//
-//	_bombName = hero.getBombName();
-//	_bombAttackPoint = hero.getBombAttackPoint();
-//	_bombRange = hero.getBombRange();
-//	_bombCountTime = hero.getBombCountTime();
-//	_bombSetCountTime = hero.getBombSetCountTime();
-//	_paddleSize = hero.getPaddleSize();
-//
-//	_weaponName = hero.getWeaponName();
-//}
-
-
-
-
 

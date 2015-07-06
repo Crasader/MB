@@ -7,7 +7,6 @@ SkillManager::SkillManager(Hero * hero) : hero(hero)
 	visibleSize = Director::sharedDirector()->getVisibleSize();
 	origin = Director::sharedDirector()->getVisibleOrigin();
 	_clickEnabled = false;
-//	_changedSkill = false;
 
 }
 SkillManager::~SkillManager()
@@ -34,13 +33,6 @@ void SkillManager::update(float dt)
 	auto gapX = gaugeMax->getPositionX() - gaugeMax->getContentSize().width  * 0.5f;
 	gaugeCurrent->setPosition(gapX + gaugeCurrent->getContentSize().width * result * 0.5f, gaugeCurrent->getPositionY());
 
-	//if (_changedSkill)
-	//{
-	//	_changedSkill = false;
-	//	ChangedSkill();
-	//}
-	// pause check
-	//btn->setEnabled(_clickEnabled);
 }
 
 void SkillManager::InitSkill()
@@ -55,11 +47,6 @@ void SkillManager::InitSkill()
 	btn->addTouchEventListener(CC_CALLBACK_2(SkillManager::ClickSkillBtn, this));
 
 	SetSkillImage();
-
-//	skillImage->setDisplayFrame(cache->getSpriteFrameByName("Skill/FireBall.png"));
-//	skillImage->setTexture("FireBallImage.png");
-//	skillImage->
-//	int current = hero->getSkillCurrentPoint();
 
 	this->addChild(node, ZINDEX_STATUS_SKILL);
 
@@ -143,8 +130,4 @@ void SkillManager::ClickSkillBtn(cocos2d::Ref* sender, cocos2d::ui::Widget::Touc
 		break;
 	}
 }
-//
-//void SkillManager::ChangedSkill()
-//{
-//	SetSkillImage();
-//}
+

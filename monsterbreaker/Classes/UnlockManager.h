@@ -8,7 +8,6 @@
 #include "Definitions.h"
 
 #include "SoundManager.h"
-//#include "Monster.h"
 
 class UnlockManager
 {
@@ -23,9 +22,6 @@ public:
 
 	cocos2d::Size visibleSize;
 	cocos2d::Vec2 origin;
-	//cocos2d::Layer * layer;
-
-	//static UnlockManager* create(cocos2d::Layer * layer);
 
 	void ShowUnlockData(cocos2d::Layer * layer);
 	void GetUnlockData();

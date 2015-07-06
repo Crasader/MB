@@ -15,14 +15,9 @@ public :
 
 	float timer2;
 
-//	virtual void MoodStay(float dt);
-
-//	virtual void Damaged(int i);
 	virtual void Die();
 	virtual void ChooseMood();
 	virtual void update(float dt);
-//	virtual void MoodMove(float dt);
-//	virtual void MoodAttack(float dt);
 	virtual void InitSprite();
 
 	virtual void CreateRandomMonster();

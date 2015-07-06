@@ -13,7 +13,6 @@ public:
 	SingleBrick(const char * mapType, int brickTypeID);
 	~SingleBrick();
 	static SingleBrick* create(const char * mapType, int brickTypeID);
-//	void InitSprite();
 };
 
 #endif // __SINGLE_BRICK_H__

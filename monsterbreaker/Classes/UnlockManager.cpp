@@ -15,13 +15,6 @@ UnlockManager::~UnlockManager()
 
 }
 
-//UnlockManager* UnlockManager::create()
-//{
-//	auto pNode = new UnlockManager();
-//	pNode->autorelease();
-//	return pNode;
-//}
-
 UnlockManager* UnlockManager::getInstace()
 {
 	if (instance == nullptr)
@@ -146,21 +139,17 @@ void UnlockManager::GetUnlockImageAndText(cocos2d::Sprite* img, cocos2d::ui::Tex
 void UnlockManager::DestroyNode(cocos2d::Node* node)
 {
 	node->stopAllActions();
-	//node->removeAllChildrenWithCleanup(true);
 	node->removeFromParentAndCleanup(true);
-//	layer->removeChild(node);
 }
 
 void UnlockManager::PauseAllEffects()
 {
-//	this->pause();
 	int size = nodes.size();
 	for (int i = 0; i < size; i++)
 		nodes.at(i)->pause();
 }
 void UnlockManager::ResumeAllEffects()
 {
-//	this->resume();
 	int size = nodes.size();
 	for (int i = 0; i < size; i++)
 		nodes.at(i)->resume();

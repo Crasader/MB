@@ -12,8 +12,6 @@ public :
 	Wolf();
 	static Wolf* create();
 
-//	virtual void MoodStay(float dt);
-
 	virtual void Die();
 	virtual void ChooseMood();
 	virtual void MoodMove(float dt);

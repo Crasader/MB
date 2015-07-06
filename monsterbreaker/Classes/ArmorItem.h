@@ -27,7 +27,6 @@ private :
 public :
 	ArmorItem(cocos2d::Layer * layer, Hero * hero, int armorID, bool isShop);
 	
-	//void Init();
 	static ArmorItem* create(cocos2d::Layer * layer, Hero * hero, int armorID, bool isShop);
 	void InitArmorItemData();
 

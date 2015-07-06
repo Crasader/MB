@@ -82,13 +82,3 @@ void LoadingScene::GoToGameScene()
 	auto scene = GameScene::createScene();
 	Director::getInstance()->replaceScene(TransitionFade::create(0.2, scene));
 }
-void LoadingScene::InitData()
-{
-	//auto def = UserDefault::sharedUserDefault();
-	//def->setIntegerForKey("TR_StaticCount", 0);
-	//def->setBoolForKey("TR1_IsOpened", false);
-	//def->setBoolForKey("TR2_IsOpened", false);
-	//def->setIntegerForKey("SR_StaticCount", 0);
-	//def->setBoolForKey("SR1_IsOpened", false);
-	//def->setBoolForKey("SR2_IsOpened", false);
-}

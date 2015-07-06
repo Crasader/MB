@@ -12,11 +12,6 @@ BombManager::~BombManager()
 
 }
 
-//void BombManager::InitBombManagerData(float countTime)
-//{
-//	this->countTime = countTime;
-//	this->kTimer = kTimerUp;
-//}
 void BombManager::CanceledTimer()
 {
 	kTimer = kTimerUp;
@@ -27,7 +22,6 @@ bool BombManager::SetBomb(cocos2d::Vec2 vec)
 	{
 		auto bomb = Bomb::create(layer, hero);
 		bomb->setPosition(vec);
-//		bomb->SetBomb(layer, vec);
 		layer->addChild(bomb, ZINDEX_HERO_BOMB);
 		bombes.pushBack(bomb);
 		kTimer = kTimerUp;
@@ -43,7 +37,6 @@ bool BombManager::IsTimerUp()
 void BombManager::SetTimer()
 {
 	kTimer = countTime;
-//	auto node = Node::create();
 }
 
 BombManager* BombManager::create(cocos2d::Layer * layer, Hero * hero)

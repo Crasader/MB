@@ -7,7 +7,6 @@
 #include "ui\CocosGUI.h"
 #include "Hero.h"
 #include "MonsterManager.h"
-//#include "EffectManager.h"
 
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
@@ -18,13 +17,6 @@ class HMArcher : public HelperMan
 {
 private:
 public:
-	//std::string  _ballName;
-	//int _ballCount;
-	//int _ballCurrentCount;
-	//int _team;
-	//int _attackPoint;
-
-
 	HMArcher(cocos2d::Layer * layer, Hero * hero, bool cageIn);
 	~HMArcher();
 

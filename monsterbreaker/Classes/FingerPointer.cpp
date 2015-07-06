@@ -1,7 +1,6 @@
 #include"FingerPointer.h"
 #include "Definitions.h"
 #include "SimpleAudioEngine.h"
-//#include "MyBodyParser.h"
 USING_NS_CC;
 
 FingerPointer::FingerPointer(cocos2d::Layer * layer) : layer(layer)
@@ -39,7 +38,6 @@ void FingerPointer::RemoveAll()
 
 cocos2d::Size FingerPointer::getContentSize()
 {
-//	auto spr = l->getChildByName("skill10_1");
 	return spr->getContentSize();
 }
 

@@ -23,8 +23,6 @@ void ItemHalfSoulHeart::ClickEvent()
 			{
 				hero->DecreaseMoneyCount(_cost);
 				hero->IncreaseCurrentSp(1);
-//				SaveShopItem1ClickedData();
-//				SoundManager::getInstance()->playMySoundLogic("PickUpCoin");
 				RemoveThis();
 			}
 			else
@@ -36,13 +34,12 @@ void ItemHalfSoulHeart::ClickEvent()
 		else
 		{
 			hero->IncreaseCurrentSp(1);
-//			SoundManager::getInstance()->playMySoundLogic("PickUpCoin");
 			RemoveThis();
 		}
 	}
 	else
 	{
-		SoundManager::getInstance()->playMySoundLogic("X");
 		// beep sound
+		SoundManager::getInstance()->playMySoundLogic("X");
 	}
 }

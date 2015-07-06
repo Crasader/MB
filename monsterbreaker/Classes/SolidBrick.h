@@ -13,7 +13,6 @@ public:
 	SolidBrick(const char * mapType, int brickTypeID);
 	~SolidBrick();
 	static SolidBrick* create(const char * mapType, int brickTypeID);
-	//void InitSprite();
 	virtual void DestroyBlock();
 };
 

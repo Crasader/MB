@@ -117,15 +117,6 @@ void Room::LoadRoomData()
 	data2.clear();
 
 	bool none = def->getBoolForKey(String::createWithFormat("m_%d%dNone", x, y)->getCString(), true);
-//	if (none)
-//	{
-//		lock = false;
-//		visible = false;
-//		exp = false;
-//		type = myEnum::kRoomType::kRTNone;
-//	}
-//	else
-//	{
 	if (!none)
 	{
 		// init
@@ -157,7 +148,6 @@ void Room::LoadRoomData()
 
 			data2["chestItemCnt"] = def->getStringForKey(String::createWithFormat("m_%d%dchestItemCnt", x, y)->getCString(), "0").c_str();
 			int chestItemSize = std::atoi(data2["chestItemCnt"].c_str());
-			//def->setStringForKey(String::createWithFormat("m_%d%dchestItemCnt", x, y)->getCString(), data2["chestItemCnt"]);
 			for (int i = 1; i <= chestItemSize; i++)
 			{
 				data2[String::createWithFormat("chestItem%dID", i)->getCString()] = def->getStringForKey(String::createWithFormat("m_%d%dchestItem%dID", x, y, i)->getCString(), "0");
@@ -168,7 +158,6 @@ void Room::LoadRoomData()
 
 			data2["skillItemCnt"] = def->getStringForKey(String::createWithFormat("m_%d%dskillItemCnt", x, y)->getCString(), "0").c_str();
 			int skillItemSize = std::atoi(data2["skillItemCnt"].c_str());
-			//def->setStringForKey(String::createWithFormat("m_%d%dskillItemCnt", x, y)->getCString(), data2["skillItemCnt"]);
 			for (int i = 1; i <= skillItemSize; i++)
 			{
 				data2[String::createWithFormat("skillItem%dID", i)->getCString()] = def->getStringForKey(String::createWithFormat("m_%d%dskillItem%dID", x, y, i)->getCString(), "0");
@@ -180,7 +169,6 @@ void Room::LoadRoomData()
 
 			data2["armorItemCnt"] = def->getStringForKey(String::createWithFormat("m_%d%darmorItemCnt", x, y)->getCString(), "0").c_str();
 			int armorItemSize = std::atoi(data2["armorItemCnt"].c_str());
-			//	def->setStringForKey(String::createWithFormat("m_%d%darmorItemCnt", x, y)->getCString(), data2["armorItemCnt"]);
 			for (int i = 1; i <= armorItemSize; i++)
 			{
 				data2[String::createWithFormat("armorItem%dID", i)->getCString()] = def->getStringForKey(String::createWithFormat("m_%d%darmorItem%dID", x, y, i)->getCString(), "0");
@@ -200,10 +188,8 @@ void Room::LoadRoomData()
 
 		// block (data)
 
-		//def->setStringForKey(String::createWithFormat("m_%d%ditemCnt", x, y)->getCString(), data2["itemCnt"]);
 		data2["itemCnt"] = def->getStringForKey(String::createWithFormat("m_%d%ditemCnt", x, y)->getCString(), "0").c_str();
 		int itemSize = std::atoi(data2["itemCnt"].c_str());
-		//int itemSize = std::atoi(def->getStringForKey(String::createWithFormat("m_%d%ditemCnt", x, y)->getCString(), 0).c_str());
 		for (int i = 1; i <= itemSize; i++)
 		{
 			data2[String::createWithFormat("item%dName", i)->getCString()] = def->getStringForKey(String::createWithFormat("m_%d%ditem%dName", x, y, i)->getCString(), "0");
@@ -218,7 +204,6 @@ void Room::LoadRoomData()
 		{
 			data2["brickCnt"] = def->getStringForKey(String::createWithFormat("m_%d%dbrickCnt", x, y)->getCString(), "0").c_str();
 			int brickSize = std::atoi(data2["brickCnt"].c_str());
-			//def->setStringForKey(String::createWithFormat("m_%d%dbrickCnt", x, y)->getCString(), data2["brickCnt"]);
 			for (int i = 1; i <= brickSize; i++)
 			{
 				data2[String::createWithFormat("brick%dID", i)->getCString()] = def->getStringForKey(String::createWithFormat("m_%d%dbrick%dID", x, y, i)->getCString(), "0");

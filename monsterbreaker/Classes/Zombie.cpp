@@ -23,10 +23,6 @@ Zombie* Zombie::create()
 	{
 		pSprite->autorelease();
 		pSprite->InitSprite();
-		//pSprite->scheduleUpdate();
-
-//		pSprite->SetWeapon(pSprite->getWeaponName().c_str());
-
 		return pSprite;
 	}
 	CC_SAFE_DELETE(pSprite);

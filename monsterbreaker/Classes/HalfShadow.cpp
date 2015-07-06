@@ -38,7 +38,7 @@ void HalfShadow::InitSprite()
 	body->setCollisionBitmask(MONSTER_BODY_COLLISION_BITMASK);
 	body->setContactTestBitmask(true);
 	this->setPhysicsBody(body);
-	//	}
+
 	this->setUserData(this);
 
 	hpBgSpr = Sprite::create("Monster/hpBg.png");
@@ -53,9 +53,6 @@ void HalfShadow::InitSprite()
 
 	auto hero = (Hero*)layer->getChildByName("Hero");
 	_ballName = hero->getBallName();
-//	_ballSize = hero->getBallSize();
-//	_ballVelocity = hero->getBallVelocity();
-
 }
 
 
@@ -105,7 +102,6 @@ void HalfShadow::Die()
 	stopAllActions();
 	this->runAction(FadeOut::create(1.0f));
 	this->pause();
-	//CCLOG("DIE SHADOW");
 }
 
 void HalfShadow::MoodHide(float dt)
@@ -123,11 +119,6 @@ void HalfShadow::MoodHide(float dt)
 		int y = rand() % 6 + 2; // 2 to 7
 		auto dp = Vec2(sp.x + gapX * x, sp.y - gapY * y);
 		
-//		auto sp = Vec2(visibleSize.width / 10, visibleSize.height / 25 * 10);
-//		auto x = visibleSize.width / 10 * 8;
-//		auto y = visibleSize.height / 25 * 9;
-//		auto dp = Vec2(sp.x + x*CCRANDOM_0_1(), sp.y + y*CCRANDOM_0_1());
-
 		auto seq = Sequence::create(CallFunc::create(std::bind(&HalfShadow::fadeOut, this))
 			, DelayTime::create(1.0f)
 			, CallFunc::create(std::bind(&HalfShadow::moveTo, this, dp))
@@ -160,7 +151,6 @@ void HalfShadow::fadeIn()
 	this->runAction(act);
 }
 
-
 void HalfShadow::MoodStay(float dt)
 {
 	if (timer == kTimerUp)
@@ -186,7 +176,6 @@ void HalfShadow::MoodAttack(float dt)
 			auto sp = this->getPosition();
 			sp.y -= this->getContentSize().height;
 			auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-//			auto dp1 = Vec2(sp.x + 1, sp.y - 1);
 			Fire(layer, sp, dp1);
 		}
 	}

@@ -130,20 +130,14 @@ void SlimeKingMiddle::Die()
 
 void SlimeKingMiddle::InitSprite()
 {
-	//	MyBodyParser::getInstance()->parseJsonFile(String::createWithFormat("%s/%s/%s.json", _type.c_str(), _name.c_str(), _name.c_str())->getCString());
-	//	auto body = MyBodyParser::getInstance()->bodyFormJson(this, String::createWithFormat("%s.png", _name.c_str())->getCString(), PhysicsMaterial(100, 1, 1));
-	//	if (body != nullptr)
-	//	{
 	auto body = PhysicsBody::createCircle(this->getContentSize().width / 3, PhysicsMaterial(100, 1, 1));
 	body->setDynamic(true);
 	body->setRotationEnable(false);
 	body->setCollisionBitmask(MONSTER_BODY_COLLISION_BITMASK);
 	body->setContactTestBitmask(true);
 	this->setPhysicsBody(body);
-	//	}
+
 	this->setUserData(this);
-	//	this->Animate("Stay", myEnum::kAction::kActionStay);
-	//	MyBodyParser::getInstance()->freeInstance();
 
 	hpBgSpr = Sprite::create("Monster/hpBg.png");
 	this->addChild(hpBgSpr, ZINDEX_MONSTER_HP);

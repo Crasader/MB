@@ -25,7 +25,6 @@ public:
 	cocos2d::Sprite * skillImage;
 	cocos2d::ui::Button * btn;
 	
-//	CC_SYNTHESIZE(bool, _changedSkill, ChangedSkill);
 	CC_SYNTHESIZE(bool, _clickEnabled, ClickEnabled);
 
 	virtual void update(float dt);
@@ -36,7 +35,6 @@ public:
 	void DrawAndSetPosition(cocos2d::Layer* layer);
 	void ClickSkillBtn(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 	void SetSkillImage();
-//	void ChangedSkill();
 	cocos2d::SpriteFrame * GetSkillSpriteFrame(int skillID);
 };
 

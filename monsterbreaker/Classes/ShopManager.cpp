@@ -12,7 +12,6 @@ ShopManager::ShopManager(cocos2d::Layer * layer, Hero * hero) : layer(layer), he
 	origin = Director::getInstance()->getVisibleOrigin();
 	contentSize = Size(visibleSize.width / 10, visibleSize.height / 25);
 	startPoint = Vec2(0, contentSize.height * 20);
-//	mm = (MapManager*)layer->getChildByName("MapManager");
 	mm = MapManager::getInstance();
 }
 
@@ -136,7 +135,6 @@ void ShopManager::createShopItem()
 		ch->setPosition(vec3);
 		layer->addChild(ch, ZINDEX_CHEST_ITEM, myEnum::kMyTag::kChestItemTag);
 
-//		mm->GetCurrentRoomData().data["shopItem3"] = 1;
 		mm->map[x][y].data["shopItem3"] = 1;
 	}
 
@@ -171,10 +169,4 @@ void ShopManager::createShopItem()
 		}
 		mm->map[x][y].data["shopItem4"] = 1;
 	}
-
-
-//	auto item3 = ItemKey::create(layer, hero, true);
-//	item3->setPosition(visibleSize.width *0.25f * 3, visibleSize.height * 0.5f);
-//	layer->addChild(item3, ZINDEX_ITEM_SPRITE);
-
 }

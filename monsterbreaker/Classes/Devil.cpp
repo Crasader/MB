@@ -25,10 +25,6 @@ Devil* Devil::create(cocos2d::Layer * layer)
 	{
 		pSprite->autorelease();
 		pSprite->InitSprite();
-		//pSprite->scheduleUpdate();
-
-//		pSprite->SetWeapon(pSprite->getWeaponName().c_str());
-
 		return pSprite;
 	}
 	CC_SAFE_DELETE(pSprite);
@@ -192,7 +188,6 @@ void Devil::InitSprite()
 void Devil::Die()
 {
 	GameObject::Die();
-	//	this->runAction(FadeOut::create(1.0f));
 	fury->runAction(FadeOut::create(1.0f));
 	d->Die();
 }

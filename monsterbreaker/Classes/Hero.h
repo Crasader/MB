@@ -21,9 +21,6 @@ class SkillItem;
 class Hero : public Character
 {
 private:
-//	static Hero* instance;
-
-	//void Init();
 protected:
 
 	CC_SYNTHESIZE(int, _maxSp, MaxSp);
@@ -58,11 +55,8 @@ protected:
 	std::vector<int> helperList;
 public:
 	Hero();
-	//Hero(Hero* hero);
 	static Hero* create(Hero * hero);
 	~Hero();
-
-//	static Hero* getInstace();
 
 	virtual void IncreaseMaxHp(int i);
 	virtual void DecreaseMaxHp(int i);
@@ -89,8 +83,6 @@ public:
 	virtual void SkillUse();
 	bool IsFullHp();
 	virtual void DoSkillEvent(cocos2d::Vec2 touch);
-//	virtual void UseSkill();
-//	void IncreaseSkillPoint();
 
 	void InitSprite();
 
@@ -113,15 +105,12 @@ public:
 
 	void Save();
 
-//	void InitWithFile(const char * className);
-
 	void Debug();
 
 	virtual void Ani(const char * str, cocos2d::__Dictionary* dic);
 	virtual void DieAni(const char * str, cocos2d::__Dictionary* dic);
 	virtual cocos2d::__Dictionary* GetAniInfo();
 
-//	virtual void Damaged();
 	virtual void DecreaseCurrentHp(int i);
 };
 

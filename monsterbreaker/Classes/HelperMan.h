@@ -25,13 +25,9 @@ public:
 	HelperMan(cocos2d::Layer * layer, Hero * hero, bool cageIn);
 	~HelperMan();
 
-	//CC_SYNTHESIZE(std::string, name, Name);
-
 	Hero * hero;
 	bool clickOk;
 	bool isCageIn;
-
-	//static HelperMan* create(cocos2d::Layer * layer, Hero * hero, bool cageIn);
 
 	void InitSprite();
 	void ClickHelperMan();

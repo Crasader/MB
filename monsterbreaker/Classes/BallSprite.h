@@ -17,9 +17,7 @@ protected:
 public:
 	BallSprite();
 	BallSprite(const Character& obj);
-//	BallSprite(cocos2d::Node * node);
 	~BallSprite();
-//	static BallSprite* create();
 	static BallSprite* create(const Character & obj);
 
 	void InitSprite();

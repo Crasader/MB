@@ -7,8 +7,6 @@ Item::Item(cocos2d::Layer * layer, Hero * hero, int cost, int isShop) : layer(la
 }
 void Item::RemoveThis()
 {
-//	this->removeAllChildrenWithCleanup(true);
-//	layer->removeChild(this);
 	this->removeFromParentAndCleanup(true);
 }
 
@@ -69,12 +67,3 @@ void Item::ClickEvent()
 
 }
 
-//
-//void Item::SaveShopItem1ClickedData()
-//{
-//	auto mm = MapManager::getInstance();
-//	int x = mm->GetCurrentRoomData().x;
-//	int y = mm->GetCurrentRoomData().y;
-//	mm->map[x][y].data["shopItem1Clicked"] = 1;
-//
-//}

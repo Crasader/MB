@@ -23,9 +23,6 @@ public:
 	CREATE_FUNC(CreditScene);
 
 	void openWeb(cocos2d::Ref * pSender, cocos2d::ui::Widget::TouchEventType type);
-	//void LockItem(cocos2d::Node * image, cocos2d::Node * lock, cocos2d::ui::Button * btn);
-	//void UnLockItem(cocos2d::Node * image, cocos2d::Node * lock, cocos2d::ui::Button * btn);
-	//void AllItemLock();
 
 	cocos2d::Node * node;
 

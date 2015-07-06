@@ -11,7 +11,6 @@
 #include "Lightning.h"
 
 #include "SoundManager.h"
-//#include "Monster.h"
 
 class EffectManager : public cocos2d::Node
 {
@@ -32,7 +31,6 @@ public:
 	void ShowItemDes(int itemNumber);
 	void ThankyouEffect(cocos2d::Vec2 target);
 	void HitEffect(cocos2d::Vec2 target);
-//	void HpEffect(Monster * monster);
 
 	void DestroyNode(cocos2d::Node* node);
 

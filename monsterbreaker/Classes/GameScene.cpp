@@ -39,17 +39,17 @@ bool GameScene::init()
 	spr_bg->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 	this->addChild(spr_bg, 0);
 
-	// only debug
-	auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test, this));
-	item1->setPosition(Vec2(300, 200));
-	auto item2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test2, this));
-	item2->setPosition(Vec2(350, 200));
-	auto item3 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test3, this));
-	item3->setPosition(Vec2(400, 200));
+	//// only debug
+	//auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test, this));
+	//item1->setPosition(Vec2(300, 200));
+	//auto item2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test2, this));
+	//item2->setPosition(Vec2(350, 200));
+	//auto item3 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test3, this));
+	//item3->setPosition(Vec2(400, 200));
 
-	auto menu = Menu::create(item1, item2, item3, NULL);
-	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 100);
+	//auto menu = Menu::create(item1, item2, item3, NULL);
+	//menu->setPosition(Vec2::ZERO);
+	//this->addChild(menu, 100);
 
 	pauseNode = CSLoader::createNode("Icon/pauseBtn.csb");
 	pauseBtn = (Button *)pauseNode->getChildByName("btn");
@@ -99,8 +99,6 @@ void GameScene::onPauseBtnClicked(cocos2d::Ref* sender, cocos2d::ui::Widget::Tou
 
 void GameScene::pauseLogic()
 {
-	//CCLOG("Current System State :: %d", systemManager->systemState);
-	//CCLOG("temp System State :: %d", temp);
 	auto cache = SpriteFrameCache::getInstance();
 	pauseImage = (Sprite*)pauseNode->getChildByName("image");
 	if (systemManager->systemState == myEnum::kSystemState::kSSPause)
@@ -155,10 +153,9 @@ void GameScene::onEnter()
 
 	doorManager = DoorManager::create(hero);
 	this->addChild(doorManager, 0, "DoorManager");
-	//	tileManager = new TileManager();
-	//	tileManager->InitMapTypeData(&mapManager, hero);
-	doorManager->setSecretView(hero->HasItem(ITEM_SCAVENGER) || hero->HasItem(ITEM_SECRET_MASTER));	// 	tileManager.setSecretView(hero.HasItem("SecretViewer") || hero.HasItem("XRAY"));
-	doorManager->setSecretViewLockOpen(hero->HasItem(ITEM_SECRET_MASTER));	//	tileManager.setSecretViewLockOpen(hero.HasItem("XRAY"));
+
+	doorManager->setSecretView(hero->HasItem(ITEM_SCAVENGER) || hero->HasItem(ITEM_SECRET_MASTER));
+	doorManager->setSecretViewLockOpen(hero->HasItem(ITEM_SECRET_MASTER));
 	doorManager->Draw(this);
 
 	skillManager = SkillManager::create(hero);
@@ -179,7 +176,6 @@ void GameScene::onEnter()
 
 	systemManager = SystemManager::create(this, hero);
 	this->addChild(systemManager, 0, "SystemManager");
-	//systemManager.Init(this, &sceneWorld, hero, helpManager);
 	
 	tutorialManager = TutorialManager::create(this, hero);
 	this->addChild(tutorialManager, 0, "TutorialManager");
@@ -327,15 +323,12 @@ void GameScene::SetResume()
 	switch (temp)
 	{
 	case myEnum::kSystemState::kSSInit:
-//		CCLOG("Resume Init");
 		SetInit();
 		break;
 	case myEnum::kSystemState::kSSPlaying:
-//		CCLOG("Resume Play");
 		SetPlay();
 		break;
 	case myEnum::kSystemState::kSSWin:
-//		CCLOG("Resume Win");
 		SetWin();
 		break;
 	}
@@ -345,7 +338,6 @@ void GameScene::SetDie()
 	systemManager->SetSystemState(myEnum::kSystemState::kSSDie);
 	monsterManager->PauseMonsters();
 	bombManager->pause();
-//	effectManager->PauseAllEffects();
 	helpManager->pause();
 	skillManager->setClickEnabled(false);
 	tutorialManager->pause();
@@ -360,13 +352,11 @@ void GameScene::SetDie()
 	pauseBtn->setBright(false);
 	pauseImage->setDisplayFrame(cache->getSpriteFrameByName("Icon/resumeIcon.png"));
 	pauseNode->setOpacity(128);
-	//SoundManager::getInstance()->pauseAllSound();
 	SoundManager::getInstance()->changeBG("DieBG");
 
 }
 void GameScene::SetWin()
 {
-//	SoundManager::getInstance()->pauseAllSound();
 	systemManager->SetSystemState(myEnum::kSystemState::kSSWin);
 	systemManager->SaveBtnEnabled(true);
 
@@ -380,17 +370,12 @@ void GameScene::SetWin()
 	else
 		skillManager->setClickEnabled(false);
 
-	//hero->IncreaseSkillPoint(1);
-
-	//monsterManager->PauseMonsters();
 	// ball delete
 	auto bodies = sceneWorld->getAllBodies();
 	int size = bodies.size();
-	//CCLOG("HB %d | MB %d | NB %d ", HERO_BALL_COLLISION_BITMASK, MONSTER_BALL_COLLISION_BITMASK, NEUTRAL_BALL_COLLISION_BITMASK);
 	for (int i = 0; i < size; i++)
 	{
 		auto obj = bodies.at(i);
-		//CCLOG("obj %d ", obj->getCollisionBitmask());
 		if (obj->getCollisionBitmask() == HERO_BALL_COLLISION_BITMASK 
 			|| obj->getCollisionBitmask() == MONSTER_BALL_COLLISION_BITMASK
 			|| obj->getCollisionBitmask() == NEUTRAL_BALL_COLLISION_BITMASK
@@ -403,13 +388,11 @@ void GameScene::SetWin()
 
 	int x = mapManager->getHeroX();
 	int y = mapManager->getHeroY();
-	//mapManager->GetCurrentRoomData().exp = true;
 	bool exp = mapManager->map[x][y].exp;
 	if (exp != true)
 	{
 		mapManager->map[x][y].exp = true;
 		helpManager->startAIAfterBattle();
-		//auto hero = (Hero *)layer->getChildByName("Hero");
 		hero->IncreaseSkillPoint(1);
 		if (hero->HasItem(ITEM_SOUL_EATER))
 			hero->IncreaseCurrentSp(1);
@@ -418,19 +401,10 @@ void GameScene::SetWin()
 			SoundManager::getInstance()->changeBG("MainBG");
 		}
 	}
-	//mapManager->map[x][y].exp = true;
-
-
-	//	mapManager->setClearCountRoom(mapManager->getClearCountRoom() + 1);
-
-	//mapManager.Save();
-
 	hero->Save();
 
 	doorManager->SetDoorClickEnable(true);
 	doorManager->OpenDoors();
-//	doorManager->visibleAllSecretDoor(hero->HasItem(ITEM_SCAVENGER));
-//	doorManager->OpenAllSecretDoor(hero->HasItem(ITEM_SECRET_MASTER));
 
 	if (MapManager::getInstance()->GetCurrentRoomData().type == myEnum::kRoomType::kRTBoss)
 	{
@@ -438,7 +412,6 @@ void GameScene::SetWin()
 		doorManager->scheduleUpdate();
 	}
 
-//	doorManager->ShowEndingDoor();
 }
 void GameScene::onExit()
 {
@@ -454,6 +427,8 @@ void GameScene::onExit()
 	}
 	
 }
+
+// only debug
 void GameScene::test(Ref *pSender)
 {
 	monsterManager->Debug2();
@@ -464,21 +439,6 @@ void GameScene::test2(Ref *pSender)
 	mapManager->setAllView(true);
 	mapManager->setAllViewType(true);
 	mapManager->ReDrawMap();
-
-	//	// for debug
-	//	auto r = mapManager->GetCurrentRoomData();
-	//	
-	////	mapManager->setLevelName("HC");
-	////	mapManager->setLevelName("MC");
-	//	mapManager->setLevelName("HV");
-	//	mapManager->map[r.x + 1][r.y].type = myEnum::kRoomType::kRTBoss;
-	//	mapManager->map[r.x - 1][r.y].type = myEnum::kRoomType::kRTBoss;
-	//	mapManager->map[r.x][r.y + 1].type = myEnum::kRoomType::kRTBoss;
-	//	mapManager->map[r.x][r.y - 1].type = myEnum::kRoomType::kRTBoss;
-	//SetResume();
-	//hero->Damaged(100);
-
-	
 }
 
 void GameScene::test3(cocos2d::Ref *pSender)
@@ -487,18 +447,11 @@ void GameScene::test3(cocos2d::Ref *pSender)
 	auto r = mapManager->GetCurrentRoomData();
 	
 	mapManager->setLevelName("MM");
-//	mapManager->setLevelName("MC");
 	mapManager->map[r.x + 1][r.y].type = myEnum::kRoomType::kRTBoss;
 	mapManager->map[r.x - 1][r.y].type = myEnum::kRoomType::kRTBoss;
 	mapManager->map[r.x][r.y + 1].type = myEnum::kRoomType::kRTBoss;
 	mapManager->map[r.x][r.y - 1].type = myEnum::kRoomType::kRTBoss;
 
-//	hero->SetSkill(SKILL_LIGHTNING);
-//	skillManager->SetSkillImage();
-
-//	SetInit();
-//	SetPause();
-//	hero->Damaged(100);
 }
 
 
@@ -512,19 +465,16 @@ void GameScene::update(float dt)
 		if (!(hero->IsAlive()))
 		{
 			SetDie();
-			//systemManager.SetSystemState(myEnum::kSystemState::kSSDie);
 
 		}
 		if (hero->getBallCurrentCount() <= 0)
 		{
-			//systemManager.SetSystemState(myEnum::kSystemState::kSSInit);
 			hero->Damaged(1);
 			if (hero->IsAlive())
 				SetInit();
 			else
 				SetDie();
 		}
-		//		monsterManager.update(dt);
 		if (monsterManager->getMonsterClear())
 		{
 			SetWin();
@@ -546,7 +496,6 @@ bool GameScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 	{
 	case myEnum::kSystemState::kSSInit:
 	{
-		//std::string ballName = hero->getBallName();
 		auto cache = SpriteFrameCache::sharedSpriteFrameCache();
 		cache->addSpriteFramesWithFile("Ball/Ball.plist", "Ball/Ball.png");
 
@@ -584,13 +533,6 @@ bool GameScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 		{
 			Move(touch);
 		}
-		//if (hero->getBoundingBox().containsPoint(touch->getLocation()))
-		//{
-		//	Move(touch);
-		////	CCLOG("@@@@@@@@@");
-		////	CCLOG("@@@@@@@@@");
-		////	CCLOG("@@@@@@@@@");
-		//}
 		break;
 	case myEnum::kSystemState::kSSPause:
 		break;
@@ -598,13 +540,6 @@ bool GameScene::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *event)
 	{
 		if (touch->getLocation().y < visibleSize.height / 10 * 8)
 			bombManager->SetTimer();
-
-		//if (hero->getBoundingBox().containsPoint(touch->getLocation()))
-		//{
-		//	//CCLOG("@@@@@@@@@");
-		//	//CCLOG("@@@@@@@@@");
-		//	//CCLOG("@@@@@@@@@");
-		//}
 	}
 		break;
 	case myEnum::kSystemState::kSSDie:
@@ -633,12 +568,9 @@ void GameScene::onTouchMoved(cocos2d::Touch *touch, cocos2d::Event *event)
 		if (touch->getLocation().y < visibleSize.height / 10 * 8 && touch->getLocation().y >= visibleSize.height / 10 * 4)
 		{
 			// Monster Zone Click
-			//CCLOG("Monster Zone Clicked");
 		}
 		else if (touch->getLocation().y < visibleSize.height / 10 * 4)
 		{
-			//CCLOG("Hero Zone Clicked");
-			//hero->Move(Vec2(touch->getLocation().x, hero->getPositionY()));
 			Move(touch);
 		}
 		break;
@@ -660,14 +592,11 @@ void GameScene::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event)
 	{
 	case myEnum::kSystemState::kSSInit:
 	{
-		//systemManager.SetSystemState(myEnum::kSystemState::kSSPlaying);
-
 		if (ball != NULL)
 		{
 			auto startPoint = hero->paddle->getPosition();
 			startPoint.y += hero->paddle->getContentSize().height;
 			ball->removeFromParentAndCleanup(true);
-			//this->removeChild(ball);
 			ball = NULL;
 			if (hero->HasItem(ITEM_TRINITY))
 			{
@@ -689,7 +618,6 @@ void GameScene::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event)
 		if (touch->getLocation().y < visibleSize.height / 10 * 8 && touch->getLocation().y >= visibleSize.height / 10 * 4)
 		{
 			// Monster Zone Click
-			//		CCLOG("Monster Zone Click ended");
 			if (hero->getBombCount() > 0)
 			{
 				if (bombManager->SetBomb(touch->getLocation()))
@@ -706,8 +634,6 @@ void GameScene::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *event)
 		else if (touch->getLocation().y < visibleSize.height / 10 * 4)
 		{
 			Move(touch);
-			//bombManager.CanceledTimer();
-			//		CCLOG("Hero Zone Click ended");
 		}
 	}
 		break;
@@ -855,7 +781,6 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 
 		else if (true == collisionManager.HasPhysicsBodiesCollided(contact, MONSTER_BODY_COLLISION_BITMASK, BOMB_RANGE_COLLISION_BITMASK))
 		{
-			//		CCLOG("Bomb!!");
 			if (a->getCollisionBitmask() == MONSTER_BODY_COLLISION_BITMASK)
 			{
 				// a is monster & b is bomb
@@ -891,8 +816,6 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 			hero->Swing();
 		}
 
-		// TODO
-
 		else if (true == collisionManager.HasPhysicsBodiesCollided(contact, MONSTER_BODY_COLLISION_BITMASK, SKILL_FIRE_BALL_SPRITE_COLLISION_BITMASK))
 		{
 			if (a->getCollisionBitmask() == MONSTER_BODY_COLLISION_BITMASK)
@@ -925,14 +848,11 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 			{
 				auto obj = (Lightning*)b->getNode()->getUserData();
 				collisionManager.GetObjectData(a)->Damaged(obj->getAttackPoint());
-				//collisionManager.DeleteObject(b);
 			}
 			else
 			{
 				auto obj = (Lightning*)a->getNode()->getUserData();
 				collisionManager.GetObjectData(b)->Damaged(obj->getAttackPoint());
-				//collisionManager.GetObjectData(b)->Damaged(2);
-				//collisionManager.DeleteObject(a);
 			}
 		}
 		else if (true == collisionManager.HasPhysicsBodiesCollided(contact, HERO_BODY_COLLISION_BITMASK, DRAGON_BREATH_COLLISION_BITMASK))
@@ -946,8 +866,6 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 		break;
 	case myEnum::kSystemState::kSSWin:
 	{
-		//CCLOG("secret %d | bomb %d ", SECRET_DOOR_COLLISION_BITMASK, BOMB_RANGE_COLLISION_BITMASK);
-		//CCLOG("a %d | b %d ", a->getCollisionBitmask(), b->getCollisionBitmask());
 		if (true == collisionManager.HasPhysicsBodiesCollided(contact, SECRET_DOOR_COLLISION_BITMASK, BOMB_RANGE_COLLISION_BITMASK))
 		{
 			if (a->getCollisionBitmask() == SECRET_DOOR_COLLISION_BITMASK)
@@ -959,7 +877,6 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 				mapManager->map[ptr->getGoToX()][ptr->getGoToY()].lock = false;
 				mapManager->map[ptr->getGoToX()][ptr->getGoToY()].visible = true;
 				SoundManager::getInstance()->playMySoundLogic("FindSecret");
-//				mapManager.Save();
 			}
 			else
 			{
@@ -970,7 +887,6 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 				mapManager->map[ptr->getGoToX()][ptr->getGoToY()].lock = false;
 				mapManager->map[ptr->getGoToX()][ptr->getGoToY()].visible = true;
 				SoundManager::getInstance()->playMySoundLogic("FindSecret");
-				//				mapManager.Save();
 			}
 		}
 		if (true == collisionManager.HasPhysicsBodiesCollided(contact, MERCHANT_COLLISION_BITMASK, BOMB_RANGE_COLLISION_BITMASK))

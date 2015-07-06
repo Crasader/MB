@@ -12,8 +12,6 @@ public :
 	Goblin();
 	static Goblin* create();
 
-//	virtual void MoodStay(float dt);
-
 	virtual void Damaged(int i);
 	virtual void Die();
 	virtual void ChooseMood();

@@ -78,9 +78,6 @@ void Magician::SkillUse()
 			break;
 
 		}
-		
-		//IncreaseCurrentHp(2);	// only First Aid
-		// effect & sound
 	}
 }
 
@@ -90,10 +87,7 @@ void Magician::DoSkillEvent(cocos2d::Vec2 touch)
 	{
 	case SKILL_FIRE_BALL:
 	{
-		//		Animate("Skill", myEnum::kAction::kActionAttack);
-		//		weapon->Animate("Skill", myEnum::kAction::kActionAttack);
 		weapon->Skill();
-		//Swing();
 		auto effectManager = static_cast<EffectManager*>(layer->getChildByName("EffectManager"));
 		effectManager->ShiningEffect(getPosition());
 		effectManager->FireBallEffect(getPosition(), touch);
@@ -102,10 +96,7 @@ void Magician::DoSkillEvent(cocos2d::Vec2 touch)
 
 	case SKILL_LIGHTNING:
 	{
-		//		Animate("Skill", myEnum::kAction::kActionAttack);
-		//		weapon->Animate("Skill", myEnum::kAction::kActionAttack);
 		weapon->Skill();
-		//Swing();
 		auto effectManager = static_cast<EffectManager*>(layer->getChildByName("EffectManager"));
 		effectManager->ShiningEffect(getPosition());
 		effectManager->LightningEffect(touch, SKILL_LIGHTNING_DAMAGE);

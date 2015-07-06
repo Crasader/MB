@@ -16,7 +16,6 @@ public:
 	float kTimer;
 	float kTimerUp = -9999.0f;
 
-	//void InitBombManagerData(float countTime);
 	bool SetBomb(cocos2d::Vec2 vec);
 	bool IsTimerUp();
 	void SetTimer();
@@ -26,9 +25,6 @@ public:
 
 	static BombManager* create(cocos2d::Layer * layer, Hero * hero);
 
-	//	virtual void Update(float dt);
-
-//	std::vector<Bomb *> bombes;
 	cocos2d::Vector<Bomb *> bombes;
 	cocos2d::Layer * layer;
 	Hero * hero;

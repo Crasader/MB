@@ -28,7 +28,6 @@ public:
 
 	MapManager * mapManager;
 	Hero * hero;
-	//cocos2d::Node * ball;
 
 	CC_SYNTHESIZE(bool, isClicked, IsClicked);
 

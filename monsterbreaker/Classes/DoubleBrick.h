@@ -16,7 +16,6 @@ public:
 	DoubleBrick(const char * mapType, cocos2d::Layer * layer, int brickTypeID);
 	~DoubleBrick();
 	static DoubleBrick* create(const char * mapType, cocos2d::Layer * layer, int brickTypeID);
-//	void InitSprite();
 	virtual void DestroyBlock();
 
 };

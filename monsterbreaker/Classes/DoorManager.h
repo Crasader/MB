@@ -13,7 +13,6 @@
 #include "Definitions\DOOR DEFINITIONS.h"
 #include "GameScene.h"
 #include "LoadingScene.h"
-//#include "Definitions\SCENE DEFINITIONS.h"
 
 #include "EndingDoor.h"
 #include "EndingScene.h"
@@ -48,7 +47,6 @@ public:
 	cocos2d::Vector <EndingDoor*> BAWKeyDoors;
 	cocos2d::Vector <EndingDoor*> TKeyDoors;
 
-//	void InitMapTypeData(MapManager * mapManager, Hero * hero, MonsterManager * monsterManager);
 	void Draw(cocos2d::Layer * layer);
 
 	void OpenDoors();
@@ -62,7 +60,6 @@ public:
 	virtual void moveScene(int dir);
 	virtual void moveLoadingScene(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 	virtual void moveEndingScene(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
-	//cocos2d::Vec2 getMyGridPosition(int x, int y);
 	
 	void update(float dt);
 	void visibleAllSecretDoor(bool b);

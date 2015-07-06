@@ -38,8 +38,6 @@ void SystemManager::InitSystemData()
 	{
 		buddiesList.pushBack(node->getChildByName(String::createWithFormat("buddyNode%d", i)->getCString()));
 	}
-	//buddy1 = node->getChildByName("buddyNode1");
-	//buddy2 = node->getChildByName("buddyNode2");
 
 	ball1 = node->getChildByName("ballNode1");;
 	ball2 = node->getChildByName("ballNode2");;
@@ -92,7 +90,6 @@ void SystemManager::InitSystemData()
 	Widget::ccWidgetClickCallback callBackHome = callBackFunctorHome();
 	btnHome->addClickEventListener(callBackHome);
 
-//	node->setPosition(-visibleSize.width*0.5f, visibleSize.height*0.5f);
 	node->setVisible(false);
 
 	layer->addChild(node, ZINDEX_PAUSE_BG);
@@ -100,7 +97,6 @@ void SystemManager::InitSystemData()
 
 void SystemManager::ResumeClicked()
 {
-//	CCLOG("RESUME");
 	((GameScene*)layer)->SetResume();
 }
 void SystemManager::SaveClicked()
@@ -112,8 +108,6 @@ void SystemManager::SaveClicked()
 }
 void SystemManager::HomeClicked()
 {
-//	CCLOG("HOME");
-//	((GameScene*)layer)->SetResume();
 	auto scene = MainMenuScene::createScene();
 	Director::getInstance()->replaceScene(TransitionFade::create(0.5f, scene));
 }
@@ -127,33 +121,24 @@ void SystemManager::SetSystemState(int systemState)
 	switch (systemState)
 	{
 	case myEnum::kSystemState::kSSInit:
-		//layer->pause();
 		layer->resume();
 		physicsWorld->setSpeed(0);
 		break;
 	case myEnum::kSystemState::kSSPlaying:
 		layer->resume();
 		physicsWorld->setSpeed(1);
-		//		this->scheduleUpdate();
 		break;
 	case myEnum::kSystemState::kSSPause:
 		layer->pause();
 		physicsWorld->setSpeed(0);
-		// someThing
 		break;
 	case myEnum::kSystemState::kSSWin:
 	{
-		//CCLOG("WIN!!!");
-		//layer->pause();
-		//(*physicsWorld)->setSpeed(0);
-
 		break;
 	}
 	case myEnum::kSystemState::kSSDie:
 		layer->pause();
 		physicsWorld->setSpeed(0);
-		// someThing
-		CCLOG("DIE!!!");
 		break;
 	}
 
@@ -162,7 +147,6 @@ void SystemManager::SetSystemState(int systemState)
 void SystemManager::ShowPause()
 {
 	bool isAlive = hero->IsAlive();
-//	node->runAction(MoveTo::create(0.5f, Vec2(visibleSize.width*0.5f, visibleSize.height*0.5f)));
 	node->setVisible(true);
 	node->setOpacity(0);
 	node->runAction(FadeIn::create(0.5f));
@@ -273,9 +257,7 @@ void SystemManager::RemoveMethod(cocos2d::Node * target)
 	for (int i = 0; i < size; i++)
 	{
 		auto obj = vect.at(i);
-		//obj->removeAllChildrenWithCleanup(true);
 		obj->removeFromParentAndCleanup(true);
-		//layer->removeChild(obj);
 	}
 }
 
@@ -286,14 +268,5 @@ void SystemManager::RemoveMethod(cocos2d::Vector<cocos2d::Node *> * target)
 	{
 		RemoveMethod(target->at(i));
 	}
-//	target->clear();
 }
-
-
-
-
-//void SystemManager::SetDoorEnabled(cocos2d::MenuItem * item, bool b)
-//{
-//	item->setEnabled(b);
-//}
 

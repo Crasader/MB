@@ -34,7 +34,6 @@ protected:
 	float stayTime;
 	float attackTime;
 	float moveTime;
-//	float damagedTime;
 
 	cocos2d::Layer * layer;
 
@@ -53,14 +52,12 @@ public:
 	
 	virtual void BaseMoveMent(float dt);
 	virtual void BaseMoveMent2(float dt);
-	//	virtual Vec2 GetTP();
 	void SetMonsterData();
 	virtual void InitSprite();
 	virtual void Draw(cocos2d::Layer * layer);
 	virtual void StartAnimation();
 
 	virtual void Die();
-//	virtual void RemoveThisClearly();
 
 	virtual void DropItem(int itemID);
 };

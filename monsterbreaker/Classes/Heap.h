@@ -126,11 +126,8 @@ void Heap<T>::heapifydown(int index)
 template <typename T>
 void Heap<T>::insert(T element)
 {
-	//	if (element.data != 0)
-	//	{ 
 	heap.push_back(element);
 	heapifyup(heap.size() - 1);
-	//	}
 }
 template <typename T>
 T Heap<T>::deletemin()

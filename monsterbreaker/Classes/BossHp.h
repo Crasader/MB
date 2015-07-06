@@ -11,7 +11,6 @@
 class BossHp : public cocos2d::Node
 {
 public:
-//	MonsterManager();
 	BossHp(cocos2d::Layer * layer);
 	~BossHp();
 

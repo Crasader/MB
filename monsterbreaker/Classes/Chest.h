@@ -11,7 +11,6 @@
 #include "MapManager.h"
 #include "DoorManager.h"
 
-//class DoorManager;
 class Chest : public cocos2d::Node
 {
 private :
@@ -32,7 +31,6 @@ public :
 	void SetItem(int itemNum);
 
 	void onTouch(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
-	//void addGlowEffect(cocos2d::Node* sprite, const cocos2d::ccColor3B& colour, const cocos2d::CCSize& size);
 };
 
 #endif // __CHEST_H__

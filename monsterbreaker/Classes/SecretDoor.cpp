@@ -4,7 +4,6 @@ using namespace ui;
 
 SecretDoor::SecretDoor(const Room & rd, int kDir, const char * mapType) : Door(rd, kDir, mapType)
 {
-//	_lock = true;
 	_clickOk = false;
 	_isSecret = true;
 }
@@ -37,20 +36,15 @@ void SecretDoor::InitSprite()
 
 	btn = dynamic_cast<Button*>(node->getChildByName("btn"));
 	btn->setUserData(this);
-	//btn->setEnabled(false);
-	//btn->addTouchEventListener(CC_CALLBACK_2(Door::onTouchDoor, this));
 
 	auto body = PhysicsBody::createBox(btn->getContentSize());
 	body->setCollisionBitmask(SECRET_DOOR_COLLISION_BITMASK);
 	body->setDynamic(false);
 	body->setContactTestBitmask(true);
-	//node->setPhysicsBody(body);
 	node->setPhysicsBody(body);
 	body->getNode()->setUserData(this);
 
-	//CCLOG((rd.visible ? "RD VISIBLE TRUE" : "RD VISIBLE FALSE"));
 	this->setVisible(_roomVisible);
-
 }
 
 void SecretDoor::Open()
@@ -63,8 +57,6 @@ void SecretDoor::Open()
 		auto act = CSLoader::createTimeline("Door/Secret.csb");
 		act->gotoFrameAndPlay(0, 60, true);
 		this->runAction(act);
-		// glow effect
-		// open sound
 	}
 }
 bool SecretDoor::ClickOpen()

@@ -61,7 +61,6 @@ void ShooterBat::MoodAttack(float dt)
 			, NULL);
 		this->runAction(seq);
 
-//		Fire(layer, sp, dp1);
 	}
 	else if (timer <= 0.0f)
 	{

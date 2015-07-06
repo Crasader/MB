@@ -5,7 +5,6 @@ using namespace ui;
 Weapon::Weapon(cocos2d::Layer * layer, Hero * hero, const char * weaponType, const char * weaponName, bool clickOk) : layer(layer), hero(hero), _weaponType(weaponType), _weaponName(weaponName), clickOk(clickOk)
 {
 	visibleSize = Director::getInstance()->getVisibleSize();
-//	mm = (MapManager*)layer->getChildByName("MapManager");
 }
 
 Weapon::~Weapon()
@@ -18,11 +17,6 @@ void Weapon::SetWeaponData()
 	_attackPoint = dic->valueForKey("AttackPoint")->intValue();
 	_paddleSize = dic->valueForKey("PaddleSize")->floatValue();
 	_paddleName = dic->valueForKey("PaddleName")->getCString();
-//	_useClass = dic->valueForKey("Class")->getCString();
-//	_weaponName = dic->valueForKey("Name")->getCString();
-//	_type = dic->valueForKey("Type")->getCString();
-	//_name = dic->valueForKey("Name")->getCString();
-
 }
 
 Weapon* Weapon::create(cocos2d::Layer * layer, Hero * hero, const char * weaponType, const char * weaponName, bool clickOk)
@@ -41,9 +35,6 @@ void Weapon::InitSprite()
 	this->addChild(node);
 
 	Stay();
-	//auto act = CSLoader::createTimeline(String::createWithFormat("HelperMan/%s/%s.csb", _weaponType.c_str(), _weaponName.c_str(), _weaponName.c_str())->getCString());
-	//act->gotoFrameAndPlay(0, 60, true);
-	//node->runAction(act);
 
 	skillNode = node->getChildByName("skillNode");
 	skillNode->setVisible(false);
@@ -60,8 +51,6 @@ void Weapon::InitSprite()
 	Widget::ccWidgetClickCallback callBackWeapon = callBackFunctorWeapon();
 	btn->addClickEventListener(callBackWeapon);
 	btn->setEnabled(clickOk);
-//	this->initWithSpriteFrameName(String::createWithFormat("HelperMan/%s/alpha.png", _name.c_str())->getCString());
-//	node->setPosition(getContentSize().width*0.5f, getContentSize().height*0.5f);
 }
 
 void Weapon::Swing()
@@ -102,11 +91,6 @@ void Weapon::SetSkillVisible(bool b)
 	skillNode->setVisible(b);
 }
 
-//void Weapon::setFilpY(bool b)
-//{
-//
-//}
-
 void Weapon::Stay()
 {
 	auto act = CSLoader::createTimeline(String::createWithFormat("Weapon/%s/%s/%s.csb", _weaponType.c_str(), _weaponName.c_str(), _weaponName.c_str())->getCString());
@@ -125,9 +109,7 @@ void Weapon::ClickWeapon()
 {
 	if (clickOk)
 	{
-//		CCLOG("Clicked Weapon");
 		mm = (MapManager*)layer->getChildByName("MapManager");
-		//ThankYou();
 		clickOk = false;
 
 		int tempWeapon = Utils::GetInstance()->GetWeaponID(hero->getWeaponName().c_str());
@@ -155,8 +137,6 @@ void Weapon::ClickWeapon()
 
 void Weapon::RemoveAll()
 {
-	//this->removeAllChildrenWithCleanup(true);
 	this->removeFromParentAndCleanup(true);
-//	layer->removeChild(this);
 }
 

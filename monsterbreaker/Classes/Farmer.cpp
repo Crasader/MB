@@ -1,5 +1,4 @@
 #include"Farmer.h"
-//#include "MyBodyParser.h"
 #include "Definitions.h"
 USING_NS_CC;
 
@@ -44,8 +43,6 @@ void Farmer::MoodAttack(float dt)
 		// fire a ball
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
-		//		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-		//		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 
 		auto dp1 = Vec2(sp.x - 1, sp.y - 1);
 		auto dp2 = Vec2(sp.x, sp.y - 1);
@@ -81,7 +78,6 @@ void Farmer::MoodStay(float dt)
 	{
 		timer = StayTime();
 		Animate("Stay", myEnum::kAction::kActionStay);
-//		this->runAction(JumpBy::create(1.0f, Vec2::ZERO, this->getContentSize().height*0.5f, 1));
 	}
 
 	else if (timer <= 0.0f)

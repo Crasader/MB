@@ -79,6 +79,8 @@ void ChestItem::ClickChestItem()
 	else
 	{
 		// beep sound
+		SoundManager::getInstance()->playMySoundLogic("X");
+
 	}
 }
 

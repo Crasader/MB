@@ -19,7 +19,6 @@ private :
 	CC_SYNTHESIZE(int, _cost, Cost);
 	Hero * hero;
 	cocos2d::Layer * layer;
-//	int itemID;
 
 	cocos2d::Node * node;
 	cocos2d::Sprite * image;
@@ -28,7 +27,6 @@ private :
 public :
 	ChestItem(cocos2d::Layer * layer, Hero * hero, int itemID, bool isShop);
 	
-	//void Init();
 	static ChestItem* create(cocos2d::Layer * layer, Hero * hero, int itemID, bool isShop);
 	void InitChestItemData();
 

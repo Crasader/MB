@@ -12,13 +12,10 @@ public :
 	Scavenger();
 	static Scavenger* create();
 
-//	int dir = 0;
-	
 	float timer2;
 
 	virtual void update(float dt);
 
-//	virtual void Damaged(int i);
 	virtual void Die();
 	virtual void ChooseMood();
 	virtual void MoodMove(float dt);
