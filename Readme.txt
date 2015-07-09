@@ -1,6 +1,7 @@
 ===================================================
 Update Log
 ===================================================
+10.July.2015	:: Modify skill logic and Release the alpha version at Google Play
 06.July.2015	:: Clear unuseful documentation in my c++ files
 04.July.2015	:: BackUp MB(0.9.0)
 		:: Readme.txt Update
@@ -24,4 +25,5 @@ I hope you understand my poor english.
 you can contact me by under the url & email.
  
 http://ilhaeYe.tumblr.com
+http://ilhaeYe.blogspot.kr
 yeaih89@gmail.com
