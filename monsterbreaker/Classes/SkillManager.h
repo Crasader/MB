@@ -35,6 +35,7 @@ public:
 	void DrawAndSetPosition(cocos2d::Layer* layer);
 	void ClickSkillBtn(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
 	void SetSkillImage();
+	void CheckSkillUseable();
 	cocos2d::SpriteFrame * GetSkillSpriteFrame(int skillID);
 };
 

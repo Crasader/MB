@@ -126,7 +126,7 @@ void GameScene::onEnter()
 		hero = Magician::create();
 	hero->Move(Vec2(visibleSize.width / 2, hero->getContentSize().height));
 	hero->Draw(this);
-
+	
 	statusManager = StatusManager::create(hero);
 	statusManager->DrawStatus(this);
 	statusManager->scheduleUpdate();
@@ -242,8 +242,12 @@ void GameScene::onEnter()
 	dataManager->LoadData();
 	this->scheduleUpdate();
 
-
-	// only debug 
+	//// only debug 
+	//this->runAction(Sequence::create(
+	//	DelayTime::create(2.0f),
+	//	CallFunc::create(std::bind(&GameScene::SetWin, this)),
+	//	NULL
+	//	));
 
 	//auto w = Weapon::create(this, hero, "Sword", "FireSword", true);
 	//w->setPosition(visibleSize.width*0.5f, visibleSize.height*0.5f);
@@ -365,10 +369,11 @@ void GameScene::SetWin()
 	helpManager->pause();
 	tutorialManager->resume();
 	effectManager->ResumeAllEffects();
-	if (hero->getSkillID() == SKILL_FIRST_AID)
-		skillManager->setClickEnabled(true);
-	else
-		skillManager->setClickEnabled(false);
+	skillManager->CheckSkillUseable();
+	//if (hero->getSkillID() == SKILL_FIRST_AID)
+	//	skillManager->setClickEnabled(true);
+	//else
+	//	skillManager->setClickEnabled(false);
 
 	// ball delete
 	auto bodies = sceneWorld->getAllBodies();

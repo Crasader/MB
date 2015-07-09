@@ -55,7 +55,7 @@ void SkillManager::InitSkill()
 void SkillManager::SetSkillImage()
 {
 	int skill = hero->getSkillID();
-
+	
 	// set skill image
 	skillImage->setDisplayFrame(GetSkillSpriteFrame(skill));
 
@@ -93,6 +93,12 @@ cocos2d::SpriteFrame * SkillManager::GetSkillSpriteFrame(int skillID)
 }
 
 
+void SkillManager::CheckSkillUseable()
+{
+	int skillID = hero->getSkillID();
+	if (skillID == SKILL_FIRST_AID) setClickEnabled(true);
+	else setClickEnabled(false);
+}
 
 void SkillManager::DrawAndSetPosition(cocos2d::Layer * layer)
 {

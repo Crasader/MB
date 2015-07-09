@@ -55,6 +55,15 @@ void Hero::DecreaseMaxHp(int i)
 	}
 }
 
+void Hero::IncreaseCurrentHp(int i)
+{
+	GameObject::IncreaseCurrentHp(i);
+	if (IsAlive())
+	{
+		SoundManager::getInstance()->playMySoundLogic("HpUp");
+	}
+}
+
 void Hero::IncreaseMaxSp(int i)
 {
 	if (IsAlive())

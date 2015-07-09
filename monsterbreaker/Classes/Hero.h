@@ -60,6 +60,7 @@ public:
 
 	virtual void IncreaseMaxHp(int i);
 	virtual void DecreaseMaxHp(int i);
+	virtual void IncreaseCurrentHp(int i);
 
 	virtual void IncreaseMaxSp(int i);
 	virtual void DecreaseMaxSp(int i);

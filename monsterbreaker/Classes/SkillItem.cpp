@@ -74,6 +74,7 @@ void SkillItem::ClickSkillItem()
 			hero->SetSkill(this);
 			auto sm = (SkillManager *)layer->getChildByName("SkillManager");
 			sm->SetSkillImage();
+			sm->CheckSkillUseable();
 
 			SoundManager::getInstance()->playMySoundLogic("Item");
 
@@ -98,6 +99,7 @@ void SkillItem::ClickSkillItem()
 		hero->SetSkill(this);
 		auto sm = (SkillManager *)layer->getChildByName("SkillManager");
 		sm->SetSkillImage();
+		sm->CheckSkillUseable();
 
 		RemoveThis();
 	}
