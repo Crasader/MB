@@ -15,9 +15,9 @@
 	<key>BallVelocity</key>
 	<real>650</real>
 	<key>CurrentHp</key>
-	<integer>6</integer>
+	<integer>4</integer>
 	<key>MaxHp</key>
-	<integer>6</integer>
+	<integer>4</integer>
 	<key>Name</key>
 	<string>TankerSlime</string>
 	<key>Team</key>

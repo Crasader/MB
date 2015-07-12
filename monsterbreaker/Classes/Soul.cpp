@@ -5,7 +5,7 @@ Soul::Soul()
 {
 	_name = "Soul";
 	_type = "Monster";
-	stayTime = 3.00f;
+	stayTime = 2.00f;
 	attackTime = 2.00f;
 	moveTime = 2.05f;
 }

@@ -87,11 +87,11 @@ void Knight::ChooseMood()
 	if (IsAlive())
 	{
 		float r = CCRANDOM_0_1();
-		if (r < 0.3f)
+		if (r < 0.4f)
 		{
 			SetMood(myEnum::kMoods::kMoodAttack);
 		}
-		else if (r < 0.7f)
+		else if (r < 0.8f)
 		{
 			SetMood(myEnum::kMoods::kMoodMove);
 		}

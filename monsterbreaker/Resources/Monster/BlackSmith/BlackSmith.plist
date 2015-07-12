@@ -11,13 +11,13 @@
 	<key>BallName</key>
 	<string>Chakram</string>
 	<key>BallSize</key>
-	<real>1.5</real>
+	<real>1.2</real>
 	<key>BallVelocity</key>
 	<real>650</real>
 	<key>CurrentHp</key>
-	<integer>10</integer>
+	<integer>8</integer>
 	<key>MaxHp</key>
-	<integer>10</integer>
+	<integer>8</integer>
 	<key>Name</key>
 	<string>BlackSmith</string>
 	<key>Team</key>

@@ -13,6 +13,9 @@ public:
 	
 	static Magician* create();
 
+	virtual void DecreaseCurrentSp(int i);
+	virtual void Damaged(int i);
+
 	virtual void SkillUse();
 	bool IsEnoughSp(int needSp);
 	virtual void DoSkillEvent(cocos2d::Vec2 touch);

@@ -61,7 +61,6 @@ void TreasureHunter::Die()
 void TreasureHunter::Damaged(int i)
 {
 	Monster::Damaged(i);
-
 }
 
 

@@ -37,6 +37,8 @@ public:
 	void fadeIn(float dt);
 	void fadeOut(float dt);
 
+	void mySetPosition(cocos2d::Vec2 vec);
+
 };
 
 #endif // __FINGER_POINTER_H__

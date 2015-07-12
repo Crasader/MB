@@ -5,7 +5,7 @@ Guard::Guard()
 {
 	_name = "Guard";
 	_type = "Monster";
-	stayTime = 3.00f;
+	stayTime = 5.00f;
 	attackTime = 2.00f;
 }
 Guard* Guard::create()
@@ -68,15 +68,16 @@ void Guard::ChooseMood()
 {
 	if (IsAlive())
 	{
-		float r = CCRANDOM_0_1();
-		if (r < 0.5f)
-		{
-			SetMood(myEnum::kMoods::kMoodAttack);
-		}
-		else
-		{
-			SetMood(myEnum::kMoods::kMoodStay);
-		}
+		SetMood(myEnum::kMoods::kMoodAttack);
+		//float r = CCRANDOM_0_1();
+		//if (r < 0.5f)
+		//{
+		//	SetMood(myEnum::kMoods::kMoodAttack);
+		//}
+		//else
+		//{
+		//	SetMood(myEnum::kMoods::kMoodStay);
+		//}
 	}
 }
 

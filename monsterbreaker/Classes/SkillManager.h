@@ -19,7 +19,9 @@ public:
 
 	Hero * hero;
 	cocos2d::Node * node;
-	cocos2d::Sprite * gaugeFrame;
+	cocos2d::Sprite * gaugeFrame1;
+	cocos2d::Sprite * gaugeFrame2;
+	cocos2d::Sprite * gaugeFrame3;
 	cocos2d::Node * gaugeCurrent;
 	cocos2d::Node * gaugeMax;
 	cocos2d::Sprite * skillImage;

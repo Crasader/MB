@@ -10,7 +10,10 @@ class StatusManager : public cocos2d::Node
 {
 private:
 	cocos2d::Size visibleSize;
+	cocos2d::Vec2 origin;
 	Hero * hero;
+
+	cocos2d::Node* node;
 
 	cocos2d::Sprite* topBG;
 	cocos2d::Label* hpLabel;

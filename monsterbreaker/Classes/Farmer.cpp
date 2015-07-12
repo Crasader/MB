@@ -10,7 +10,9 @@ void Farmer::Init()
 {
 	_name = "Farmer";
 	_type = "Monster";
-	sleepState = true;
+	stayTime = 2.0f;
+	attackTime = 3.0f;
+	moveTime = 3.0f;
 }
 Farmer* Farmer::create()
 {

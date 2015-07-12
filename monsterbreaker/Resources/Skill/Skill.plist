@@ -4,6 +4,39 @@
 	<dict>
 		<key>frames</key>
 		<dict>
+			<key>Skill/Alpha.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,2026},{1,1}}</string>
+				<key>offset</key>
+				<string>{125,-97}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{251,195}</string>
+			</dict>
+			<key>Skill/Book.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{60,926},{105,132}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{150,150}</string>
+			</dict>
+			<key>Skill/FireBall.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,689},{237,119}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{237,119}</string>
+			</dict>
 			<key>Skill/FirstAid.png</key>
 			<dict>
 				<key>frame</key>
@@ -26,7 +59,7 @@
 				<key>sourceSize</key>
 				<string>{260,260}</string>
 			</dict>
-			<key>Skill/GaugeFront.png</key>
+			<key>Skill/GaugeFrame1.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,1186},{260,60}}</string>
@@ -36,28 +69,6 @@
 				<true />
 				<key>sourceSize</key>
 				<string>{260,260}</string>
-			</dict>
-			<key>Skill/SkillFrame.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,0},{260,260}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{260,260}</string>
-			</dict>
-			<key>Skill/Alpha.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,1966},{1,1}}</string>
-				<key>offset</key>
-				<string>{125,-97}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{251,195}</string>
 			</dict>
 			<key>Skill/GaugeFrame2.png</key>
 			<dict>
@@ -70,16 +81,27 @@
 				<key>sourceSize</key>
 				<string>{260,260}</string>
 			</dict>
-			<key>Skill/FireBall.png</key>
+			<key>Skill/GaugeFrame3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,689},{237,119}}</string>
+				<string>{{0,1706},{260,60}}</string>
 				<key>offset</key>
-				<string>{0,0}</string>
+				<string>{0,-100}</string>
 				<key>rotated</key>
 				<true />
 				<key>sourceSize</key>
-				<string>{237,119}</string>
+				<string>{260,260}</string>
+			</dict>
+			<key>Skill/GaugeFront.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,1966},{260,60}}</string>
+				<key>offset</key>
+				<string>{0,-100}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{260,260}</string>
 			</dict>
 			<key>Skill/Lightning.png</key>
 			<dict>
@@ -92,27 +114,16 @@
 				<key>sourceSize</key>
 				<string>{178,169}</string>
 			</dict>
-			<key>Skill/GaugeFrame.png</key>
+			<key>Skill/SkillFrame.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,1706},{260,60}}</string>
+				<string>{{0,0},{260,260}}</string>
 				<key>offset</key>
-				<string>{0,-100}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{260,260}</string>
-			</dict>
-			<key>Skill/Book.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{60,926},{105,132}}</string>
-				<key>offset</key>
-				<string>{0,-1}</string>
+				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{150,150}</string>
+				<string>{260,260}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -124,14 +135,14 @@
 			<key>realTextureFileName</key>
 			<string>Skill.png</string>
 			<key>size</key>
-			<string>{260,1967}</string>
+			<string>{260,2027}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
 			<integer>260</integer>
 			<key>height</key>
-			<integer>1967</integer>
+			<integer>2027</integer>
 		</dict>
 	</dict>
 </plist>

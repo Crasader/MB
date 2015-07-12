@@ -494,11 +494,11 @@
 		<key>16</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>tp</string>
 			<key>x</key>
-			<integer>5</integer>
+			<integer>6</integer>
 			<key>y</key>
-			<integer>8</integer>
+			<integer>2</integer>
 		</dict>
 		<key>17</key>
 		<dict>
@@ -507,18 +507,9 @@
 			<key>x</key>
 			<integer>6</integer>
 			<key>y</key>
-			<integer>2</integer>
-		</dict>
-		<key>18</key>
-		<dict>
-			<key>type</key>
-			<string>tp</string>
-			<key>x</key>
-			<integer>6</integer>
-			<key>y</key>
 			<integer>4</integer>
 		</dict>
-		<key>19</key>
+		<key>18</key>
 		<dict>
 			<key>type</key>
 			<string>m</string>
@@ -526,6 +517,15 @@
 			<integer>6</integer>
 			<key>y</key>
 			<integer>6</integer>
+		</dict>
+		<key>19</key>
+		<dict>
+			<key>type</key>
+			<string>b3</string>
+			<key>x</key>
+			<integer>6</integer>
+			<key>y</key>
+			<integer>8</integer>
 		</dict>
 		<key>2</key>
 		<dict>
@@ -541,7 +541,7 @@
 			<key>type</key>
 			<string>b3</string>
 			<key>x</key>
-			<integer>6</integer>
+			<integer>7</integer>
 			<key>y</key>
 			<integer>8</integer>
 		</dict>
@@ -550,9 +550,9 @@
 			<key>type</key>
 			<string>b3</string>
 			<key>x</key>
-			<integer>7</integer>
-			<key>y</key>
 			<integer>8</integer>
+			<key>y</key>
+			<integer>6</integer>
 		</dict>
 		<key>22</key>
 		<dict>
@@ -561,27 +561,9 @@
 			<key>x</key>
 			<integer>8</integer>
 			<key>y</key>
-			<integer>5</integer>
-		</dict>
-		<key>23</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>6</integer>
-		</dict>
-		<key>24</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
 			<integer>7</integer>
 		</dict>
-		<key>25</key>
+		<key>23</key>
 		<dict>
 			<key>type</key>
 			<string>b3</string>
@@ -654,7 +636,7 @@
 			<integer>7</integer>
 		</dict>
 		<key>cnt</key>
-		<integer>25</integer>
+		<integer>23</integer>
 	</dict>
 	<key>4</key>
 	<dict>
@@ -796,49 +778,13 @@
 		<key>23</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>6</integer>
-			<key>y</key>
-			<integer>1</integer>
-		</dict>
-		<key>24</key>
-		<dict>
-			<key>type</key>
-			<string>b1</string>
-			<key>x</key>
-			<integer>6</integer>
-			<key>y</key>
-			<integer>3</integer>
-		</dict>
-		<key>25</key>
-		<dict>
-			<key>type</key>
 			<string>tp</string>
 			<key>x</key>
 			<integer>6</integer>
 			<key>y</key>
 			<integer>5</integer>
 		</dict>
-		<key>26</key>
-		<dict>
-			<key>type</key>
-			<string>b1</string>
-			<key>x</key>
-			<integer>6</integer>
-			<key>y</key>
-			<integer>6</integer>
-		</dict>
-		<key>27</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>6</integer>
-			<key>y</key>
-			<integer>8</integer>
-		</dict>
-		<key>28</key>
+		<key>24</key>
 		<dict>
 			<key>type</key>
 			<string>b3</string>
@@ -847,7 +793,7 @@
 			<key>y</key>
 			<integer>1</integer>
 		</dict>
-		<key>29</key>
+		<key>25</key>
 		<dict>
 			<key>type</key>
 			<string>tp</string>
@@ -855,6 +801,42 @@
 			<integer>7</integer>
 			<key>y</key>
 			<integer>4</integer>
+		</dict>
+		<key>26</key>
+		<dict>
+			<key>type</key>
+			<string>b3</string>
+			<key>x</key>
+			<integer>7</integer>
+			<key>y</key>
+			<integer>8</integer>
+		</dict>
+		<key>27</key>
+		<dict>
+			<key>type</key>
+			<string>b3</string>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>1</integer>
+		</dict>
+		<key>28</key>
+		<dict>
+			<key>type</key>
+			<string>b3</string>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>2</integer>
+		</dict>
+		<key>29</key>
+		<dict>
+			<key>type</key>
+			<string>b3</string>
+			<key>x</key>
+			<integer>8</integer>
+			<key>y</key>
+			<integer>7</integer>
 		</dict>
 		<key>3</key>
 		<dict>
@@ -866,60 +848,6 @@
 			<integer>3</integer>
 		</dict>
 		<key>30</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>7</integer>
-			<key>y</key>
-			<integer>8</integer>
-		</dict>
-		<key>31</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>1</integer>
-		</dict>
-		<key>32</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>2</integer>
-		</dict>
-		<key>33</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>3</integer>
-		</dict>
-		<key>34</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>6</integer>
-		</dict>
-		<key>35</key>
-		<dict>
-			<key>type</key>
-			<string>b3</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>7</integer>
-		</dict>
-		<key>36</key>
 		<dict>
 			<key>type</key>
 			<string>b3</string>
@@ -983,7 +911,7 @@
 			<integer>5</integer>
 		</dict>
 		<key>cnt</key>
-		<integer>36</integer>
+		<integer>30</integer>
 	</dict>
 	<key>5</key>
 	<dict>
@@ -999,7 +927,7 @@
 		<key>10</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>2</integer>
 			<key>y</key>
@@ -1008,7 +936,7 @@
 		<key>11</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>2</integer>
 			<key>y</key>
@@ -1044,7 +972,7 @@
 		<key>15</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>3</integer>
 			<key>y</key>
@@ -1053,7 +981,7 @@
 		<key>16</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>3</integer>
 			<key>y</key>
@@ -1098,7 +1026,7 @@
 		<key>20</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>4</integer>
 			<key>y</key>
@@ -1107,7 +1035,7 @@
 		<key>21</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>4</integer>
 			<key>y</key>
@@ -1143,7 +1071,7 @@
 		<key>25</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>5</integer>
 			<key>y</key>
@@ -1152,7 +1080,7 @@
 		<key>26</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>5</integer>
 			<key>y</key>
@@ -1206,7 +1134,7 @@
 		<key>31</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>6</integer>
 			<key>y</key>
@@ -1215,7 +1143,7 @@
 		<key>32</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>6</integer>
 			<key>y</key>
@@ -1251,7 +1179,7 @@
 		<key>36</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>7</integer>
 			<key>y</key>
@@ -1260,7 +1188,7 @@
 		<key>37</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>7</integer>
 			<key>y</key>
@@ -1296,7 +1224,7 @@
 		<key>40</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>8</integer>
 			<key>y</key>
@@ -1305,7 +1233,7 @@
 		<key>41</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>8</integer>
 			<key>y</key>
@@ -1602,24 +1530,6 @@
 			<key>x</key>
 			<integer>8</integer>
 			<key>y</key>
-			<integer>3</integer>
-		</dict>
-		<key>33</key>
-		<dict>
-			<key>type</key>
-			<string>b2</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
-			<integer>6</integer>
-		</dict>
-		<key>34</key>
-		<dict>
-			<key>type</key>
-			<string>b2</string>
-			<key>x</key>
-			<integer>8</integer>
-			<key>y</key>
 			<integer>7</integer>
 		</dict>
 		<key>4</key>
@@ -1677,7 +1587,7 @@
 			<integer>5</integer>
 		</dict>
 		<key>cnt</key>
-		<integer>34</integer>
+		<integer>32</integer>
 	</dict>
 	<key>7</key>
 	<dict>
@@ -1765,25 +1675,25 @@
 		<key>5</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>4</integer>
 			<key>y</key>
-			<integer>4</integer>
+			<integer>3</integer>
 		</dict>
 		<key>6</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>4</integer>
 			<key>y</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>7</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>5</integer>
 			<key>y</key>
@@ -1792,7 +1702,7 @@
 		<key>8</key>
 		<dict>
 			<key>type</key>
-			<string>b3</string>
+			<string>b2</string>
 			<key>x</key>
 			<integer>5</integer>
 			<key>y</key>

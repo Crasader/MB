@@ -142,7 +142,6 @@ void EffectManager::ShowItemDes(int itemNumber)
 	layer->addChild(node, ZINDEX_EFFECT_FRONT);
 
 	// new Item
-	CCLOG("ChestItem :: %d", itemNumber);
 	Hero * hero = (Hero *)layer->getChildByName("Hero");
 	auto item = ChestItem::create(layer, hero, itemNumber, false);
 	node->addChild(item,1);
@@ -190,6 +189,25 @@ void EffectManager::HitEffect(cocos2d::Vec2 target)
 		DelayTime::create(0.5f),
 		CallFunc::create(std::bind(&EffectManager::DestroyNode, this, node)),
 		NULL));
+
+	effects.pushBack(node);
+}
+
+void EffectManager::BarrierEffect(cocos2d::Vec2 target)
+{
+	auto barrier = Sprite::create("Effect/Barrier/Barrier.png");
+	barrier->setPosition(target);
+	layer->addChild(barrier, ZINDEX_EFFECT_FRONT);
+	
+	barrier->runAction(Sequence::create(
+		Repeat::create(Sequence::create(
+		FadeOut::create(0.1f),
+		FadeIn::create(0.1f),
+		NULL),2),
+		CallFunc::create(std::bind(&EffectManager::DestroyNode, this, barrier)),
+		NULL));
+
+	effects.pushBack(barrier);
 }
 
 void EffectManager::DestroyNode(cocos2d::Node* node)

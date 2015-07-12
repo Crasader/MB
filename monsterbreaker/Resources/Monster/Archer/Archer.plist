@@ -15,9 +15,9 @@
 	<key>BallVelocity</key>
 	<real>850</real>
 	<key>CurrentHp</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>MaxHp</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>Name</key>
 	<string>Archer</string>
 	<key>Team</key>

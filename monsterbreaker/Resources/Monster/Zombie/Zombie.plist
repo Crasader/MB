@@ -5,7 +5,7 @@
 	<key>AttackPoint</key>
 	<integer>1</integer>
 	<key>BallCount</key>
-	<integer>3</integer>
+	<integer>2</integer>
 	<key>BallCurrentCount</key>
 	<string>0</string>
 	<key>BallName</key>
@@ -15,9 +15,9 @@
 	<key>BallVelocity</key>
 	<real>500</real>
 	<key>CurrentHp</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>MaxHp</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>Name</key>
 	<string>Zombie</string>
 	<key>Team</key>

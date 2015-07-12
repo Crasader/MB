@@ -5,9 +5,9 @@ Orc::Orc()
 {
 	_name = "Orc";
 	_type = "Monster";
-	stayTime = 1.25f;
-	attackTime = 1.75f;
-	moveTime = 1.05f;
+	stayTime = 2.0f;
+	attackTime = 2.0f;
+	moveTime = 2.05f;
 }
 Orc* Orc::create()
 {

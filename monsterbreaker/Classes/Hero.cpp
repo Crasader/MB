@@ -530,7 +530,8 @@ void Hero::SetItem(int itemID)
 		break;
 	case ITEM_STONE_OF_DAVID:
 		_attackPoint += 2;
-		_paddleSize = 0.7f;
+		_paddleSize -= 0.2f;
+		if (_paddleSize < 0.8f) _paddleSize = 0.8f;
 		// change ball image
 		_ballName = "StoneOfDavid";
 		break;

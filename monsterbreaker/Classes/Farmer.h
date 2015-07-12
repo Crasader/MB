@@ -8,7 +8,6 @@
 class Farmer : public Monster
 {
 private :
-	bool sleepState = true;
 
 public :
 	Farmer();

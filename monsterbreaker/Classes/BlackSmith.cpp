@@ -6,7 +6,7 @@ BlackSmith::BlackSmith()
 	_name = "BlackSmith";
 	_type = "Monster";
 	attackTime = 3.00f;
-	moveTime = 1.05f;
+	moveTime = 2.05f;
 }
 BlackSmith* BlackSmith::create()
 {
@@ -73,7 +73,7 @@ void BlackSmith::ChooseMood()
 	if (IsAlive())
 	{
 		float r = CCRANDOM_0_1();
-		if (r < 0.5f)
+		if (r < 0.35f)
 		{
 			SetMood(myEnum::kMoods::kMoodAttack);
 		}

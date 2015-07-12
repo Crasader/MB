@@ -14,6 +14,8 @@
 #include "Bomb.h"
 #include "Slime.h"
 
+#include "DoorManager.h"
+
 class TutorialManager : public cocos2d::Node
 {
 public:
@@ -51,6 +53,9 @@ public:
 	Vector <cocos2d::Node * > vec;
 
 	void playAttackSound(const char * soundName, const char * soundType = "wav");
+
+	void HideBtn();
+	void EndAnimation();
 };
 
 #endif // __TUTORIAL_MANAGER_H__

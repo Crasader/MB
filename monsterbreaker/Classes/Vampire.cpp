@@ -5,9 +5,9 @@ Vampire::Vampire()
 {
 	_name = "Vampire";
 	_type = "Monster";
-	stayTime = 3.00f;
-	attackTime = 4.00f;
-	moveTime = 3.05f;
+	stayTime = 2.00f;
+	attackTime = 3.00f;
+	moveTime = 2.05f;
 }
 Vampire* Vampire::create()
 {
@@ -90,11 +90,11 @@ void Vampire::ChooseMood()
 	if (IsAlive())
 	{
 		float r = CCRANDOM_0_1();
-		if (r < 0.2f)
+		if (r < 0.35f)
 		{
 			SetMood(myEnum::kMoods::kMoodAttack);
 		}
-		else if (r < 0.4f)
+		else if (r < 0.8f)
 		{
 			SetMood(myEnum::kMoods::kMoodMove);
 		}

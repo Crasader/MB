@@ -15,9 +15,9 @@
 	<key>BallVelocity</key>
 	<real>700</real>
 	<key>CurrentHp</key>
-	<integer>15</integer>
+	<integer>12</integer>
 	<key>MaxHp</key>
-	<integer>15</integer>
+	<integer>12</integer>
 	<key>Name</key>
 	<string>Vampire</string>
 	<key>Team</key>

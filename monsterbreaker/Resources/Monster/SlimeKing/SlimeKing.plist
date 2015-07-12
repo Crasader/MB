@@ -15,9 +15,9 @@
 	<key>BallVelocity</key>
 	<real>550</real>
 	<key>CurrentHp</key>
-	<integer>20</integer>
+	<integer>15</integer>
 	<key>MaxHp</key>
-	<integer>20</integer>
+	<integer>15</integer>
 	<key>Name</key>
 	<string>SlimeKing</string>
 	<key>Team</key>

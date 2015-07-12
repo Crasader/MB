@@ -41,13 +41,13 @@
 	<key>MoneyCount</key>
 	<integer>0</integer>
 	<key>PaddleSize</key>
-	<real>0.5</real>
+	<real>0.59999999999999998</real>
 	<key>Skill</key>
 	<integer>2</integer>
 	<key>SkillCurrentPoint</key>
-	<integer>3</integer>
+	<integer>2</integer>
 	<key>SkillMaxPoint</key>
-	<integer>3</integer>
+	<integer>2</integer>
 	<key>Team</key>
 	<integer>1</integer>
 	<key>WeaponName</key>

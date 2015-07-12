@@ -162,8 +162,8 @@ bool CharacterSelectScene::init()
 
 	WDT = node->getChildByName("WDT");
 	MDT = node->getChildByName("MDT");
-	MDesc = node->getChildByName("MDesc");
-	WDesc = node->getChildByName("WDesc");
+	MDesc = node->getChildByName("mNode");
+	WDesc = node->getChildByName("wNode");
 	SelectFrame = node->getChildByName("SelectFrame");
 
 	character = myEnum::kCharacter::kWarrior;

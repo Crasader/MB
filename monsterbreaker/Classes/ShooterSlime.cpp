@@ -10,6 +10,7 @@ void ShooterSlime::Init()
 {
 	_name = "ShooterSlime";
 	_type = "Monster";
+	attackTime = 3.0f;
 }
 ShooterSlime* ShooterSlime::create()
 {
@@ -37,7 +38,7 @@ void ShooterSlime::MoodAttack(float dt)
 {
 	if (timer == kTimerUp)
 	{
-		timer = AttackTime() + AttackTime() * CCRANDOM_0_1();
+		timer = AttackTime();
 		Animate("Attack", myEnum::kAction::kActionAttack);
 		// fire a ball
 		auto sp = this->getPosition();

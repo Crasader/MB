@@ -40,7 +40,9 @@ void SkillManager::InitSkill()
 	node = CSLoader::createNode("Skill/Skill.csb");
 
 	gaugeCurrent = node->getChildByName("GaugeFront");
-	gaugeFrame = static_cast<Sprite*>(node->getChildByName("GaugeFrame"));
+	gaugeFrame1 = static_cast<Sprite*>(node->getChildByName("GaugeFrame1"));
+	gaugeFrame2 = static_cast<Sprite*>(node->getChildByName("GaugeFrame2"));
+	gaugeFrame3 = static_cast<Sprite*>(node->getChildByName("GaugeFrame3"));
 	gaugeMax = node->getChildByName("GaugeBack");
 	skillImage = static_cast<Sprite*>(node->getChildByName("SkillImage"));
 	btn = static_cast<cocos2d::ui::Button*>(node->getChildByName("Btn"));
@@ -61,10 +63,24 @@ void SkillManager::SetSkillImage()
 
 	int max = hero->getSkillMaxPoint();
 
-	if (max == 1)
-		gaugeFrame->setOpacity(0);
-	else
-		gaugeFrame->setOpacity(255);
+	switch (max)
+	{
+	case 1:
+		gaugeFrame1->setOpacity(255);
+		gaugeFrame2->setOpacity(0);
+		gaugeFrame3->setOpacity(0);
+		break;
+	case 2:
+		gaugeFrame1->setOpacity(0);
+		gaugeFrame2->setOpacity(255);
+		gaugeFrame3->setOpacity(0);
+		break;
+	case 3:
+		gaugeFrame1->setOpacity(0);
+		gaugeFrame2->setOpacity(0);
+		gaugeFrame3->setOpacity(255);
+		break;
+	}
 
 }
 
@@ -121,7 +137,7 @@ void SkillManager::ClickSkillBtn(cocos2d::Ref* sender, cocos2d::ui::Widget::Touc
 		if (_clickEnabled)
 		{
 			hero->SkillUse();
-			SoundManager::getInstance()->playMySoundLogic("Shining");
+			//SoundManager::getInstance()->playMySoundLogic("Shining");
 		}
 		else
 		{

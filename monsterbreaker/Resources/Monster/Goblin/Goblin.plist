@@ -11,7 +11,7 @@
 	<key>BallName</key>
 	<string>Coin</string>
 	<key>BallSize</key>
-	<real>1</real>
+	<real>2</real>
 	<key>BallVelocity</key>
 	<real>650</real>
 	<key>CurrentHp</key>

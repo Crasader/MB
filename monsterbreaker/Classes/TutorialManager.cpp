@@ -93,6 +93,7 @@ void TutorialManager::onTutorialBtnTouch(cocos2d::Ref* sender, cocos2d::ui::Widg
 		case Widget::TouchEventType::ENDED:
 		{
 			isClicked = true;
+			HideBtn();
 			auto target = (TutorialBtn*)((Node*)sender)->getUserData();
 			doWork(target->btnType);
 		}
@@ -170,7 +171,7 @@ void TutorialManager::doWork(int btnType)
 			CallFunc::create(std::bind(&Monster::Damaged, m, 1)),
 			DelayTime::create(0.5f),
 			CallFunc::create(std::bind(&TutorialManager::removeNode, this, m)),
-			CallFunc::create(std::bind(&TutorialManager::setIsClicked, this, false)),
+			CallFunc::create(std::bind(&TutorialManager::EndAnimation, this)),
 			NULL));
 
 		vec.pushBack(f);
@@ -186,20 +187,58 @@ void TutorialManager::doWork(int btnType)
 		layer->addChild(f, ZINDEX_TUTORIAL_SPRITE);
 
 		f->setClickVisible(true);
-
+	
 		f->runAction(Sequence::create(
 			MoveTo::create(1.0f, Vec2(visibleSize.width*0.8f, f->getPositionY())),
 			MoveTo::create(1.0f, Vec2(visibleSize.width*0.2f, f->getPositionY())),
-			CallFunc::create(std::bind(&TutorialManager::removeNode, this, f)),
-			CallFunc::create(std::bind(&TutorialManager::setIsClicked, this, false)),
 			NULL));
+
+		auto doorManager = (DoorManager*)layer->getChildByName("DoorManager");
+		int size = doorManager->doors.size();
+
+		bool checkSecretDoor = false;
+		for (int i = 0; i < size; i++)
+		{
+			auto obj = doorManager->doors.at(i);
+			if (obj->_isSecret)
+			{
+				checkSecretDoor = true;
+				continue;
+			}			
+			auto vec = obj->getPosition();
+			float delayTime = 1 * i;
+			if (checkSecretDoor)
+				delayTime = 1 * (i - 1);
+			if (i != size - 1)
+			{
+				f->runAction(Sequence::create(
+					DelayTime::create(2.5f),
+					DelayTime::create(delayTime),
+					CallFunc::create(std::bind(&FingerPointer::mySetPosition, f, vec)),
+					DelayTime::create(1.0f),
+					NULL));
+			}
+			else
+			{
+				f->runAction(Sequence::create(
+					DelayTime::create(2.5f),
+					DelayTime::create(delayTime),
+					CallFunc::create(std::bind(&FingerPointer::mySetPosition, f, vec)),
+					DelayTime::create(1.0f),
+					CallFunc::create(std::bind(&TutorialManager::removeNode, this, f)),
+					CallFunc::create(std::bind(&TutorialManager::EndAnimation, this)),
+					NULL));
+			}
+		}
+
 		vec.pushBack(f);
 	}
 	break;
 	case myEnum::kTutorial::kBomb:
 	{
+		auto dp = Vec2(visibleSize.width*0.3f, visibleSize.height*0.5f);
 		auto f = FingerPointer::create(layer);
-		f->setPosition(visibleSize.width*0.5f, visibleSize.height*0.7f);
+		f->setPosition(dp);
 		layer->addChild(f, ZINDEX_TUTORIAL_SPRITE);
 
 		f->setClickVisible(true);
@@ -229,7 +268,7 @@ void TutorialManager::doWork(int btnType)
 			DelayTime::create(1.0f),
 			FadeOut::create(0.5f),
 			CallFunc::create(std::bind(&TutorialManager::removeNode, this, bomb)),
-			CallFunc::create(std::bind(&TutorialManager::setIsClicked, this, false)),
+			CallFunc::create(std::bind(&TutorialManager::EndAnimation, this)),
 			NULL));
 
 		vec.pushBack(f);
@@ -242,7 +281,6 @@ void TutorialManager::doWork(int btnType)
 	{
 		auto cache = SpriteFrameCache::sharedSpriteFrameCache();
 		cache->addSpriteFramesWithFile("Ball/Ball.plist", "Ball/Ball.png");
-
 
 		auto ball = Sprite::createWithSpriteFrameName(String::createWithFormat("Ball/%s.png", hero->getBallName().c_str())->getCString());
 
@@ -263,14 +301,19 @@ void TutorialManager::doWork(int btnType)
 			MoveTo::create(0.5f, dp2),
 			MoveTo::create(0.5f, dp3),
 			CallFunc::create(std::bind(&Node::setVisible, ball, false)),
-			DelayTime::create(1.0f),
-			MoveTo::create(0.01f, dp),
-			
+			CallFunc::create(std::bind(&TutorialManager::removeNode, this, ball)),
+			NULL));
+		auto mBall = Sprite::createWithSpriteFrameName("Ball/GreenBall.png");
+		mBall->setPosition(dp);
+		mBall->setVisible(false);
+		layer->addChild(mBall, ZINDEX_TUTORIAL_SPRITE);
+		mBall->runAction(Sequence::create(
+			DelayTime::create(3.0f),
 			CallFunc::create(std::bind(&TutorialManager::playAttackSound, this, "FireBall", "wav")),
-			CallFunc::create(std::bind(&Node::setVisible, ball, true)),
+			CallFunc::create(std::bind(&Node::setVisible, mBall, true)),
 			MoveTo::create(0.5f, dp2),
 			MoveTo::create(0.5f, hero->getPosition()),
-			CallFunc::create(std::bind(&TutorialManager::removeNode, this, ball)),
+			CallFunc::create(std::bind(&TutorialManager::removeNode, this, mBall)),
 			NULL));
 
 		auto m = Slime::create();
@@ -285,7 +328,7 @@ void TutorialManager::doWork(int btnType)
 			CallFunc::create(std::bind(&Monster::Damaged, m, 1)),
 			DelayTime::create(4.0f),
 			CallFunc::create(std::bind(&TutorialManager::removeNode, this, m)),
-			CallFunc::create(std::bind(&TutorialManager::setIsClicked, this, false)),
+			CallFunc::create(std::bind(&TutorialManager::EndAnimation, this)),
 			NULL));
 
 		auto color = hero->getColor();
@@ -305,13 +348,14 @@ void TutorialManager::doWork(int btnType)
 
 		vec.pushBack(m);
 		vec.pushBack(ball);
+		vec.pushBack(mBall);
 		vec.pushBack(hero);
 	}
 	break;
 	case myEnum::kTutorial::kSkill:
 	{
 		auto sm = (SkillManager*)layer->getChildByName("SkillManager");
-		
+		auto dp = Vec2(visibleSize.width*0.3f, visibleSize.height*0.5f);
 		//
 		auto f = FingerPointer::create(layer);
 		f->setPosition(sm->getPosition());
@@ -327,7 +371,7 @@ void TutorialManager::doWork(int btnType)
 
 		//
 		auto f2 = FingerPointer::create(layer);
-		f2->setPosition(visibleSize.width*0.5f, visibleSize.height*0.7f);
+		f2->setPosition(dp);
 		layer->addChild(f2, ZINDEX_TUTORIAL_SPRITE);
 
 		f2->setClickVisible(true);
@@ -339,7 +383,7 @@ void TutorialManager::doWork(int btnType)
 			CallFunc::create(std::bind(&FingerPointer::setVisible, f2, true)),
 			DelayTime::create(1.0f),
 			CallFunc::create(std::bind(&TutorialManager::removeNode, this, f2)),
-			CallFunc::create(std::bind(&TutorialManager::setIsClicked, this, false)),
+			CallFunc::create(std::bind(&TutorialManager::EndAnimation, this)),
 			NULL));
 
 		vec.pushBack(f);
@@ -360,4 +404,21 @@ void TutorialManager::playAttackSound(const char * soundName, const char * sound
 	SoundManager::getInstance()->playMySoundLogic(soundName, soundType);
 }
 
+void TutorialManager::HideBtn()
+{
+	aBtn->setVisible(false);
+	mBtn->setVisible(false);
+	dBtn->setVisible(false);
+	sBtn->setVisible(false);
+	bBtn->setVisible(false);
+}
+void TutorialManager::EndAnimation()
+{
+	aBtn->setVisible(true);
+	mBtn->setVisible(true);
+	dBtn->setVisible(true);
+	sBtn->setVisible(true);
+	bBtn->setVisible(true);
+	isClicked = false;
+}
 

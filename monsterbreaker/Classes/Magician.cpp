@@ -46,7 +46,7 @@ void Magician::SkillUse()
 				weapon->Skill();
 				EmptySkillPoint();
 				IncreaseCurrentHp(2);
-				DecreaseCurrentSp(1);
+//				DecreaseCurrentSp(1);
 				// effect & sound
 				auto effectManager = static_cast<EffectManager*>(layer->getChildByName("EffectManager"));
 				effectManager->HealEffect(this->getPosition());
@@ -63,7 +63,7 @@ void Magician::SkillUse()
 			if (IsEnoughSp(1))
 			{
 				EmptySkillPoint();
-				DecreaseCurrentSp(1);
+//				DecreaseCurrentSp(1);
 				_skillUseState = true;
 			}
 			break;
@@ -72,7 +72,7 @@ void Magician::SkillUse()
 			if (IsEnoughSp(2))
 			{
 				EmptySkillPoint();
-				DecreaseCurrentSp(2);
+//				DecreaseCurrentSp(2);
 				_skillUseState = true;
 			}
 			break;
@@ -113,4 +113,48 @@ bool Magician::IsEnoughSp(int needSp)
 		result = true;
 	return result;
 }
+
+void Magician::DecreaseCurrentSp(int i)
+{
+	if (_currentSp - i <= 0)
+	{
+		int temp = i - _currentSp;
+		_currentSp = 0;
+		DecreaseCurrentHp(temp);
+	}
+	else
+	{
+		_currentSp -= i;
+		SoundManager::getInstance()->playMySoundLogic("Solid");
+		// effect
+		auto effectManager = static_cast<EffectManager*>(layer->getChildByName("EffectManager"));
+		effectManager->BarrierEffect(this->getPosition());
+	}
+}
+void Magician::Damaged(int i)
+{
+	if (IsAlive())
+	{
+		if (!IsDamaged())
+		{
+			_damagedState = true;
+			this->getPhysicsBody()->setEnable(false);
+			//Animate
+			auto color = this->getColor();
+			auto sprite = Sprite::create();
+			this->runAction(
+				Sequence::create(
+				TintTo::create(0.1, 255, 0, 0),
+				Blink::create(0.2, 2),
+				TintTo::create(0.1, color.r, color.g, color.b),
+				CallFunc::create(std::bind(&GameObject::SetBodyEnable, this, true)),
+				CallFunc::create(std::bind(&GameObject::setDamagedState, this, false)),
+				NULL));
+
+			DecreaseCurrentSp(i);
+		}
+	}
+}
+
+
 

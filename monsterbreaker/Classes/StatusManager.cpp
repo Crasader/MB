@@ -21,6 +21,7 @@ StatusManager* StatusManager::create(Hero * hero)
 void StatusManager::InitStatus(Hero * hero)
 {
 	visibleSize = Director::getInstance()->getVisibleSize();
+	origin = Director::getInstance()->getVisibleOrigin();
 	this->hero = hero;
 	// top ui 
 	topBG = Sprite::create("GameScene/TopUI.png");

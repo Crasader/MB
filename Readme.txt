@@ -1,6 +1,10 @@
 ===================================================
 Update Log
 ===================================================
+12.July.2015	:: Update 0.9.2 Version
+		:: Improve UI & Tutorial & Character Selete Scene.
+		:: Modify magician's damage system & skill system for adjust difficulty level.
+		:: Improve monster's AI system.
 10.July.2015	:: Modify skill logic and Release the alpha version at Google Play
 06.July.2015	:: Clear unuseful documentation in my c++ files
 04.July.2015	:: BackUp MB(0.9.0)
@@ -10,7 +14,7 @@ Update Log
 ===================================================
 Monster Breaker
 This game is motivated by 'Binding Of Isaac".
-It's my first game programming for my portfolio and studing.
+It's my first game programming for my portfolio and studying.
 
 I used 'Cocos2d-x' with 'VS Express 2013' for coding,
 and graphic has been designed with 'gimp' and 'Cocos Studio' tool,

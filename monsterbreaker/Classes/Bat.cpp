@@ -12,6 +12,9 @@ void Bat::Init()
 	_name = "Bat";
 	_type = "Monster";
 	sleepState = true;
+	attackTime = 3.0f;
+	stayTime = 2.0f;
+	moveTime = 1.5f;
 }
 Bat* Bat::create()
 {
@@ -84,11 +87,11 @@ void Bat::ChooseMood()
 		else
 		{
 			float r = CCRANDOM_0_1();
-			if (r < 0.3f)
+			if (r < 0.2f)
 			{
 				SetMood(myEnum::kMoods::kMoodStay);
 			}
-			else if (r > 0.7f)
+			else if (r > 0.5f)
 			{
 				SetMood(myEnum::kMoods::kMoodAttack);
 			}
@@ -138,7 +141,7 @@ void Bat::MoodStay(float dt)
 {
 	if (timer == kTimerUp)
 	{
-		timer = StayTime() + StayTime() * CCRANDOM_0_1();
+		timer = StayTime();
 		Animate("Fly", myEnum::kAction::kActionStay);
 	}
 
@@ -153,7 +156,7 @@ void Bat::MoodMove(float dt)
 {
 	if (timer == kTimerUp)
 	{
-		timer = MoveTime() + MoveTime() * CCRANDOM_0_1();
+		timer = MoveTime();
 		Animate("Fly", myEnum::kAction::kActionMove);
 		auto visibleSize = Director::getInstance()->getVisibleSize();
 		auto sp = Vec2(visibleSize.width / 10, visibleSize.height / 25 * 10);
@@ -172,7 +175,7 @@ void Bat::MoodAttack(float dt)
 {
 	if (timer == kTimerUp)
 	{
-		timer = AttackTime() + AttackTime() * CCRANDOM_0_1();
+		timer = AttackTime();
 		Animate("Attack", myEnum::kAction::kActionAttack);
 		// fire a ball
 		auto sp = this->getPosition();

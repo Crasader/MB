@@ -16,7 +16,7 @@
 		<key>Cost</key>
 		<integer>5</integer>
 		<key>MaxPoint</key>
-		<integer>3</integer>
+		<integer>2</integer>
 		<key>SkillName</key>
 		<string>Fire Ball</string>
 	</dict>

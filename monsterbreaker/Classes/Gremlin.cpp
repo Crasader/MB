@@ -5,9 +5,9 @@ Gremlin::Gremlin()
 {
 	_name = "Gremlin";
 	_type = "Monster";
-	stayTime = 1.0f;
-	attackTime = 1.75f;
-	moveTime = 2.0f;
+	stayTime = 2.0f;
+	attackTime = 3.0f;
+	moveTime = 3.0f;
 }
 Gremlin* Gremlin::create()
 {
@@ -39,17 +39,17 @@ void Gremlin::MoodAttack(float dt)
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
 
-		auto dp1 = Vec2(sp.x - 2, sp.y - 1);
+//		auto dp1 = Vec2(sp.x - 2, sp.y - 1);
 		auto dp2 = Vec2(sp.x - 1, sp.y - 1);
 		auto dp3 = Vec2(sp.x, sp.y - 1);
 		auto dp4 = Vec2(sp.x + 1, sp.y - 1);
-		auto dp5 = Vec2(sp.x + 2, sp.y - 1);
+//		auto dp5 = Vec2(sp.x + 2, sp.y - 1);
 
-		Fire(layer, sp, dp1);
+//		Fire(layer, sp, dp1);
 		Fire(layer, sp, dp2);
 		Fire(layer, sp, dp3);
 		Fire(layer, sp, dp4);
-		Fire(layer, sp, dp5);
+//		Fire(layer, sp, dp5);
 	}
 	else if (timer <= 0.0f)
 	{

@@ -5,7 +5,7 @@ Wolf::Wolf()
 {
 	_name = "Wolf";
 	_type = "Monster";
-	attackTime = 3.00f;
+	attackTime = 1.5f;
 	moveTime = 1.05f;
 }
 Wolf* Wolf::create()
@@ -37,10 +37,10 @@ void Wolf::MoodAttack(float dt)
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
 		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
-		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
+//		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 
 		Fire(layer, sp, dp1);
-		Fire(layer, sp, dp2);
+//		Fire(layer, sp, dp2);
 	}
 	else if (timer <= 0.0f)
 	{
@@ -73,7 +73,7 @@ void Wolf::ChooseMood()
 	if (IsAlive())
 	{
 		float r = CCRANDOM_0_1();
-		if (r < 0.5f)
+		if (r < 0.35f)
 		{
 			SetMood(myEnum::kMoods::kMoodAttack);
 		}

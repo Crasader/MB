@@ -29,13 +29,13 @@
 	<key>BombSetCountTime</key>
 	<real>1</real>
 	<key>CurrentHp</key>
-	<integer>4</integer>
+	<integer>6</integer>
 	<key>CurrentSp</key>
 	<integer>2</integer>
 	<key>KeyCount</key>
 	<integer>0</integer>
 	<key>MaxHp</key>
-	<integer>4</integer>
+	<integer>6</integer>
 	<key>MaxSp</key>
 	<integer>2</integer>
 	<key>MoneyCount</key>

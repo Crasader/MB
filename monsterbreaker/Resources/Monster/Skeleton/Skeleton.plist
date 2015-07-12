@@ -5,19 +5,19 @@
 	<key>AttackPoint</key>
 	<integer>1</integer>
 	<key>BallCount</key>
-	<integer>10</integer>
+	<integer>5</integer>
 	<key>BallCurrentCount</key>
 	<string>0</string>
 	<key>BallName</key>
 	<string>White</string>
 	<key>BallSize</key>
-	<real>2</real>
+	<real>1.2</real>
 	<key>BallVelocity</key>
 	<real>700</real>
 	<key>CurrentHp</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>MaxHp</key>
-	<integer>15</integer>
+	<integer>10</integer>
 	<key>Name</key>
 	<string>Skeleton</string>
 	<key>Team</key>

@@ -6,7 +6,7 @@ Zombie::Zombie()
 	_name = "Zombie";
 	_type = "Monster";
 	stayTime = 1.05f;
-	attackTime = 1.75f;
+	attackTime = 2.75f;
 	moveTime = 1.75f;
 }
 Zombie* Zombie::create()
@@ -39,8 +39,10 @@ void Zombie::MoodAttack(float dt)
 		auto sp = this->getPosition();
 		sp.y -= this->getContentSize().height;
 		auto dp1 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
+		auto dp2 = Vec2(sp.x - CCRANDOM_MINUS1_1(), sp.y - 1);
 
 		Fire(layer, sp, dp1);
+		Fire(layer, sp, dp2);
 	}
 	else if (timer <= 0.0f)
 	{
@@ -50,7 +52,7 @@ void Zombie::MoodAttack(float dt)
 void Zombie::ChooseMood()
 {
 	float r = CCRANDOM_0_1();
-	if (r < 0.3f)
+	if (r < 0.4f)
 	{
 		SetMood(myEnum::kMoods::kMoodAttack);
 	}

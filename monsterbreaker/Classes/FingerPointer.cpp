@@ -88,6 +88,10 @@ void FingerPointer::fadeOut(float dt)
 	node->runAction(FadeOut::create(dt));
 }
 
+void FingerPointer::mySetPosition(cocos2d::Vec2 vec)
+{
+	this->setPosition(vec);
+}
 
 
 
