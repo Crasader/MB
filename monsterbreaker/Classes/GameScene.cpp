@@ -39,17 +39,17 @@ bool GameScene::init()
 	spr_bg->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
 	this->addChild(spr_bg, 0);
 
-	//// only debug
-	auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test, this));
-	item1->setPosition(Vec2(300, 200));
-	auto item2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test2, this));
-	item2->setPosition(Vec2(350, 200));
-	auto item3 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test3, this));
-	item3->setPosition(Vec2(400, 200));
+	////// only debug
+	//auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test, this));
+	//item1->setPosition(Vec2(300, 200));
+	//auto item2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test2, this));
+	//item2->setPosition(Vec2(350, 200));
+	//auto item3 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test3, this));
+	//item3->setPosition(Vec2(400, 200));
 
-	auto menu = Menu::create(item1, item2, item3, NULL);
-	menu->setPosition(Vec2::ZERO);
-	this->addChild(menu, 100);
+	//auto menu = Menu::create(item1, item2, item3, NULL);
+	//menu->setPosition(Vec2::ZERO);
+	//this->addChild(menu, 100);
 
 	pauseNode = CSLoader::createNode("Icon/pauseBtn.csb");
 	pauseBtn = (Button *)pauseNode->getChildByName("btn");

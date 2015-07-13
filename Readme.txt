@@ -1,6 +1,9 @@
 ===================================================
 Update Log
 ===================================================
+13.July.2015	:: Modify image size & position for G2 screen ratio.
+		:: Add MapZoomIn&Out Func.
+		:: Modify game level to easy
 12.July.2015	:: Update 0.9.2 Version
 		:: Improve UI & Tutorial & Character Selete Scene.
 		:: Modify magician's damage system & skill system for adjust difficulty level.
