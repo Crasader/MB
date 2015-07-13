@@ -26,17 +26,17 @@ void HelpManager::createCageAndData()
 	int y = mapManager->GetCurrentRoomData().y;
 
 	c1 = Cage::create(layer, hero, 1);
-	c1->setPosition(Vec2(visibleSize.width * 0.5f + origin.x, visibleSize.height* 0.7f + origin.y));
+	c1->setPosition(Vec2(visibleSize.width * 0.5f , visibleSize.height* 0.7f));
 	layer->addChild(c1, ZINDEX_CAGE_SPRITE);
 	c1->setTag(1);
 
 	c2 = Cage::create(layer, hero, 1);
-	c2->setPosition(Vec2(visibleSize.width * 0.3f + origin.x, visibleSize.height* 0.5f + origin.y));
+	c2->setPosition(Vec2(visibleSize.width * 0.3f, visibleSize.height* 0.5f ));
 	layer->addChild(c2, ZINDEX_CAGE_SPRITE);
 	c2->setTag(2);
 
 	c3 = Cage::create(layer, hero, 1);
-	c3->setPosition(Vec2(visibleSize.width * 0.7f + origin.x, visibleSize.height* 0.5f + origin.y));
+	c3->setPosition(Vec2(visibleSize.width * 0.7f, visibleSize.height* 0.5f ));
 	layer->addChild(c3, ZINDEX_CAGE_SPRITE);
 	c3->setTag(3);
 

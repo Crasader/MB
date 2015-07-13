@@ -291,7 +291,7 @@ void MainMenuScene::DrawNode()
 		// torch
 		auto torch = CSLoader::createNode("Torch/Torch.csb");
 		torch->setScale(3);
-		torch->setPosition(visibleSize.width * 0.4f + origin.x, visibleSize.height * 0.6f + origin.y);
+		torch->setPosition(visibleSize.width * 0.4f, visibleSize.height * 0.6f);
 
 		node->addChild(torch, 1000);
 		auto ani_torch = CSLoader::createTimeline("Torch/Torch.csb");
@@ -417,9 +417,9 @@ void MainMenuScene::DrawNode()
 		wing2->runAction(act_wing2);
 		body->runAction(act_body);
 
-		angel->setPosition(visibleSize.width / 2 + origin.x, visibleSize.height + visibleSize.height / 2);
+		angel->setPosition(visibleSize.width / 2, visibleSize.height + visibleSize.height / 2);
 
-		auto act_moveTo = MoveTo::create(2.0f, Vec2(visibleSize.width / 2 + origin.x, visibleSize.height * 0.4));
+		auto act_moveTo = MoveTo::create(2.0f, Vec2(visibleSize.width / 2, visibleSize.height * 0.4));
 		auto seq = Sequence::create(
 			DelayTime::create(0.5f),
 			act_moveTo,
@@ -429,7 +429,7 @@ void MainMenuScene::DrawNode()
 
 		// vassal 1
 		auto vassal1 = CSLoader::createNode("MainMenuScene/Ending4/Vassal.csb");
-		vassal1->setPosition(visibleSize.width *0.2 + origin.x, -visibleSize.height / 3);
+		vassal1->setPosition(visibleSize.width *0.2 , -visibleSize.height / 3);
 		node->addChild(vassal1);
 
 		auto ani_v1 = CSLoader::createTimeline("MainMenuScene/Ending4/Vassal.csb");
@@ -446,7 +446,7 @@ void MainMenuScene::DrawNode()
 
 		// vassal 2
 		auto vassal2 = CSLoader::createNode("MainMenuScene/Ending4/Vassal.csb");
-		vassal2->setPosition(visibleSize.width * 0.5 + origin.x, -visibleSize.height / 3);
+		vassal2->setPosition(visibleSize.width * 0.5 , -visibleSize.height / 3);
 		node->addChild(vassal2);
 
 		auto ani_v2 = CSLoader::createTimeline("MainMenuScene/Ending4/Vassal.csb");
@@ -463,7 +463,7 @@ void MainMenuScene::DrawNode()
 
 		// vassal 3
 		auto vassal3 = CSLoader::createNode("MainMenuScene/Ending4/Vassal.csb");
-		vassal3->setPosition(visibleSize.width * 0.8 + origin.x, -visibleSize.height / 3);
+		vassal3->setPosition(visibleSize.width * 0.8 , -visibleSize.height / 3);
 		vassal3->setScaleX(-1);
 		node->addChild(vassal3);
 
@@ -505,7 +505,7 @@ void MainMenuScene::DrawNode()
 
 		// hero
 		auto hero = CSLoader::createNode("MainMenuScene/Ending5/Hero.csb");
-		hero->setPosition(visibleSize.width * 0.5f + origin.x, visibleSize.height * 0.3f);
+		hero->setPosition(visibleSize.width * 0.5f , visibleSize.height * 0.3f);
 		node->addChild(hero);
 
 		// half angel
@@ -514,7 +514,7 @@ void MainMenuScene::DrawNode()
 		auto ani_ha = CSLoader::createTimeline("MainMenuScene/Ending5/HalfAngel.csb");
 		halfAngel->runAction(ani_ha);
 		ani_ha->gotoFrameAndPlay(0, 60, true);
-		halfAngel->setPosition(visibleSize.width * 0.35f + origin.x, visibleSize.height * 0.45f);
+		halfAngel->setPosition(visibleSize.width * 0.35f , visibleSize.height * 0.45f);
 
 		// half devil
 		auto halfDevil = CSLoader::createNode("MainMenuScene/Ending5/HalfDevil.csb");
@@ -522,11 +522,11 @@ void MainMenuScene::DrawNode()
 		auto ani_hd = CSLoader::createTimeline("MainMenuScene/Ending5/HalfDevil.csb");
 		halfDevil->runAction(ani_hd);
 		ani_hd->gotoFrameAndPlay(0, 60, true);
-		halfDevil->setPosition(visibleSize.width*0.7f + origin.x, visibleSize.height * 0.25f);
+		halfDevil->setPosition(visibleSize.width*0.7f , visibleSize.height * 0.25f);
 
 		// angel
 		auto angel = CSLoader::createNode("MainMenuScene/Ending4/Angel.csb");
-		angel->setPosition(visibleSize.width * 0.1f + origin.x, visibleSize.height * 0.5f);
+		angel->setPosition(visibleSize.width * 0.1f, visibleSize.height * 0.5f);
 		angel->setScale(0.5f);
 		node->addChild(angel);
 		auto ani_a = CSLoader::createTimeline("MainMenuScene/Ending4/Angel.csb");
@@ -535,7 +535,7 @@ void MainMenuScene::DrawNode()
 
 		// devil
 		auto devil= CSLoader::createNode("MainMenuScene/Ending5/Devil.csb");
-		devil->setPosition(visibleSize.width * 0.9f + origin.x, visibleSize.height * 0.1f);
+		devil->setPosition(visibleSize.width * 0.9f , visibleSize.height * 0.1f);
 		node->addChild(devil);
 
 	}
@@ -572,7 +572,7 @@ void MainMenuScene::DrawNode()
 		auto ani_flower = CSLoader::createTimeline("MainMenuScene/Ending6/Flower.csb");
 		flower->runAction(ani_flower);
 		ani_flower->gotoFrameAndPlay(0, 120, true);
-		flower->setPosition(visibleSize.width * 0.5555f + origin.x, -visibleSize.height * 0.078125f + origin.y);
+		flower->setPosition(visibleSize.width * 0.5555f , -visibleSize.height * 0.078125f );
 		auto move = MoveTo::create(1.5f, Vec2(flower->getPositionX(), -flower->getPositionY()));
 		flower->runAction(move);
 	}

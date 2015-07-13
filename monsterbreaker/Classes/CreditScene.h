@@ -27,7 +27,7 @@ public:
 	cocos2d::Node * node;
 
 	cocos2d::ui::Button * backBtn;
-	cocos2d::ui::Button * tumblrBtn;
+	cocos2d::ui::Button * webBtn;
 	cocos2d::ui::Button * meBtn;
 	cocos2d::ui::Button * isaacBtn;
 

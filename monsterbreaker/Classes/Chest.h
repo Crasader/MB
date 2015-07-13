@@ -8,8 +8,9 @@
 #include "ui\CocosGUI.h"
 #include "ChestItem.h"
 #include "Hero.h"
-#include "MapManager.h"
+//#include "MapManager.h"
 #include "DoorManager.h"
+#include "MapDrawManager.h"
 
 class Chest : public cocos2d::Node
 {

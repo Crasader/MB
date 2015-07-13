@@ -148,7 +148,7 @@ void EffectManager::ShowItemDes(int itemNumber)
 
 	// Item Animation 
 	auto frame = CSLoader::createNode("Item/ItemFrame.csb");
-	frame->setPosition(origin.x, origin.y);
+	//frame->setPosition(origin.x, origin.y);
 	node->addChild(frame,0);
 
 	auto nameLabel = dynamic_cast<Text*>(frame->getChildByName("NameLabel"));

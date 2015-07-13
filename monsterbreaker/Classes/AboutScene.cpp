@@ -32,6 +32,7 @@ bool AboutScene::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 	node = CSLoader::createNode("About/About.csb");
+	//node->setPosition(origin);
 	this->addChild(node);
 
 	this->setKeypadEnabled(true);

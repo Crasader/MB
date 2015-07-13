@@ -35,7 +35,7 @@ bool TestScene::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 	auto spr_bg = Sprite::create("GameScene/BG.png");
-	spr_bg->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	spr_bg->setPosition(Vec2(visibleSize.width / 2 , visibleSize.height / 2 ));
 	this->addChild(spr_bg, 0);
 
 	//SpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Door/Door.plist", "Door/Door.png");

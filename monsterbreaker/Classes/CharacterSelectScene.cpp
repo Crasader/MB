@@ -33,6 +33,7 @@ bool CharacterSelectScene::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 	node = CSLoader::createNode("CSS/CSS.csb");
+	//node->setPosition(origin);
 	this->addChild(node);
 	
 	this->setKeypadEnabled(true);

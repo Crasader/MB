@@ -18,7 +18,7 @@ void Chest::InitSprite()
 {
 	auto origin = Director::getInstance()->getVisibleOrigin();
 	auto node = (CSLoader::createNode("Chest/Chest.csb"));
-	node->setPosition(origin.x, origin.y);
+	//node->setPosition();
 
 	this->addChild(node);
 
@@ -28,7 +28,7 @@ void Chest::InitSprite()
 
 	auto btn = dynamic_cast<Button*>(node->getChildByName("btn"));
 	btn->setEnabled(true);
-	btn->setPosition(Vec2(origin.x, origin.y));
+	//btn->setPosition(Vec2());
 	btn->addTouchEventListener(CC_CALLBACK_2(Chest::onTouch, this));
 
 	while (true)
@@ -74,10 +74,14 @@ void Chest::Open()
 	auto doorManager = static_cast<DoorManager*>(layer->getChildByName("DoorManager"));
 	if (r == ITEM_THE_MAP || r == ITEM_THE_COMPASS)
 	{
-		auto mapManager = MapManager::getInstance();
-		mapManager->setAllView(hero->HasItem(ITEM_THE_MAP));
-		mapManager->setAllViewType(hero->HasItem(ITEM_THE_COMPASS));
-		mapManager->ReDrawMap();
+		//auto mapManager = MapManager::getInstance();
+		//mapManager->setAllView(hero->HasItem(ITEM_THE_MAP));
+		//mapManager->setAllViewType(hero->HasItem(ITEM_THE_COMPASS));
+		//mapManager->ReDrawMap();
+		auto mapDrawManager = (MapDrawManager*)layer->getChildByName("MapDrawManager");
+		mapDrawManager->setAllView(hero->HasItem(ITEM_THE_MAP));
+		mapDrawManager->setAllViewType(hero->HasItem(ITEM_THE_COMPASS));
+		mapDrawManager->ReDrawMap();
 	}
 	else if (r == ITEM_SECRET_MASTER)
 		doorManager->OpenAllSecretDoor();

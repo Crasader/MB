@@ -81,6 +81,7 @@ bool PrologScene::init()
 	Widget::ccWidgetClickCallback callBackSkip = callBackFunctorSkip();
 	skipBtn->addClickEventListener(callBackSkip);
 
+	node->setPosition(origin);
 	return true;
 }
 

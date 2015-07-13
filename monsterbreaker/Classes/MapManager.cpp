@@ -1,6 +1,7 @@
 #include "MapManager.h"
 #include <stdlib.h>
 USING_NS_CC;
+using namespace ui;
 
 MapManager* MapManager::instance = nullptr;
 void MapManager::debug(const char * temp)
@@ -372,156 +373,159 @@ void MapManager::setRoomType()
 
 }
 
-
-void MapManager::DrawMap(cocos2d::Layer *layer)
-{
-	// init
-	this->layer = layer;
-	auto cache = SpriteFrameCache::sharedSpriteFrameCache();
-	cache->addSpriteFramesWithFile("Map/Map.plist", "Map/Map.png");
-	spriteBatch = SpriteBatchNode::create("Map/Map.png");
-
-	auto visibleSize = Director::getInstance()->getVisibleSize();
-
-	auto mapBGSprite = Sprite::createWithSpriteFrameName("Map/MapBG.png");
-	mapBGSprite->setPosition(visibleSize.width - mapBGSprite->getContentSize().width / 2, visibleSize.height - mapBGSprite->getContentSize().height / 2);
-	spriteBatch->addChild(mapBGSprite, ZINDEX_STATUS_MAP_BG, "map");
-
-	// calculate start point for room Images
-	cocos2d::Size tempSize = Sprite::createWithSpriteFrameName("Map/CurrentRoom.png")->getContentSize();
-	int rateX = (SIZE_X - 1) / 2.0;
-	int rateY = (SIZE_Y - 1) / 2.0;
-
-	float sX = mapBGSprite->getPosition().x - rateX * tempSize.width;
-	float sY = mapBGSprite->getPosition().y + rateY * tempSize.height;
-
-	// curse
-	if (_curse)
-	{
-		auto temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-		auto tempType = Sprite::createWithSpriteFrameName("Map/Secret.png");
-		temp->setPosition(mapBGSprite->getPosition());
-		tempType->setPosition(mapBGSprite->getPosition());
-		spriteBatch->addChild(temp, 3);
-		spriteBatch->addChild(tempType, 4);
-	}
-	else // not curse
-	{
-		for (int i = 0; i < SIZE_X; i++)
-		{
-			for (int j = 0; j < SIZE_Y; j++)
-			{
-				cocos2d::Sprite * temp = nullptr;
-				cocos2d::Sprite * tempType = nullptr;
-				switch (map[i][j].type)
-				{
-				case myEnum::kRoomType::kRTNone:
-					break;
-				case myEnum::kRoomType::kRTStart:
-					if (_allView || map[i][j].visible)
-						temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-					break;
-				case myEnum::kRoomType::kRTMonster:
-					if (_allView || map[i][j].visible)
-					{
-						if (map[i][j].exp)
-							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-						else
-							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-					}
-					break;
-				case myEnum::kRoomType::kRTShop:
-					if (_allView || map[i][j].visible)
-					{
-						if (map[i][j].exp)
-							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-						else
-							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-					}
-					if (_allViewType || map[i][j].visible)
-					{
-						tempType = Sprite::createWithSpriteFrameName("Map/Shop.png");
-					}
-					break;
-				case myEnum::kRoomType::kRTHelp:
-					if (_allView || map[i][j].visible)
-					{
-						if (map[i][j].exp)
-							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-						else
-							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-					}
-					if (_allViewType || map[i][j].visible)
-					{
-						tempType = Sprite::createWithSpriteFrameName("Map/Help.png");
-					}
-					break;
-				case myEnum::kRoomType::kRTBoss:
-					if (_allView || map[i][j].visible)
-					{
-						if (map[i][j].exp)
-							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-						else
-							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-					}
-					if (_allViewType || map[i][j].visible)
-					{
-						tempType = Sprite::createWithSpriteFrameName("Map/Boss.png");
-					}
-					break;
-				case myEnum::kRoomType::kRTTreasure:
-					if (_allView || map[i][j].visible)
-					{
-						if (map[i][j].exp)
-							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-						else
-							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-					}
-					if (_allViewType || map[i][j].visible)
-					{
-						tempType = Sprite::createWithSpriteFrameName("Map/Treasure.png");
-					}
-					break;
-				case myEnum::kRoomType::kRTSecret:
-					if (map[i][j].visible)
-					{
-						if (map[i][j].exp)
-							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
-						else
-							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
-						tempType = Sprite::createWithSpriteFrameName("Map/Secret.png");
-					}
-					break;
-				}
-
-				if (temp != nullptr)
-				{
-					temp->setPosition(Vec2(sX + tempSize.width * j, sY - tempSize.height * i));
-					spriteBatch->addChild(temp, ZINDEX_STATUS_MAP_ROOM);
-				}
-				if (tempType != nullptr)
-				{
-					tempType->setPosition(Vec2(sX + tempSize.width * j, sY - tempSize.height * i));
-					spriteBatch->addChild(tempType, ZINDEX_STATUS_MAP_TYPE);
-				}
-			} // end for j
-		} // end for i
-
-		auto hero = Sprite::createWithSpriteFrameName("Map/CurrentRoom.png");
-		hero->setPosition(sX + tempSize.width * _heroY, sY - tempSize.height * _heroX);
-		spriteBatch->addChild(hero, ZINDEX_STATUS_MAP_ROOM);
-
-	}
-
-	layer->addChild(spriteBatch, ZINDEX_STATUS_MAP_BG, "map");
-
-
-}
-void MapManager::ReDrawMap()
-{
-	layer->removeChild(spriteBatch);
-	DrawMap(layer);
-}
+//
+//void MapManager::DrawMap(cocos2d::Layer *layer)
+//{
+//	// init
+//	this->layer = layer;
+//	auto cache = SpriteFrameCache::sharedSpriteFrameCache();
+//	cache->addSpriteFramesWithFile("Map/Map.plist", "Map/Map.png");
+//	spriteBatch = SpriteBatchNode::create("Map/Map.png");
+//
+//	auto visibleSize = Director::getInstance()->getVisibleSize();
+//	auto mapBGSprite = CSLoader::createNode("Map/Map.csb");
+//	auto btn = (Button*)mapBGSprite->getChildByName("btn");
+//	btn->addTouchEventListener(CC_CALLBACK_2(MapManager::onTouchMap, this));
+//	//auto mapBGSprite = Sprite::createWithSpriteFrameName("Map/MapBG.png");
+//	//mapBGSprite->setPosition(visibleSize.width - mapBGSprite->getContentSize().width / 2, visibleSize.height - mapBGSprite->getContentSize().height / 2);
+//	//spriteBatch->addChild(mapBGSprite, ZINDEX_STATUS_MAP_BG);
+//	mapNode = Node::create();
+//	mapNode->setPosition(visibleSize.width - mapBGSprite->getContentSize().width / 2, visibleSize.height - mapBGSprite->getContentSize().height / 2);
+//	mapNode->addChild(mapBGSprite, ZINDEX_STATUS_MAP_BG);
+//
+//	// calculate start point for room Images
+//	cocos2d::Size tempSize = Sprite::createWithSpriteFrameName("Map/CurrentRoom.png")->getContentSize();
+//	int rateX = (SIZE_X - 1) / 2.0;
+//	int rateY = (SIZE_Y - 1) / 2.0;
+//
+//	float sX = mapBGSprite->getPosition().x - rateX * tempSize.width;
+//	float sY = mapBGSprite->getPosition().y + rateY * tempSize.height;
+//
+//	// curse
+//	if (_curse)
+//	{
+//		auto temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//		auto tempType = Sprite::createWithSpriteFrameName("Map/Secret.png");
+//		temp->setPosition(mapBGSprite->getPosition());
+//		tempType->setPosition(mapBGSprite->getPosition());
+//		spriteBatch->addChild(temp, 3);
+//		spriteBatch->addChild(tempType, 4);
+//	}
+//	else // not curse
+//	{
+//		for (int i = 0; i < SIZE_X; i++)
+//		{
+//			for (int j = 0; j < SIZE_Y; j++)
+//			{
+//				cocos2d::Sprite * temp = nullptr;
+//				cocos2d::Sprite * tempType = nullptr;
+//				switch (map[i][j].type)
+//				{
+//				case myEnum::kRoomType::kRTNone:
+//					break;
+//				case myEnum::kRoomType::kRTStart:
+//					if (_allView || map[i][j].visible)
+//						temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//					break;
+//				case myEnum::kRoomType::kRTMonster:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTShop:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Shop.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTHelp:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Help.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTBoss:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Boss.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTTreasure:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Treasure.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTSecret:
+//					if (map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//						tempType = Sprite::createWithSpriteFrameName("Map/Secret.png");
+//					}
+//					break;
+//				}
+//
+//				if (temp != nullptr)
+//				{
+//					temp->setPosition(Vec2(sX + tempSize.width * j, sY - tempSize.height * i));
+//					spriteBatch->addChild(temp, ZINDEX_STATUS_MAP_ROOM);
+//				}
+//				if (tempType != nullptr)
+//				{
+//					tempType->setPosition(Vec2(sX + tempSize.width * j, sY - tempSize.height * i));
+//					spriteBatch->addChild(tempType, ZINDEX_STATUS_MAP_TYPE);
+//				}
+//			} // end for j
+//		} // end for i
+//
+//		auto hero = Sprite::createWithSpriteFrameName("Map/CurrentRoom.png");
+//		hero->setPosition(sX + tempSize.width * _heroY, sY - tempSize.height * _heroX);
+//		spriteBatch->addChild(hero, ZINDEX_STATUS_MAP_ROOM);
+//
+//	}
+//	mapNode->addChild(spriteBatch);
+//	layer->addChild(mapNode, ZINDEX_STATUS_MAP_BG, "map");
+//}
+//void MapManager::ReDrawMap()
+//{
+//	layer->removeChild(spriteBatch);
+//	DrawMap(layer);
+//}
 
 void MapManager::SaveRoomData(int x, int y)
 {
@@ -636,3 +640,203 @@ bool MapManager::IsN()
 {
 	return (_heroX - 1 >= 0);
 }
+//
+//void MapManager::MapZoom()
+//{
+//	// init
+//	this->layer = layer;
+//	isZoomed = true;
+//
+//	auto cache = SpriteFrameCache::sharedSpriteFrameCache();
+//	cache->addSpriteFramesWithFile("Map/Map.plist", "Map/Map.png");
+//	spriteBatch = SpriteBatchNode::create("Map/Map.png");
+//
+//	auto visibleSize = Director::getInstance()->getVisibleSize();
+//
+//	auto mapBGSprite = CSLoader::createNode("Map/Map.csb");
+//	auto btn = (Button*)mapBGSprite->getChildByName("btn");
+//	btn->addTouchEventListener(CC_CALLBACK_2(MapManager::onTouchMap, this));
+//
+//	//auto mapBGSprite = Sprite::createWithSpriteFrameName("Map/MapBG.png");
+//	//mapBGSprite->setPosition(visibleSize.width - mapBGSprite->getContentSize().width / 2, visibleSize.height - mapBGSprite->getContentSize().height / 2);
+//	spriteBatch->addChild(mapBGSprite, ZINDEX_STATUS_MAP_BG);
+//
+//	// calculate start point for room Images
+//	cocos2d::Size tempSize = Sprite::createWithSpriteFrameName("Map/CurrentRoom.png")->getContentSize();
+//	int rateX = (SIZE_X - 1) / 2.0;
+//	int rateY = (SIZE_Y - 1) / 2.0;
+//
+//	float sX = mapBGSprite->getPosition().x - rateX * tempSize.width;
+//	float sY = mapBGSprite->getPosition().y + rateY * tempSize.height;
+//
+//	// curse
+//	if (_curse)
+//	{
+//		auto temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//		auto tempType = Sprite::createWithSpriteFrameName("Map/Secret.png");
+//		temp->setPosition(mapBGSprite->getPosition());
+//		tempType->setPosition(mapBGSprite->getPosition());
+//		spriteBatch->addChild(temp, 3);
+//		spriteBatch->addChild(tempType, 4);
+//	}
+//	else // not curse
+//	{
+//		for (int i = 0; i < SIZE_X; i++)
+//		{
+//			for (int j = 0; j < SIZE_Y; j++)
+//			{
+//				cocos2d::Sprite * temp = nullptr;
+//				cocos2d::Sprite * tempType = nullptr;
+//				switch (map[i][j].type)
+//				{
+//				case myEnum::kRoomType::kRTNone:
+//					break;
+//				case myEnum::kRoomType::kRTStart:
+//					if (_allView || map[i][j].visible)
+//						temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//					break;
+//				case myEnum::kRoomType::kRTMonster:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTShop:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Shop.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTHelp:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Help.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTBoss:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Boss.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTTreasure:
+//					if (_allView || map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//					}
+//					if (_allViewType || map[i][j].visible)
+//					{
+//						tempType = Sprite::createWithSpriteFrameName("Map/Treasure.png");
+//					}
+//					break;
+//				case myEnum::kRoomType::kRTSecret:
+//					if (map[i][j].visible)
+//					{
+//						if (map[i][j].exp)
+//							temp = Sprite::createWithSpriteFrameName("Map/OpenedRoom.png");
+//						else
+//							temp = Sprite::createWithSpriteFrameName("Map/ClosedRoom.png");
+//						tempType = Sprite::createWithSpriteFrameName("Map/Secret.png");
+//					}
+//					break;
+//				}
+//
+//				if (temp != nullptr)
+//				{
+//					temp->setPosition(Vec2(sX + tempSize.width * j, sY - tempSize.height * i));
+//					spriteBatch->addChild(temp, ZINDEX_STATUS_MAP_ROOM);
+//				}
+//				if (tempType != nullptr)
+//				{
+//					tempType->setPosition(Vec2(sX + tempSize.width * j, sY - tempSize.height * i));
+//					spriteBatch->addChild(tempType, ZINDEX_STATUS_MAP_TYPE);
+//				}
+//			} // end for j
+//		} // end for i
+//
+//		auto hero = Sprite::createWithSpriteFrameName("Map/CurrentRoom.png");
+//		hero->setPosition(sX + tempSize.width * _heroY, sY - tempSize.height * _heroX);
+//		spriteBatch->addChild(hero, ZINDEX_STATUS_MAP_ROOM);
+//
+//	}
+//
+//	spriteBatch->setScale(2);
+//	spriteBatch->setPosition(visibleSize.width*0.5f, visibleSize.height*0.5f);
+//	layer->addChild(spriteBatch, ZINDEX_STATUS_MAP_BG, "zoomMap");
+//
+//}
+//
+//void MapManager::onTouchMap(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
+//{
+//	if (!isZoomed)
+//	{
+//		switch (type){
+//		case Widget::TouchEventType::BEGAN:
+//			break;
+//		case Widget::TouchEventType::MOVED:
+//			break;
+//		case Widget::TouchEventType::ENDED:
+//		{
+//			MapZoom();
+//		}
+//		break;
+//		case Widget::TouchEventType::CANCELED:
+//			break;
+//		default:
+//			break;
+//		}
+//	}
+//	else
+//	{
+//		switch (type){
+//		case Widget::TouchEventType::BEGAN:
+//			break;
+//		case Widget::TouchEventType::MOVED:
+//			break;
+//		case Widget::TouchEventType::ENDED:
+//		{
+//			ClearZoomMap();
+//		}
+//		break;
+//		case Widget::TouchEventType::CANCELED:
+//			break;
+//		default:
+//			break;
+//		}
+//	}
+//}
+//
+//void MapManager::ClearZoomMap()
+//{
+//	auto node = layer->getChildByName("mapZoom");
+//	node->removeFromParentAndCleanup(true);
+//	isZoomed = false;
+//}
+

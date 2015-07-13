@@ -48,6 +48,17 @@
 				<key>sourceSize</key>
 				<string>{25,20}</string>
 			</dict>
+			<key>Map/MapBG.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{360,258}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{360,258}</string>
+			</dict>
 			<key>Map/OpenedRoom.png</key>
 			<dict>
 				<key>frame</key>
@@ -92,16 +103,16 @@
 				<key>sourceSize</key>
 				<string>{25,20}</string>
 			</dict>
-			<key>Map/MapBG.png</key>
+			<key>Map/alpha.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,0},{360,258}}</string>
+				<string>{{553,0},{1,1}}</string>
 				<key>offset</key>
-				<string>{0,0}</string>
+				<string>{149,-149}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{360,258}</string>
+				<string>{300,300}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -113,12 +124,12 @@
 			<key>realTextureFileName</key>
 			<string>Map.png</string>
 			<key>size</key>
-			<string>{553,258}</string>
+			<string>{554,258}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>553</integer>
+			<integer>554</integer>
 			<key>height</key>
 			<integer>258</integer>
 		</dict>

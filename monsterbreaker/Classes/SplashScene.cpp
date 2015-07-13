@@ -33,7 +33,7 @@ bool SplashScene::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 	auto backgroundSprite = Sprite::create("SplashScene/Logo_Y.png");
-	backgroundSprite->setPosition( Vec2( visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y  ) );
+	backgroundSprite->setPosition( Vec2( visibleSize.width / 2 , visibleSize.height / 2 ) );
 	this->addChild( backgroundSprite );
 
 	LoadData();

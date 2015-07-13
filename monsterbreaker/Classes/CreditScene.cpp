@@ -34,12 +34,13 @@ bool CreditScene::init()
 	SoundManager::getInstance()->changeBG("EndingBG");
 
 	node = CSLoader::createNode("CreditScene/CreditScene.csb");
+	node->setPosition(origin);
 	this->addChild(node);
 
 	this->setKeypadEnabled(true);
 
 	backBtn = static_cast<Button*>(node->getChildByName("backBtn"));
-	tumblrBtn = static_cast<Button*>(node->getChildByName("tumblrBtn"));
+	webBtn = static_cast<Button*>(node->getChildByName("webBtn"));
 	meBtn = static_cast<Button*>(node->getChildByName("meBtn"));
 	isaacBtn = static_cast<Button*>(node->getChildByName("isaacBtn"));
 
@@ -57,10 +58,10 @@ bool CreditScene::init()
 
 	isaacBtn->addTouchEventListener(CC_CALLBACK_2(CreditScene::openWeb, this));
 	meBtn->addTouchEventListener(CC_CALLBACK_2(CreditScene::openWeb, this));
-	tumblrBtn->addTouchEventListener(CC_CALLBACK_2(CreditScene::openWeb, this));
+	webBtn->addTouchEventListener(CC_CALLBACK_2(CreditScene::openWeb, this));
 
 	meBtn->setTag(1);
-	tumblrBtn->setTag(1);
+	webBtn->setTag(1);
 	isaacBtn->setTag(2);
 	return true;
 }
@@ -80,7 +81,7 @@ void CreditScene::openWeb(cocos2d::Ref * pSender, cocos2d::ui::Widget::TouchEven
 			switch (tag)
 			{
 			case 1:
-				CCApplication::sharedApplication()->openURL("http://ilhaeYe.tumblr.com");
+				CCApplication::sharedApplication()->openURL("http://ilhaeYe.blogspot.com/");
 				break;
 			case 2:
 				CCApplication::sharedApplication()->openURL("http://bindingofisaac.com/");

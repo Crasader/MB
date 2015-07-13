@@ -32,7 +32,7 @@ void SecretManager::createSecretItem()
 	if (mapType.compare("MV") == 0 && _unlockEndingNum >= 1 || mapType.compare("HV") == 0 && _unlockEndingNum >= 3){
 		// create B&W
 		auto chest = Chest::create(hero, layer);
-		chest->setPosition(Vec2(visibleSize.width * 0.5f + origin.x, visibleSize.height* 0.5f + origin.y));
+		chest->setPosition(Vec2(visibleSize.width * 0.5f , visibleSize.height* 0.5f ));
 		layer->addChild(chest, ZINDEX_CHEST_SPRITE);
 
 		chest->SetItem(ITEM_BLACK_AND_WHITE);
@@ -45,7 +45,7 @@ void SecretManager::createSecretItem()
 	{
 		// create TRUTH
 		auto chest = Chest::create(hero, layer);
-		chest->setPosition(Vec2(visibleSize.width * 0.5f + origin.x, visibleSize.height* 0.5f + origin.y));
+		chest->setPosition(Vec2(visibleSize.width * 0.5f, visibleSize.height* 0.5f ));
 		layer->addChild(chest, ZINDEX_CHEST_SPRITE);
 
 		chest->SetItem(ITEM_TRUTH);
@@ -82,7 +82,7 @@ void SecretManager::createSecretItem()
 					case 1:	// coin
 					{
 						auto spr = ItemCoin::create(layer, hero);
-						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 						layer->addChild(spr, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kItemTag);
 						secondBG = Sprite::createWithSpriteFrameName("SecondBG/bgCoin.png");
 					}
@@ -90,7 +90,7 @@ void SecretManager::createSecretItem()
 					case 2:	// heart
 					{
 						auto spr = ItemHeart::create(layer, hero, false);
-						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f, startPoint.y - contentSize.height * objX + contentSize.height / 2));
 						layer->addChild(spr, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kItemTag);
 						secondBG = Sprite::createWithSpriteFrameName("SecondBG/bgHeart.png");
 					}
@@ -98,7 +98,7 @@ void SecretManager::createSecretItem()
 					case 3:	// key
 					{
 						auto spr = ItemKey::create(layer, hero, false);
-						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f, startPoint.y - contentSize.height * objX + contentSize.height / 2));
 						layer->addChild(spr, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kItemTag);
 						secondBG = Sprite::createWithSpriteFrameName("SecondBG/bgKey.png");
 					}
@@ -106,7 +106,7 @@ void SecretManager::createSecretItem()
 					case 4:	// bomb
 					{
 						auto spr = ItemBomb::create(layer, hero, false);
-						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+						spr->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 						layer->addChild(spr, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kItemTag);
 						secondBG = Sprite::createWithSpriteFrameName("SecondBG/bgBomb.png");
 					}

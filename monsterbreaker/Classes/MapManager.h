@@ -6,6 +6,10 @@
 #include "cocos2d.h"
 #include "Definitions.h"
 #include "Heap.h"
+
+#include "cocostudio\CocoStudio.h"
+#include "ui\CocosGUI.h"
+
 using namespace std;
 
 #define SIZE_X 9
@@ -30,15 +34,18 @@ private:
 	int cnt_gen = 2;
 	int cnt_branch = 2;
 
-	cocos2d::SpriteBatchNode * spriteBatch;
-	cocos2d::Layer * layer;
+//	bool isZoomed = false;
+
+//	cocos2d::Node * mapNode;
+//	cocos2d::SpriteBatchNode * spriteBatch;
+//	cocos2d::Layer * layer;
 
 	void SetVisibleState(int x, int y, bool secretVisible, bool secretLockOpen);
 
 public:
-	CC_SYNTHESIZE(bool, _curse, Curse);
-	CC_SYNTHESIZE(bool, _allView, AllView);
-	CC_SYNTHESIZE(bool, _allViewType, AllViewType);
+//	CC_SYNTHESIZE(bool, _curse, Curse);
+//	CC_SYNTHESIZE(bool, _allView, AllView);
+//	CC_SYNTHESIZE(bool, _allViewType, AllViewType);
 	CC_SYNTHESIZE(int, _heroX, HeroX);
 	CC_SYNTHESIZE(int, _heroY, HeroY);
 
@@ -57,8 +64,8 @@ public:
 	void initAllRoomdata();
 	void create();
 	void debug(const char * temp);
-	void DrawMap(cocos2d::Layer *layer);
-	void ReDrawMap();
+	//void DrawMap(cocos2d::Layer *layer);
+	//void ReDrawMap();
 
 	void SaveAll();
 	void SaveRoomData(int x, int y);
@@ -72,6 +79,10 @@ public:
 	bool IsW();
 	bool IsS();
 	bool IsN();
+
+	//void MapZoom();
+	//void onTouchMap(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
+	//void ClearZoomMap();
 private:
 
 };

@@ -8,7 +8,7 @@ Scene* GameScene::createScene()
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
 	scene->getPhysicsWorld()->setGravity(Vec2(0, 0));
-//	scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+	scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
 
     // 'layer' is an autorelease object
 	auto layer = GameScene::create();
@@ -36,20 +36,20 @@ bool GameScene::init()
 	//touchDoor = false;
 
 	auto spr_bg = Sprite::create("GameScene/BG.png");
-	spr_bg->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	spr_bg->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
 	this->addChild(spr_bg, 0);
 
 	//// only debug
-	//auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test, this));
-	//item1->setPosition(Vec2(300, 200));
-	//auto item2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test2, this));
-	//item2->setPosition(Vec2(350, 200));
-	//auto item3 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test3, this));
-	//item3->setPosition(Vec2(400, 200));
+	auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test, this));
+	item1->setPosition(Vec2(300, 200));
+	auto item2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test2, this));
+	item2->setPosition(Vec2(350, 200));
+	auto item3 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::test3, this));
+	item3->setPosition(Vec2(400, 200));
 
-	//auto menu = Menu::create(item1, item2, item3, NULL);
-	//menu->setPosition(Vec2::ZERO);
-	//this->addChild(menu, 100);
+	auto menu = Menu::create(item1, item2, item3, NULL);
+	menu->setPosition(Vec2::ZERO);
+	this->addChild(menu, 100);
 
 	pauseNode = CSLoader::createNode("Icon/pauseBtn.csb");
 	pauseBtn = (Button *)pauseNode->getChildByName("btn");
@@ -138,14 +138,22 @@ void GameScene::onEnter()
 	{
 		mapManager->CheckSideRoom(hero->HasItem(ITEM_SCAVENGER) || hero->HasItem(ITEM_SECRET_MASTER), hero->HasItem(ITEM_SECRET_MASTER));
 	}
-	mapManager->setCurse(false);
-	mapManager->setAllView(hero->HasItem(ITEM_THE_MAP));	
-	mapManager->setAllViewType(hero->HasItem(ITEM_THE_COMPASS));
+	//mapManager->setCurse(false);
+	//mapManager->setAllView(hero->HasItem(ITEM_THE_MAP));	
+	//mapManager->setAllViewType(hero->HasItem(ITEM_THE_COMPASS));
 
-	mapManager->DrawMap(this);
+	//mapManager->DrawMap(this);
+	
+	mapDrawManager = MapDrawManager::create(this);
+	this->addChild(mapDrawManager, 0, "MapDrawManager");
+	mapDrawManager->setCurse(false);
+	mapDrawManager->setAllView(hero->HasItem(ITEM_THE_MAP));
+	mapDrawManager->setAllViewType(hero->HasItem(ITEM_THE_COMPASS));
+
+	mapDrawManager->DrawMap();
 
 	bombManager = BombManager::create(this,hero);
-	this->addChild(bombManager);
+	this->addChild(bombManager, 0, "BombManager");
 	bombManager->scheduleUpdate();
 
 	monsterManager = MonsterManager::create(this, mapManager->getLevelName().c_str());
@@ -320,7 +328,39 @@ void GameScene::SetPause()
 	skillManager->setClickEnabled(false);
 	tutorialManager->pause();
 	systemManager->ShowPause();
+
+	mapDrawManager->SetBtnEnable(false);
 }
+void GameScene::SetMapZoomIn()
+{
+	temp = systemManager->systemState;
+	systemManager->SetSystemState(myEnum::kSystemState::kSSPause);
+	monsterManager->PauseMonsters();
+	bombManager->pause();
+	effectManager->PauseAllEffects();
+	helpManager->pause();
+	skillManager->setClickEnabled(false);
+	tutorialManager->pause();
+	
+	pauseBtnEnable(false);
+}
+void GameScene::SetMapZoomOut()
+{
+	switch (temp)
+	{
+	case myEnum::kSystemState::kSSInit:
+		SetInit();
+		break;
+	case myEnum::kSystemState::kSSPlaying:
+		SetPlay();
+		break;
+	case myEnum::kSystemState::kSSWin:
+		SetWin();
+		break;
+	}
+	pauseBtnEnable(true);
+}
+
 void GameScene::SetResume()
 {
 	systemManager->HidePause();
@@ -336,6 +376,8 @@ void GameScene::SetResume()
 		SetWin();
 		break;
 	}
+	mapDrawManager->SetBtnEnable(true);
+
 }
 void GameScene::SetDie()
 {
@@ -352,13 +394,27 @@ void GameScene::SetDie()
 	def->flush();
 
 	auto cache = SpriteFrameCache::getInstance();
-	pauseBtn->setEnabled(false);
-	pauseBtn->setBright(false);
 	pauseImage->setDisplayFrame(cache->getSpriteFrameByName("Icon/resumeIcon.png"));
-	pauseNode->setOpacity(128);
+	pauseBtnEnable(false);
 	SoundManager::getInstance()->changeBG("DieBG");
 
 }
+void GameScene::pauseBtnEnable(bool b)
+{
+	if (b)
+	{
+		pauseBtn->setEnabled(b);
+		pauseBtn->setBright(b);
+		pauseNode->setOpacity(255);
+	}
+	else
+	{
+		pauseBtn->setEnabled(b);
+		pauseBtn->setBright(b);
+		pauseNode->setOpacity(128);
+	}
+}
+
 void GameScene::SetWin()
 {
 	systemManager->SetSystemState(myEnum::kSystemState::kSSWin);
@@ -441,9 +497,9 @@ void GameScene::test(Ref *pSender)
 
 void GameScene::test2(Ref *pSender)
 {	
-	mapManager->setAllView(true);
-	mapManager->setAllViewType(true);
-	mapManager->ReDrawMap();
+	mapDrawManager->setAllView(true);
+	mapDrawManager->setAllViewType(true);
+	mapDrawManager->ReDrawMap();
 }
 
 void GameScene::test3(cocos2d::Ref *pSender)
@@ -893,6 +949,7 @@ bool GameScene::onContactBegin(cocos2d::PhysicsContact &contact)
 				mapManager->map[ptr->getGoToX()][ptr->getGoToY()].visible = true;
 				SoundManager::getInstance()->playMySoundLogic("FindSecret");
 			}
+			mapDrawManager->ReDrawMap();
 		}
 		if (true == collisionManager.HasPhysicsBodiesCollided(contact, MERCHANT_COLLISION_BITMASK, BOMB_RANGE_COLLISION_BITMASK))
 		{
@@ -923,8 +980,8 @@ void GameScene::Move(cocos2d::Touch * touch)
 {
 	if (touch->getLocation().x < hero->getContentSize().width - rightTick)	// left
 		hero->Move(Vec2(hero->getContentSize().width - rightTick, hero->getPositionY()));
-	else  if (touch->getLocation().x > visibleSize.width - hero->getContentSize().width + origin.x + rightTick)	// right
-		hero->Move(Vec2(visibleSize.width - hero->getContentSize().width + origin.x + rightTick, hero->getPositionY()));
+	else  if (touch->getLocation().x > visibleSize.width - hero->getContentSize().width + rightTick)	// right
+		hero->Move(Vec2(visibleSize.width - hero->getContentSize().width + rightTick, hero->getPositionY()));
 	else  // center
 		hero->Move(Vec2(touch->getLocation().x, hero->getPositionY()));
 }

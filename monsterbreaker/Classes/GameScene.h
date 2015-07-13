@@ -21,6 +21,7 @@
 #include "DataManager.h"
 #include "Lightning.h"
 #include "TutorialManager.h"
+#include "MapDrawManager.h"
 
 #include "Definitions.h"
 #include "Utils.h"
@@ -35,6 +36,7 @@ class HelpManager;
 class DataManager;
 class SystemManager;
 class TutorialManager;
+class MapDrawManager;
 
 class GameScene : public cocos2d::Layer
 {
@@ -78,6 +80,7 @@ private:
 	HelpManager * helpManager;
 	DataManager * dataManager;
 	TutorialManager * tutorialManager;
+	MapDrawManager * mapDrawManager;
 
 	cocos2d::Node * ball;
 	cocos2d::Node * pauseNode;
@@ -110,8 +113,11 @@ public:
 	void SetResume();
 	void SetWin();
 	void SetDie();
+	void SetMapZoomIn();
+	void SetMapZoomOut();
 	void Move(cocos2d::Touch * touch);
 
+	void pauseBtnEnable(bool b);
 };
 
 #endif // __BOSS_SCENE_H__

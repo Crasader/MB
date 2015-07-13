@@ -37,7 +37,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	this->layer = layer;
 	
 	auto bg = Sprite::create(cocos2d::String::createWithFormat("Tile/%s/BG.png", getMapType().c_str())->getCString());
-	bg->setPosition(Vec2(visibleSize.width / 2 + origin.x, bg->getContentSize().height / 2 + origin.y));
+	bg->setPosition(Vec2(visibleSize.width / 2 , bg->getContentSize().height / 2 ));
 	layer->addChild(bg, ZINDEX_BG);
 
 	int heroX = mapManager->getHeroX();
@@ -54,7 +54,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 		{
 			int x = 0;
 			int y = 4;
-			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width + origin.x, startPoint.y - contentSize.height * x + contentSize.height / 2 + origin.y);
+			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width , startPoint.y - contentSize.height * x + contentSize.height / 2 );
 			SetTileDoor(vec, 1, 0, rd, myEnum::kDir::kDirNorth);
 		}
 	}
@@ -71,7 +71,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 		{
 			int x = 19;
 			int y = 4;
-			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width + origin.x, startPoint.y - contentSize.height * x + origin.y);
+			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width , startPoint.y - contentSize.height * x );
 			SetTileDoor(vec, 1, 180, rd, myEnum::kDir::kDirSouth);
 		}
 	}
@@ -88,7 +88,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 		{
 			int x = 9;
 			int y = 0;
-			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width / 2 + origin.x, startPoint.y - contentSize.height * x + origin.y);
+			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width / 2, startPoint.y - contentSize.height * x );
 			SetTileDoor(vec, 0.7129, -90, rd, myEnum::kDir::kDirWest);
 		}
 	}
@@ -105,7 +105,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 		{
 			int x = 9;
 			int y = 9;
-			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width / 2 + origin.x, startPoint.y - contentSize.height * x + origin.y);
+			auto vec = Vec2(startPoint.x + contentSize.width * y + contentSize.width / 2 , startPoint.y - contentSize.height * x );
 			SetTileDoor(vec, 0.7129, 90, rd, myEnum::kDir::kDirEast);
 		}
 	}
@@ -119,7 +119,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	edgeBody->setContactTestBitmask(true);
 
 	auto edgeNode = Node::create();
-	edgeNode->setPosition(Vec2(visibleSize.width / 2 + origin.x, tempY / 2 + contentSize.height / 2 + origin. y));
+	edgeNode->setPosition(Vec2(visibleSize.width / 2 , tempY / 2 + contentSize.height / 2 ));
 	edgeNode->setPhysicsBody(edgeBody);
 	layer->addChild(edgeNode);
 
@@ -130,7 +130,7 @@ void DoorManager::Draw(cocos2d::Layer * layer)
 	deathBody->setDynamic(false);
 
 	auto deathNode = Node::create();
-	deathNode->setPosition(Vec2(visibleSize.width / 2 + origin.x, tempY / 2 + contentSize.height + origin.y));
+	deathNode->setPosition(Vec2(visibleSize.width / 2, tempY / 2 + contentSize.height * 1.25f));
 	deathNode->setPhysicsBody(deathBody);
 	layer->addChild(deathNode);
 
@@ -209,7 +209,7 @@ void DoorManager::SetTileFenceLine(int kDir, bool hasDoor)
 void DoorManager::SetTileFence(int x, int y)
 {
 	auto spr = Sprite::create(cocos2d::String::createWithFormat("Tile/%s/Fence.png", getMapType().c_str())->getCString());
-	spr->setPosition(startPoint.x + contentSize.width * y + contentSize.width / 2 + origin.x, startPoint.y - contentSize.height * x + contentSize.height / 2 + origin.y);
+	spr->setPosition(startPoint.x + contentSize.width * y + contentSize.width / 2 , startPoint.y - contentSize.height * x + contentSize.height / 2 );
 	layer->addChild(spr, ZINDEX_BRICK_SPRITE);
 }
 

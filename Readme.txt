@@ -28,6 +28,5 @@ I hope you understand my poor english.
 
 you can contact me by under the url & email.
  
-http://ilhaeYe.tumblr.com
 http://ilhaeYe.blogspot.kr
 yeaih89@gmail.com

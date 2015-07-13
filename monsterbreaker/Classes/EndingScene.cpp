@@ -43,6 +43,7 @@ bool EndingScene::init()
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
 
 	node = CSLoader::createNode(String::createWithFormat("EndingScene/Ending%d/Ending.csb", ESendingNum)->getCString());
+	//node->setPosition(origin);
 	addChild(node);
 
 	switch (ESendingNum)

@@ -94,7 +94,7 @@ void MonsterManager::DrawMonsters()
 			// only for debug 
 			//m = Skeleton::create();
 
-			m->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			m->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f, startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 			m->Draw(layer);
 			m->StartAnimation();
 			m->scheduleUpdate();
@@ -103,19 +103,19 @@ void MonsterManager::DrawMonsters()
 		else if (type.compare("b1") == 0)
 		{
 			auto brick = SingleBrick::create(getMapType().c_str(), BRICK_SINGLE_ID);
-			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 			layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		}
 		else if (type.compare("b2") == 0)
 		{
 			auto brick = DoubleBrick::create(getMapType().c_str(), layer, BRICK_DOUBLE_ID);
-			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f, startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 			layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		}
 		else if (type.compare("b3") == 0)
 		{
 			auto brick = SolidBrick::create(getMapType().c_str(), BRICK_SOLID_ID);
-			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 			layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		}
 		else if (type.compare("tp") == 0)
@@ -134,7 +134,7 @@ void MonsterManager::CreateHeroBrick()
 	for (int i = 1; i <= 8; i++)
 	{
 		auto brick = SingleBrick::create(getMapType().c_str(), BRICK_SINGLE_ID);
-		brick->setPosition(Vec2(startPoint.x + contentSize.width * i + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * 16 - contentSize.height * 0.25 + origin.y));
+		brick->setPosition(Vec2(startPoint.x + contentSize.width * i + contentSize.width * 0.5f , startPoint.y - contentSize.height * 16 - contentSize.height * 0.25));
 		layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		brick->getPhysicsBody()->setCollisionBitmask(SINGLE_NEUTRAL_BRICK_COLLISION_BITMASK);
 	}
@@ -241,7 +241,7 @@ void MonsterManager::CreateBossMonster()
 
 			if (m != nullptr)
 			{
-				m->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+				m->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 				m->Draw(layer);
 				m->StartAnimation();
 				m->scheduleUpdate();
@@ -258,19 +258,19 @@ void MonsterManager::CreateBossMonster()
 		else if (type.compare("b1") == 0)
 		{
 			auto brick = SingleBrick::create(getMapType().c_str(), BRICK_SINGLE_ID);
-			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2 ));
 			layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		}
 		else if (type.compare("b2") == 0)
 		{
 			auto brick = DoubleBrick::create(getMapType().c_str(), layer, BRICK_DOUBLE_ID);
-			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2));
 			layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		}
 		else if (type.compare("b3") == 0)
 		{
 			auto brick = SolidBrick::create(getMapType().c_str(), BRICK_SOLID_ID);
-			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f + origin.x, startPoint.y - contentSize.height * objX + contentSize.height / 2 + origin.y));
+			brick->setPosition(Vec2(startPoint.x + contentSize.width * objY + contentSize.width * 0.5f , startPoint.y - contentSize.height * objX + contentSize.height / 2));
 			layer->addChild(brick, ZINDEX_BRICK_SPRITE, myEnum::kMyTag::kBlockTag);
 		}
 	}

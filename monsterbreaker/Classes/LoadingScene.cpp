@@ -39,7 +39,7 @@ void LoadingScene::onEnter()
 	CCLayer::onEnter();
 	
 	auto loadingSpr = Sprite::create("Loading.png");
-	loadingSpr->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	loadingSpr->setPosition(Vec2(visibleSize.width / 2 , visibleSize.height / 2) + origin);
 	this->addChild(loadingSpr);
 
 	auto fadeIn = FadeIn::create(0.5f);

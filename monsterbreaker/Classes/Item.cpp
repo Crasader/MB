@@ -16,14 +16,14 @@ void Item::InitSprite()
 	auto origin = Director::getInstance()->getVisibleOrigin();
 
 	node = CSLoader::createNode(String::createWithFormat("Item/%s.csb", getName().c_str())->getCString());
-	node->setPosition(origin.x, origin.y);
+	//node->setPosition();
 	this->addChild(node);
 
 	SetTextLabel();
 
 	btn = dynamic_cast<Button*>(node->getChildByName("btn"));
 	btn->setEnabled(true);
-	btn->setPosition(Vec2(origin.x, origin.y));
+	btn->setPosition(Vec2());
 	btn->addTouchEventListener(CC_CALLBACK_2(Item::onTouch, this));
 
 	auto body = PhysicsBody::createCircle(getContentSize().width*0.5f, PhysicsMaterial(100, 1, 0));

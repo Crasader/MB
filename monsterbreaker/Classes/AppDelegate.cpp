@@ -32,18 +32,32 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        //glview = GLViewImpl::create("Monster Breaker");
-		//		glview = GLViewImpl::createWithRect("Monster Breaker", Rect(0, 0, 1080, 1920));
+		//glview = GLViewImpl::create("Monster Breaker");
+		//glview = GLViewImpl::createWithRect("Monster Breaker", Rect(0, 0, 1080, 1920));
 		
 		// pc test frame
 		glview = GLViewImpl::createWithRect("Monster Breaker", Rect(0, 0, 506.25, 900));
 		//glview = GLViewImpl::createWithRect("Monster Breaker", Rect(0, 0, 540, 960));
 		//glview = GLViewImpl::createWithRect("Monster Breaker", Rect(0, 0, 360, 640));
+		//glview = GLViewImpl::createWithRect("Monster Breaker", Rect(0, 0, 540, 900));
 
 		director->setOpenGLView(glview);
     }
+	auto fSize = glview->getFrameSize();
+	//CCLOG("@@@@@@@@@@@");
+	//CCLOG("%f,%f", fSize.width, fSize.height);
+	//CCLOG("@@@@@@@@@@@");
+	//if ( fSize.height == 1800 || fSize.height == 900)
+	//{
+	//	glview->setDesignResolutionSize(1080, 1800, ResolutionPolicy::NO_BORDER);
+	//}
+	//else
+	//{
+		glview->setDesignResolutionSize(1080, 1920, ResolutionPolicy::NO_BORDER);	
+	//}
 
-	glview->setDesignResolutionSize(1080, 1920, ResolutionPolicy::NO_BORDER);
+	//1080 1800
+	
 
     // turn on display FPS
     director->setDisplayStats(false);

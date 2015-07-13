@@ -69,7 +69,7 @@ void Bomb::BombBomb()
 	this->getPhysicsBody()->setEnable(false);
 
 	auto exNode = CSLoader::createNode("Effect/Explore/Explore.csb");
-	exNode->setPosition(origin.x, origin.y);
+	//exNode->setPosition(origin.x, origin.y);
 	this->addChild(exNode);
 
 	auto body = PhysicsBody::createCircle(spr->getContentSize().width);

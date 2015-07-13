@@ -26,21 +26,10 @@
 				<key>sourceSize</key>
 				<string>{720,234}</string>
 			</dict>
-			<key>CreditScene/contact.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,3614},{406,126}}</string>
-				<key>offset</key>
-				<string>{-1,9}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{651,165}</string>
-			</dict>
 			<key>CreditScene/isaac.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,3384},{230,227}}</string>
+				<string>{{83,2411},{230,227}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -51,7 +40,7 @@
 			<key>CreditScene/me.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{126,3614},{184,184}}</string>
+				<string>{{193,1920},{184,184}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -73,7 +62,7 @@
 			<key>CreditScene/title.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,4020},{617,51}}</string>
+				<string>{{0,3942},{617,51}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -84,7 +73,7 @@
 			<key>CreditScene/alpha.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,4071},{1,1}}</string>
+				<string>{{0,4093},{1,1}}</string>
 				<key>offset</key>
 				<string>{149,-149}</string>
 				<key>rotated</key>
@@ -95,7 +84,7 @@
 			<key>CreditScene/BackBtn.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{126,3898},{100,98}}</string>
+				<string>{{100,3993},{100,98}}</string>
 				<key>offset</key>
 				<string>{0,1}</string>
 				<key>rotated</key>
@@ -106,13 +95,24 @@
 			<key>CreditScene/BackBtnClicked.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{126,3798},{100,100}}</string>
+				<string>{{0,3993},{100,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
 				<string>{100,100}</string>
+			</dict>
+			<key>CreditScene/contact.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,3384},{558,134}}</string>
+				<key>offset</key>
+				<string>{1,41}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{651,237}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -124,14 +124,14 @@
 			<key>realTextureFileName</key>
 			<string>images.png</string>
 			<key>size</key>
-			<string>{1080,4072}</string>
+			<string>{1080,4094}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
 			<integer>1080</integer>
 			<key>height</key>
-			<integer>4072</integer>
+			<integer>4094</integer>
 		</dict>
 	</dict>
 </plist>
