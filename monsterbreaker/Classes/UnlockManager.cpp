@@ -84,12 +84,12 @@ void UnlockManager::GetUnlockImageAndText(cocos2d::Sprite* img, cocos2d::ui::Tex
 		break;
 	case UNLOCK_HC:
 		img->setDisplayFrame(cache->getSpriteFrameByName("Unlock/hc.png"));
-		text1->setText("need the 'Black And White'");
+		text1->setText("");
 		text2->setText("Human Castle");
 		break;
 	case UNLOCK_MC:
 		img->setDisplayFrame(cache->getSpriteFrameByName("Unlock/mc.png"));
-		text1->setText("need the 'Black And White'");
+		text1->setText("");
 		text2->setText("Monster Castle");
 		break;
 	case UNLOCK_MM:

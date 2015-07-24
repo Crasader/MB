@@ -8,8 +8,8 @@ Scene* GameScene::createScene()
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
 	scene->getPhysicsWorld()->setGravity(Vec2(0, 0));
-	scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
-
+	//scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+	
     // 'layer' is an autorelease object
 	auto layer = GameScene::create();
 	layer->SetPhysicsWorld(scene->getPhysicsWorld());
@@ -470,7 +470,7 @@ void GameScene::SetWin()
 	if (MapManager::getInstance()->GetCurrentRoomData().type == myEnum::kRoomType::kRTBoss)
 	{
 		doorManager->ShowEndingDoor();
-		doorManager->scheduleUpdate();
+		//doorManager->scheduleUpdate();
 	}
 
 }

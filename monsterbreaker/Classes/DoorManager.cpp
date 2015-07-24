@@ -515,8 +515,8 @@ void DoorManager::ShowEndingDoor()
 			auto spr2 = EndingDoor::create("MC");
 			spr2->setPosition(visibleSize.width / 3 * 2, visibleSize.height * 0.7f);
 			layer->addChild(spr2, ZINDEX_ENDING_DOOR);
-			spr2->setVisible(false);
-			spr2->btn->setEnabled(false);
+			//spr2->setVisible(false);
+			//spr2->btn->setEnabled(false);
 			auto btn2 = spr2->btn;
 			if (btn2 != nullptr) 	btn2->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveLoadingScene, this));
 			BAWKeyDoors.pushBack(spr2);
@@ -566,8 +566,8 @@ void DoorManager::ShowEndingDoor()
 			auto spr3 = EndingDoor::create("MM");
 			spr3->setPosition(visibleSize.width / 4 * 3, visibleSize.height * 0.7f);
 			layer->addChild(spr3, ZINDEX_ENDING_DOOR);
-			spr3->setVisible(false);
-			spr3->btn->setEnabled(false);
+			//spr3->setVisible(false);
+			//spr3->btn->setEnabled(false);
 			auto btn3 = spr3->btn;
 			if (btn3 != nullptr) 	btn3->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveLoadingScene, this));
 			TKeyDoors.pushBack(spr3);
@@ -597,8 +597,8 @@ void DoorManager::ShowEndingDoor()
 			layer->addChild(spr2, ZINDEX_ENDING_DOOR);
 			auto btn2 = spr2->btn;
 			if (btn2 != nullptr) 	btn2->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveLoadingScene, this));
-			spr2->setVisible(false);
-			spr2->btn->setEnabled(false);
+			//spr2->setVisible(false);
+			//spr2->btn->setEnabled(false);
 			BAWKeyDoors.pushBack(spr2);
 		}
 	}
@@ -631,8 +631,8 @@ void DoorManager::ShowEndingDoor()
 			auto spr3 = EndingDoor::create("MM");
 			spr3->setPosition(visibleSize.width / 4 * 3, visibleSize.height * 0.7f);
 			layer->addChild(spr3, ZINDEX_ENDING_DOOR);
-			spr3->setVisible(false);
-			spr3->btn->setEnabled(false);
+			//spr3->setVisible(false);
+			//spr3->btn->setEnabled(false);
 			auto btn3 = spr3->btn;
 			if (btn3 != nullptr) 	btn3->addTouchEventListener(CC_CALLBACK_2(DoorManager::moveLoadingScene, this));
 			TKeyDoors.pushBack(spr3);
@@ -699,24 +699,30 @@ void DoorManager::moveEndingScene(cocos2d::Ref* sender, cocos2d::ui::Widget::Tou
 
 void DoorManager::update(float dt)
 {
-	if (hero->HasItem(ITEM_BLACK_AND_WHITE) || hero->HasItem(ITEM_TRUTH))
-	{
-		int BAWK_cnt = BAWKeyDoors.size();
-		for (int i = 0; i < BAWK_cnt; i++)
-		{
-			auto endingDoor = BAWKeyDoors.at(i);
-			endingDoor->setVisible(true);
-			endingDoor->btn->setEnabled(true);
-		}
-		int TK_cnt = TKeyDoors.size();
-		for (int i = 0; i < TK_cnt; i++)
-		{
-			auto endingDoor = TKeyDoors.at(i);
-			endingDoor->setVisible(true);
-			endingDoor->btn->setEnabled(true);
-		}
-		this->pause();
-	}
+//	if (hero->HasItem(ITEM_BLACK_AND_WHITE) || hero->HasItem(ITEM_TRUTH))
+//	{
+	//if (hero->HasItem(ITEM_BLACK_AND_WHITE))
+	//{
+	//	int BAWK_cnt = BAWKeyDoors.size();
+	//	for (int i = 0; i < BAWK_cnt; i++)
+	//	{
+	//		auto endingDoor = BAWKeyDoors.at(i);
+	//		endingDoor->setVisible(true);
+	//		endingDoor->btn->setEnabled(true);
+	//	}
+	//}
+	//if (hero->HasItem(ITEM_TRUTH))
+	//{
+	//	int TK_cnt = TKeyDoors.size();
+	//	for (int i = 0; i < TK_cnt; i++)
+	//	{
+	//		auto endingDoor = TKeyDoors.at(i);
+	//		endingDoor->setVisible(true);
+	//		endingDoor->btn->setEnabled(true);
+	//	}
+	//}
+		//this->pause();
+//	}
 }
 void DoorManager::visibleAllSecretDoor(bool b)
 {

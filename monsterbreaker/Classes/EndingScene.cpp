@@ -1299,9 +1299,9 @@ void EndingScene::saveDataLogic()
 		auto um = UnlockManager::getInstace();
 		if (ESendingNum == 1)
 		{
-			um->addUnlockData(UNLOCK_BLACK_AND_WHITE);
 			um->addUnlockData(UNLOCK_ENDING_1);
 			um->addUnlockData(UNLOCK_MC);
+			um->addUnlockData(UNLOCK_BLACK_AND_WHITE);
 		}else if (ESendingNum == 2)
 		{
 			um->addUnlockData(UNLOCK_ENDING_2);
@@ -1316,9 +1316,9 @@ void EndingScene::saveDataLogic()
 		}
 		else if (ESendingNum == 5)
 		{
-			um->addUnlockData(UNLOCK_TRUTH);
 			um->addUnlockData(UNLOCK_ENDING_5);
 			um->addUnlockData(UNLOCK_MM);
+			um->addUnlockData(UNLOCK_TRUTH);
 		}
 		else if (ESendingNum == 6)
 		{

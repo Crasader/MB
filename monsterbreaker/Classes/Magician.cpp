@@ -46,7 +46,7 @@ void Magician::SkillUse()
 				weapon->Skill();
 				EmptySkillPoint();
 				IncreaseCurrentHp(2);
-//				DecreaseCurrentSp(1);
+				DecreaseCurrentSp(1);
 				// effect & sound
 				auto effectManager = static_cast<EffectManager*>(layer->getChildByName("EffectManager"));
 				effectManager->HealEffect(this->getPosition());
@@ -63,8 +63,12 @@ void Magician::SkillUse()
 			if (IsEnoughSp(1))
 			{
 				EmptySkillPoint();
-//				DecreaseCurrentSp(1);
+				DecreaseCurrentSp(1);
 				_skillUseState = true;
+			}
+			else
+			{
+				SoundManager::getInstance()->playMySoundLogic("X");
 			}
 			break;
 
@@ -72,12 +76,22 @@ void Magician::SkillUse()
 			if (IsEnoughSp(2))
 			{
 				EmptySkillPoint();
-//				DecreaseCurrentSp(2);
+				DecreaseCurrentSp(1);
 				_skillUseState = true;
+			}
+			else
+			{
+				SoundManager::getInstance()->playMySoundLogic("X");
+
 			}
 			break;
 
 		}
+	}
+	else
+	{
+		SoundManager::getInstance()->playMySoundLogic("X");
+
 	}
 }
 
