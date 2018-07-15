@@ -1,3 +1,4 @@
+```
 ===================================================
 Update Log
 ===================================================
@@ -26,7 +27,9 @@ and I made almost sound with 'Bfxr'.
 
 Thank you for attention.
 ===================================================
+```
 ![desc](/pic/MB.png)
+```
 ===================================================
 I'm from south korea.
 I'm studing english harder.
@@ -34,6 +37,7 @@ I hope you understand my poor english.
 
 you can contact me by under the url & email.
 
-youtube url : https://youtu.be/ORT5dPIuR5w 
-http://ilhaeYe.blogspot.kr
-yeaih89@gmail.com
+```
+* youtube url : https://youtu.be/ORT5dPIuR5w
+* http://ilhaeYe.blogspot.kr
+* yeaih89@gmail.com
