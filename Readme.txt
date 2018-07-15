@@ -1,6 +1,7 @@
 ===================================================
 Update Log
 ===================================================
+16.July.2018	:: Update Readme.txt
 13.July.2015	:: Modify image size & position for G2 screen ratio.
 		:: Add MapZoomIn&Out Func.
 		:: Modify game level to easy
@@ -23,13 +24,16 @@ I used 'Cocos2d-x' with 'VS Express 2013' for coding,
 and graphic has been designed with 'gimp' and 'Cocos Studio' tool,
 and I made almost sound with 'Bfxr'.
 
-Thank you for attention
+Thank you for attention.
+===================================================
+![desc](/pic/MB.png)
 ===================================================
 I'm from south korea.
 I'm studing english harder.
 I hope you understand my poor english.
 
 you can contact me by under the url & email.
- 
+
+youtube url : https://youtu.be/ORT5dPIuR5w 
 http://ilhaeYe.blogspot.kr
 yeaih89@gmail.com
